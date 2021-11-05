@@ -1,7 +1,7 @@
 ---
-permalink: /archive
+permalink: /news
 layout: page
-title: Blog archive
+title: News
 ---
 
 
