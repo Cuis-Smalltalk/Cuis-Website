@@ -92,9 +92,24 @@
 - name: PopupFinder
   description: This is a variation of Cuis Finder by Nicolas Papagna, that uses a popup morph as user interface.
   url: https://github.com/mmontone/Cuis-PopupFinder
-  tags: [user interface]
+  tags: [user interface, tools]
 
 - name: Finder
   description: Finder is a system-wide search tool for Cuis Smalltalk.
   url: https://github.com/npapagna/cuis-finder
-  tags: [user interface]
+  tags: [user interface, tools]
+
+- name: Magritte
+  description: Magritte is fully dynamic meta-description framework for Smalltalk.
+  url: https://github.com/mmontone/Cuis-Magritte
+  tags: [reflection, metaprogramming]
+
+- name: PetitParser
+  description: PetitParser combines ideas from scannerless parsing, parser combinators, parsing expression grammars (PEG) and packrat parsers to model grammars and parsers as objects that can be reconfigured dynamically.
+  url: https://github.com/Cuis-Smalltalk/Parsers/tree/master/PetitParser
+  tags: [parsing]
+
+- name: OMeta
+  description: an object-oriented language for pattern matching.
+  url: https://github.com/pbella/OMeta-Cuis
+  tags: [parsing]
