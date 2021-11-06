@@ -5,6 +5,15 @@ $content-width:    1000px !default;
 
 @import "minima";
 
+.site-title {
+    font-weight: bold;
+    color: #0343DF;
+}
+
+.site-title:visited {
+    color: #0343DF;
+}
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 body {
     font-family: 'Montserrat', sans-serif;

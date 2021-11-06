@@ -25,6 +25,7 @@ Like other Smalltalk systems, Cuis is also:
 - A complete development environment written in itself
 - A pure, dynamic Object Oriented language
 
+<img src="./assets/imgs/screenshot.png">
 
 Cuis assumes very little on the underlying platform, and this lets it run out-of-the-box on Windows, MacOS, Linux, ChromeOS and WebBrowsers. Cuis shares the [OpenSmalltalk Virtual Machine] (http://www.opensmalltalk.org) with Squeak, Pharo and Newspeak.
 
@@ -37,17 +38,3 @@ Complexity puts a limit to the level of understanding of the system a person mig
 Cuis Smalltalk is our attempt at this challenge. Furthermore, we believe we are doing something else that no other Smalltalk, commercial or open source, does. We attempt to give the true Smalltalk-80 experience, and keep Smalltalk-80 not as legacy software of historic significance, but as a live, evolving system. We feel we are the keepers of the Smalltalk-80 heritage, and enablers of the Dynabook experience.
 
 As Cuis evolves, we keep on these values. Every update, be it a bug fix or a feature enhancement, is reviewed carefully to avoid adding unneded complexity to the system. Every opportunity to remove unneded complexity is followed. As we go, features are enhanced, and any reported bugs fixed. We also adopt selected enhancements from Squeak and Pharo, and share our work with the wider Smalltalk community.
-
-<img src="./assets/imgs/screenshot.png" width="900px">
-
-
-## License
-
-Cuis is distributed subject to the MIT License, as in http://www.opensource.org/licenses/mit-license.php . Any contribution submitted for incorporation into or for distribution with Cuis shall be presumed subject to the same license.
-
-Portions of Cuis are:
-Copyright (c) Xerox Corp. 1981, 1982
-Copyright (c) Apple Computer, Inc. 1985-1996
-Copyright (c) Contributors to Squeak project. 1997-2021
-Copyright (c) Contributors to Cuis Smalltalk project. 2009-2021
-
