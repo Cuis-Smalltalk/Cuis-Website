@@ -1,5 +1,7 @@
 # Cuis-Website
 
+A web site for Cuis Smalltalk.
+
 This is a Jekyll site that uses a template and some instructions for running Github Pages with the [`minima` theme][minima]. 
 
 * Frontpage that includes your last blog posts: `_pages/frontpage.md`
