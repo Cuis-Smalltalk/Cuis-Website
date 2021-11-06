@@ -113,3 +113,23 @@
   description: an object-oriented language for pattern matching.
   url: https://github.com/pbella/OMeta-Cuis
   tags: [parsing]
+
+- name: AXAnnouncements
+  description: Announcements events framework.
+  url: https://bitbucket.org/mmontone/mold/src/master/AXAnnouncements.pck.st
+  tags: [events handling]
+
+- name: ValueModels
+  description: Value models implementation.
+  url: https://bitbucket.org/mmontone/mold/src/master/ValueModels.pck.st
+
+- name: Morphic-Widgets-Extras2
+  description: Widgets extras for Cuis.
+  url: https://bitbucket.org/mmontone/mold/src/master/Morphic-Widgets-Extras2.pck.st
+  tags: [user interface]
+
+- name: Props
+  description: General framework and tools for properties editing.
+  url: https://bitbucket.org/mmontone/mold/src/master/Props.pck.st
+  tags: [user interface]
+  
