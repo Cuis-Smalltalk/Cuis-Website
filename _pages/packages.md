@@ -14,6 +14,7 @@ title: Packages
 		<li>
 			<h4 class="name"><a href="{{package.url}}">{{ package.name }}</a></h4>
 			<p class="description">{{ package.description }}</p>
+			<div class="tags">{% for tag in package.tags %}<span class="tag">{{tag}}</span>{% endfor %}</div>
 		</li>
 		{% endfor %}
 	</ul>
@@ -23,7 +24,7 @@ title: Packages
 <script>
 
 var options = {
-    valueNames: [ 'name', 'description' ],
+    valueNames: [ 'name', 'description', 'tags' ],
 	pagination: true,
 	page: 10
 };

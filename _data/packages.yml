@@ -1,55 +1,69 @@
 - name: Erudite
   description: Documentation system for Cuis Smalltalk (with literate programming capabilities).
   url: https://github.com/Cuis-Smalltalk/Erudite
-  tags: documentation, literate-programming
+  tags: [documentation, literate programming]
 
 - name: Measures
   description: Different Measure models implemented in Cuis.
   url: https://github.com/Cuis-Smalltalk/Measures
-  tags: utilities
+  tags: [utilities]
 
 - name: Calendar
   description: Different implementation of how to represent dates and calendars in Cuis.
   url: https://github.com/Cuis-Smalltalk/Calendars
-  tags: utilities
+  tags: [utilities]
 
 - name: OSProcess
   description: Provides access to operating system functions, including pipes, child process creation, and control of the Squeak VM process.
   url: https://github.com/Cuis-Smalltalk/OSProcess
-  tags: utilities
+  tags: [utilities, operating system]
 
 - name: StyledTextEditor
   description: Rich text editor.
   url: https://github.com/Cuis-Smalltalk/StyledTextEditor
-  tags: text editing
+  tags: [text editing]
 
 - name: Aida
   description: AidaWeb Smalltalk Web Application Server for Cuis 4.2.
   url: https://github.com/pbella/Cuis-Smalltalk-Aida
-  tags: web
+  tags: [web]
 
 - name: Regex
   description: Regular expressions support to Cuis.
   url: https://github.com/nmingotti/Cuis-Smalltalk-Regex
-  tags: regular expressions, parsing
+  tags: [regular expressions, parsing]
 
 - name: OpenGL
   description: OpenGL in Cuis.
   url: https://github.com/pbella/Cuis-OpenGL
-  tags: graphics, opengl
+  tags: [graphics, opengl, 3D]
 
 - name: AMPQ
   description: AMQP 0.8 and 0.9.1 client library for Cuis Smalltalk, compatible with RabbitMQ and other AMQP 0.8 and 0.9.1 servers.
   url: https://github.com/Cuis-Smalltalk/AMQP
+  tags: [message queues]
 
 - name: Games
   description: Games.
   url: https://github.com/Cuis-Smalltalk/Games
+  tags: [games]
 
 - name: SVG
   description: Support for SVG (Scalable Vector Graphics) files.
   url: https://github.com/Cuis-Smalltalk/SVG
+  tags: [graphics]
 
 - name: PostgresAdapter
   description:  a directly in Smalltalk implemented interface to PostgreSQL.
   url: https://github.com/Phantasus/Cuis-Smalltalk-Postgres
+  tags: [database]
+
+- name: PopupFinder
+  description: This is a variation of Cuis Finder by Nicolas Papagna, that uses a popup morph as user interface.
+  url: https://github.com/mmontone/Cuis-PopupFinder
+  tags: [user interface]
+
+- name: Finder
+  description: Finder is a system-wide search tool for Cuis Smalltalk.
+  url: https://github.com/npapagna/cuis-finder
+  tags: [user interface]
