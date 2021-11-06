@@ -13,7 +13,7 @@ title: Packages
 		{% for package in site.data.packages %}
 		<li>
 			<h4 class="name"><a href="{{package.url}}">{{ package.name }}</a></h4>
-			<p class="description">{{ package.description }}</p>
+			<p class="description">{{ package.description }}</p><p>{{package.license}}</p>
 			<div class="tags">{% for tag in package.tags %}<span class="tag">{{tag}}</span>{% endfor %}</div>
 		</li>
 		{% endfor %}
