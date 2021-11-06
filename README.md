@@ -38,9 +38,9 @@ bundle exec jekyll serve --livereload
 
 ## References
 
-[gh-site]: https://pages.github.com/
-[jk]: https://jekyllrb.com/
-[minima]: https://github.com/jekyll/minima/tree/2.5-stable
-[gh]: https://help.github.com/en/github/working-with-github-pages
-[gh-settings]: https://help.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
-[web]: https://jsanz.github.io/gh-pages-minima-starter/
+- [gh-site](https://pages.github.com)
+- [jk](https://jekyllrb.com)
+- [minima](https://github.com/jekyll/minima/tree/2.5-stable)
+- [gh](https://help.github.com/en/github/working-with-github-pages)
+- [gh-settings](https://help.github.com/en/github/working-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
+- [web](https://jsanz.github.io/gh-pages-minima-starter/)
