@@ -55,8 +55,39 @@
 
 - name: PostgresAdapter
   description:  a directly in Smalltalk implemented interface to PostgreSQL.
+  license: MIT
   url: https://github.com/Phantasus/Cuis-Smalltalk-Postgres
   tags: [database]
+
+- name: SQLiteAdapter
+  description: a Smalltalk FFI interface to sqlite.
+  license: MIT
+  url: https://github.com/Phantasus/Cuis-Smalltalk-Sqlite
+  tags: [database]
+
+- name: Mail
+  description: a collection of packages for dealing with mail.
+  license: MIT
+  url: https://github.com/Phantasus/Cuis-Smalltalk-Mail
+  tags: [networking, mail]
+
+- name: URI-Kernel
+  description: a collection of packages for dealing with URIs.
+  license: MIT
+  url: https://github.com/Phantasus/Cuis-Smalltalk-URI-Kernel
+  tags: [networking, web]
+  
+- name: Gemini-Kernel
+  description: This package implements the gemini protocol and provides basic browsing capabilities.
+  license: MIT
+  url: https://github.com/Phantasus/Cuis-Smalltalk-Gemini-Kernel
+  tags: [networking, protocols, gemini]
+
+- name: CBOR
+  description: This package reads and writes the CBOR (RFC 7049) file format
+  license: MIT
+  url: https://github.com/Phantasus/Cuis-Smalltalk-CBOR
+  tags: [formats, persistence]
 
 - name: PopupFinder
   description: This is a variation of Cuis Finder by Nicolas Papagna, that uses a popup morph as user interface.
