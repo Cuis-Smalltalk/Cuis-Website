@@ -1,6 +1,6 @@
-# gh-pages-minima-starter
+# Cuis-Website
 
-This is a template and some instructions for running Github Pages with the [`minima` theme][minima]. This repo has what I consider the minimum pieces for a personal blog using [Jekyll][jk] and [Github Pages][gh-site]:
+This is a Jekyll site that uses a template and some instructions for running Github Pages with the [`minima` theme][minima]. 
 
 * Frontpage that includes your last blog posts: `_pages/frontpage.md`
 * Archive for all your posts: `_pages/archive.md`
@@ -14,9 +14,27 @@ Check out the excellent [`minima` theme][minima] documentation for further detai
 
 For more details on how to create content, use Github interface, etc. feel free to browse [the website][web] or the source code here.
 
-Do you have questions? feel free to [open an issue](https://github.com/jsanz/gh-pages-minima-starter/issues/new/choose) or reach me from my [contact form](https://www.jorgesanz.net/contact/).
+## Run and develop
 
-Enjoy!!
+Have a look at instructions at [Jekyll](https://jekyllrb.com/) website.
+
+```
+bundle install
+```
+
+then:
+
+```
+bundle exec jekyll serve
+```
+
+or:
+
+```
+bundle exec jekyll serve --livereload
+```
+
+## References
 
 [gh-site]: https://pages.github.com/
 [jk]: https://jekyllrb.com/
