@@ -24,6 +24,7 @@ header_pages:
   - _pages/frontpage.md
   - _pages/download.md
   - _pages/documentation.md
+  - _pages/community.md
   - _pages/archive.md
   - _pages/about.md
 
