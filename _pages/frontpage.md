@@ -2,7 +2,7 @@
 permalink: /
 layout: home
 title: Home
-list_title: Cuis Smalltalk posts
+list_title: News
 ---
 
 Cuis is a modern, Open Source, multiplatform, Smalltalk-80 system.
