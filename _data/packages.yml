@@ -132,4 +132,8 @@
   description: General framework and tools for properties editing.
   url: https://bitbucket.org/mmontone/mold/src/master/Props.pck.st
   tags: [user interface]
-  
+
+- name: PropsPreferences
+  description: Tool for editing Cuis preferences.
+  url: https://bitbucket.org/mmontone/mold/src/master/PropsPreferences.pck.st
+  tags: [user interface, tools]
