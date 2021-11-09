@@ -56,3 +56,11 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: #383838;
 }
+
+.site-title::before {
+    content: url("imgs/CuisLogo-small.png");
+    display: inline-block;
+    position: relative;
+    width: 50px;
+    top: 8px;
+}
