@@ -17,6 +17,14 @@ title: Packages
 			<div class="tags">{% for tag in package.tags %}<span class="tag">{{tag}}</span>{% endfor %}</div>
 		</li>
 		{% endfor %}
+		
+		{% for package in site.data.github %}
+		<li>
+			<h4 class="name"><a href="{{package.url}}">{{ package.name }}</a></h4>
+			<p class="description">{{ package.description }}</p><p>{{package.license}}</p>
+			<div class="tags">{% for tag in package.tags %}<span class="tag">{{tag}}</span>{% endfor %}</div>
+		</li>
+		{% endfor %}
 	</ul>
 	<ul class="pagination"></ul>
 </div>

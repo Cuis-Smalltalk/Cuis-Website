@@ -1,0 +1,654 @@
+- name: StyledTextEditor
+  description: A high quality Styled Text Model and Editor for Cuis Smalltalk
+  url: https://github.com/bpieber/Cuis-Smalltalk-StyledTextEditor
+  license: NOASSERTION
+  tags: []
+
+- name: Cuis-University
+  description: Repo that contains all changes to Cuis for teaching purposes and dependencies with other packages
+  url: https://github.com/Cuis-University/Cuis-University
+  license: MIT
+  tags: [cuis, cuis-smalltalk, cuis-university, learning, oop, smalltalk, teaching]
+
+- name: CompatibilityWithOtherSmalltalks
+  description: Cuis-CompatibilityWithOtherSmalltalks
+  url: https://github.com/garduino/Cuis-Smalltalk-CompatibilityWithOtherSmalltalks
+  tags: []
+
+- name: CommandShell
+  description: CommandShell for Cuis
+  url: https://github.com/dtlewis290/Cuis-Smalltalk-CommandShell
+  license: NOASSERTION
+  tags: []
+
+- name: DenotativeObject
+  description: DenotativeObject
+  url: https://github.com/hernanwilkinson/Cuis-Smalltalk-DenotativeObject
+  license: MIT
+  tags: []
+
+- name: RegEx
+  description: Regular Expressions for Cuis
+  url: https://github.com/garduino/Cuis-Smalltalk-RegEx
+  tags: []
+
+- name: RayTracer
+  description:  David Buck's ray tracer in Cuis Smalltalk
+  url: https://github.com/len/RayTracer
+  tags: [raytracing, smalltalk]
+
+- name: Refactoring
+  description: Implementation of refactoring for cuis
+  url: https://github.com/hernanwilkinson/Cuis-Smalltalk-Refactoring
+  tags: []
+
+- name: openchat-buenosaires-smalltalk
+  description: ImplementaciÃ³n del OpenChat system, forma Buenos Aires en Smalltalk (Cuis)
+  url: https://github.com/hernanwilkinson/openchat-buenosaires-smalltalk
+  tags: []
+
+- name: msgpack-smalltalk
+  description: MessagePack serialization library for various Smalltalk dialects / msgpack.org[Smalltalk]
+  url: https://github.com/msgpack/msgpack-smalltalk
+  tags: [cuis, msgpack, pharo, serialization, smalltalk, squeak]
+
+- name: FileMan
+  description: FileMan is a thin wrapper for various Smalltalk file libraries. It provides simple, portable interfaces for manipulating files and directories.
+  url: https://github.com/mumez/FileMan
+  license: MIT
+  tags: [cuis, fileman, pharo, smalltalk]
+
+- name: AweSOM
+  description: Cuis port of AweSOM
+  url: https://github.com/Phantasus/Cuis-Smalltalk-AweSOM
+  license: MIT
+  tags: []
+
+- name: DWM
+  description: Tiling window management in Cuis, very much in the spirit of dwm.suckless.org
+  url: https://github.com/len/Cuis-Smalltalk-DWM
+  tags: [tiling, windowmanager]
+
+- name: Pharo14CompatibilityLayer
+  description: Cuis Pharo 1.4 Compatibility Layer
+  url: https://github.com/garduino/Cuis-Smalltalk-Pharo14CompatibilityLayer
+  tags: []
+
+- name: Cuis-Ports
+  description: Ports of various 3rd party Smalltalk projects to Cuis.  Testing is occurring primarily on Linux and Android with occasional work on OS X (i.e. there may be issues on platforms such as Windows and fixes to correct them are welcome)
+  url: https://github.com/pbella/Cuis-Ports
+  tags: []
+
+- name: Slang
+  description: A re-imagined Slang port for Cuis
+  url: https://github.com/Phantasus/Cuis-Smalltalk-Slang
+  license: MIT
+  tags: []
+
+- name: Cuis-SQLite
+  description: Access library for SQLite3 databases for Cuis Smalltalk
+  url: https://github.com/hhzl/Cuis-SQLite
+  tags: []
+
+- name: Cuis-PopupFinder
+  description: Finder for Cuis Smalltalk
+  url: https://github.com/mmontone/Cuis-PopupFinder
+  tags: [cuis, cuis-smalltalk, smalltalk]
+
+- name: FileMan
+  description: FileMan ported to Cuis
+  url: https://github.com/mumez/Cuis-Smalltalk-FileMan
+  license: MIT
+  tags: []
+
+- name: MessagePack
+  description: MessagePack ported to Cuis
+  url: https://github.com/mumez/Cuis-Smalltalk-MessagePack
+  license: MIT
+  tags: []
+
+- name: cuis-xp
+  description: Experimental bits on Cuis-Smalltalk
+  url: https://github.com/hilaire/cuis-xp
+  license: MIT
+  tags: []
+
+- name: Actors
+  description: A re-imagined port of Squeak Actors to Cuis-Smalltalk
+  url: https://github.com/Phantasus/Cuis-Smalltalk-Actors
+  license: MIT
+  tags: []
+
+- name: Crypto-NaCl
+  description: Cuis Foreign Function Interface to the NaCl ('Salt') Cryptographic Library
+  url: https://github.com/KenDickey/Cuis-Smalltalk-Crypto-NaCl
+  tags: []
+
+- name: cuis-code-coverage
+  description: cuis-code-coverage
+  url: https://github.com/npapagna/cuis-code-coverage
+  license: MIT
+  tags: []
+
+- name: BeeYourself
+  description: Experiments in porting Powerlang/Bee-DMR to Cuis
+  url: https://github.com/KenDickey/BeeYourself
+  license: MIT
+  tags: []
+
+- name: Cryptography
+  description: Crypto classes for Cuis (Ported from Squeak, Pharo or written from scratch).
+  url: https://github.com/garduino/Cuis-Smalltalk-Cryptography
+  tags: []
+
+- name: Postgres
+  description: A PostgresSQL adapter for Cuis Smalltalk
+  url: https://github.com/Phantasus/Cuis-Smalltalk-Postgres
+  license: MIT
+  tags: []
+
+- name: cuis
+  description: cuis
+  url: https://github.com/ebi1/cuis
+  license: MIT
+  tags: []
+
+- name: cuis
+  description: cuis
+  url: https://github.com/DuglasColoma/cuis
+  tags: []
+
+- name: Miscellaneous
+  description: Different code experiments
+  url: https://github.com/garduino/Cuis-Smalltalk-Miscellaneous
+  tags: []
+
+- name: OSProcess
+  description: OSProcess provides access to operating system functions, including pipes, child process creation, and control of the Squeak VM process.
+  url: https://github.com/dtlewis290/Cuis-Smalltalk-OSProcess
+  tags: []
+
+- name: OMeta-Cuis
+  description: OMeta/Cuis - an enhanced version of OMeta for Cuis
+  url: https://github.com/pbella/OMeta-Cuis
+  license: NOASSERTION
+  tags: []
+
+- name: Swazoo
+  description: Cuis port of Swazoo.
+  url: https://github.com/garduino/Cuis-Smalltalk-Swazoo
+  tags: []
+
+- name: AOC
+  description: Cuis-Smalltalk-AOC
+  url: https://github.com/mpcjanssen/Cuis-Smalltalk-AOC
+  tags: []
+
+- name: Cuis-WebClient
+  description: Web library for Cuis
+  url: https://github.com/hhzl/Cuis-WebClient
+  license: MIT
+  tags: []
+
+- name: StOMP
+  description: StOMP ported to Cuis
+  url: https://github.com/mumez/Cuis-Smalltalk-StOMP
+  license: MIT
+  tags: []
+
+- name: irizar
+  description: Cuis web framework
+  url: https://github.com/gstn-caruso/irizar
+  license: MIT
+  tags: [cuis, cuis-smalltalk, smalltalk, web]
+
+- name: SIXX
+  description: SIXX for Cuis Smalltalk
+  url: https://github.com/mumez/Cuis-Smalltalk-SIXX
+  license: MIT
+  tags: []
+
+- name: Sport
+  description: Sport for Cuis.
+  url: https://github.com/garduino/Cuis-Smalltalk-Sport
+  tags: []
+
+- name: PostgreSQL
+  description: Cuis interface to PosgresSQL
+  url: https://github.com/nmingotti/Cuis-Smalltalk-PostgreSQL
+  license: MIT
+  tags: []
+
+- name: UiImprovements
+  description: Cuis Smalltalk environment UI improvements
+  url: https://github.com/thepalbi/Cuis-Smalltalk-UiImprovements
+  tags: []
+
+- name: cuis-finder
+  description: cuis-finder
+  url: https://github.com/npapagna/cuis-finder
+  license: MIT
+  tags: []
+
+- name: rST
+  description: rST - Remote Smalltalk for Cuis
+  url: https://github.com/garduino/Cuis-Smalltalk-rST
+  tags: []
+
+- name: Verp
+  description: Collection of cuis smalltalk packages
+  url: https://github.com/Phantasus/Cuis-Smalltalk-Verp
+  license: MIT
+  tags: []
+
+- name: Themes
+  description: Some themes for Cuis Smalltalk
+  url: https://github.com/nachoba/Cuis-Smalltalk-Themes
+  tags: []
+
+- name: Cairo
+  description: Cairo graphics for Cuis Smalltalk
+  url: https://github.com/Cuis-Smalltalk/Cairo
+  license: MIT
+  tags: [cuis-smalltalk, graphics, smalltalk]
+
+- name: SimpleLogger
+  description: Simple Logger for Cuis Smalltalk
+  url: https://github.com/garduino/Cuis-Smalltalk-SimpleLogger
+  tags: []
+
+- name: cuis-web
+  description: Microframework web for cuis smalltalk
+  url: https://github.com/gstn-caruso/cuis-web
+  license: MIT
+  tags: [cuis-smalltalk, framework, server-side-rendering, smalltalk, web]
+
+- name: Printf
+  description: C printf function for Cuis Smalltalk
+  url: https://github.com/nmingotti/Cuis-Smalltalk-Printf
+  license: MIT
+  tags: []
+
+- name: Mail
+  description: A collection of re-imagined mail related packages
+  url: https://github.com/Phantasus/Cuis-Smalltalk-Mail
+  license: MIT
+  tags: []
+
+- name: Refactorings-Thesis
+  description: Work for my thesis about adding new refactorings to Cuis Smalltalk (extract method + refactorings for building hierarchies)
+  url: https://github.com/ngarbezza/Cuis-Smalltalk-Refactorings-Thesis
+  license: MIT
+  tags: []
+
+- name: BabySteps
+  description: Pre-alpha prototype proof-of-concept and other random code under development
+  url: https://github.com/KenDickey/Cuis-Smalltalk-BabySteps
+  tags: []
+
+- name: SWT
+  description: Smalltalk Web Toolkit and friends for Cuis
+  url: https://github.com/garduino/Cuis-Smalltalk-SWT
+  tags: []
+
+- name: Teapot
+  description: Teapot REST Framework ported to Cuis Smalltalk
+  url: https://github.com/10PinesLabs/Teapot
+  license: MIT
+  tags: []
+
+- name: CodeExamples
+  description: Examples to aid Programming with Cuis
+  url: https://github.com/Cuis-Smalltalk/CodeExamples
+  tags: []
+
+- name: Chip8
+  description: Yet Another Chip 8 Emulator
+  url: https://github.com/thiagoslino/Cuis-Smalltalk-Chip8
+  license: MIT
+  tags: [chip-8, chip8-interpreter, cuis, cuis-smalltalk, smalltalk]
+
+- name: MiniToDo
+  description: A simple ToDo app for Cuis Smalltalk
+  url: https://github.com/garduino/MiniToDo
+  license: MIT
+  tags: []
+
+- name: SandstoneDB
+  description: SandstoneDb, Simple ActiveRecord Style Persistence in Cuis
+  url: https://github.com/garduino/Cuis-Smalltalk-SandstoneDB
+  tags: []
+
+- name: StdIO
+  description: Stdin, stdout, stderror, and a simple REPL (Read Eval Print Loop)
+  url: https://github.com/KenDickey/Cuis-Smalltalk-StdIO
+  tags: []
+
+- name: Aida
+  description: Port of Aida Web (http://www.aidaweb.si)
+  url: https://github.com/garduino/Cuis-Smalltalk-Aida
+  tags: []
+
+- name: Morphic-Misc1
+  description: Basic morphs used by several packages
+  url: https://github.com/KenDickey/Cuis-Smalltalk-Morphic-Misc1
+  tags: []
+
+- name: SF2-Import
+  description: Import Squeak sf2 format (StrikeFont) files
+  url: https://github.com/KenDickey/Cuis-Smalltalk-SF2-Import
+  license: MIT
+  tags: []
+
+- name: Sqlite
+  description: An adapter for the sqlite3 library for Cuis Smalltalk
+  url: https://github.com/Phantasus/Cuis-Smalltalk-Sqlite
+  license: MIT
+  tags: []
+
+- name: VMMaker
+  description: Port of Squeak VMMaker to Cuis. For building VM Plugins.
+  url: https://github.com/Cuis-Smalltalk/VMMaker
+  license: MIT
+  tags: []
+
+- name: ChuckNorrisTalk
+  description: Cuis Smalltalk client for https://api.chucknorris.io/
+  url: https://github.com/thiagoslino/ChuckNorrisTalk
+  tags: [cuis, cuis-smalltalk, smalltalk]
+
+- name: PasswordGenerator
+  description: A try of Cuis 4.0 packages support
+  url: https://github.com/garduino/Cuis-Smalltalk-PasswordGenerator
+  tags: []
+
+- name: URI-Kernel
+  description: A Cuis Smalltalk kernel for dealing with URI/URLs
+  url: https://github.com/Phantasus/Cuis-Smalltalk-URI-Kernel
+  license: MIT
+  tags: []
+
+- name: Utilities
+  description: A random set of Cuis Smalltalk packages from my own
+  url: https://github.com/ngarbezza/Cuis-Smalltalk-Utilities
+  license: MIT
+  tags: []
+
+- name: CBOR
+  description: Implementation of CBOR (RFC 7049) data format for Cuis Smalltalk
+  url: https://github.com/Phantasus/Cuis-Smalltalk-CBOR
+  license: MIT
+  tags: []
+
+- name: Streamers
+  description: Various stream based readers and writers for cuis-smalltalk
+  url: https://github.com/Phantasus/Cuis-Smalltalk-Streamers
+  license: MIT
+  tags: []
+
+- name: cuis-finder-asWidget
+  description: Cuis finder de Nico PM convertido a widget 
+  url: https://github.com/hernanwilkinson/cuis-finder-asWidget
+  tags: []
+
+- name: SmallTalk-CuisUniversityUNQ
+  description: POO1 para la facultad nacional de quilmes SmallTalk trabajado en CuisUniversity
+  url: https://github.com/Tomaya15/SmallTalk-CuisUniversityUNQ
+  tags: []
+
+- name: cuis-ci
+  description: cuis-ci
+  url: https://github.com/fortizpenaloza/cuis-ci
+  license: MIT
+  tags: []
+
+- name: LazaroCuis
+  description: A set of adapters for most of the famous and popular screen readers. This package allows you to use a screen reader with Cuis (at least for this moment, we are planning to make it integrable with any existing smalltalk).
+  url: https://github.com/LazaroProject/LazaroCuis
+  license: MIT
+  tags: []
+
+- name: HereBeDragons
+  description: Optional Cuis Code which changes base system methods -- NOT package code
+  url: https://github.com/KenDickey/HereBeDragons
+  license: MIT
+  tags: []
+
+- name: CronDaemon
+  description: Provides something similar to cron daemon to run inside Cuis Smalltalk
+  url: https://github.com/nmingotti/Cuis-Smalltalk-CronDaemon
+  license: MIT
+  tags: []
+
+- name: Aida-Porting
+  description: A temporary repository for anyone to use to start porting Aida Web framework to Cuis Smalltalk
+  url: https://github.com/Phantasus/Cuis-Smalltalk-Aida-Porting
+  license: MIT
+  tags: []
+
+- name: Covid19
+  description: A Cuis Smalltalk client for  https://disease.sh/ covid-19 api
+  url: https://github.com/thiagoslino/Covid19
+  license: MIT
+  tags: [covid-19, cuis, cuis-smalltalk, smalltalk]
+
+- name: Cuis-Add-Ons
+  description: Some Add-Ons for Cuis; will contain examples and experiments as well
+  url: https://github.com/hhzl/Cuis-Add-Ons
+  tags: []
+
+- name: prestamos-smalltalk
+  description: Una calculadora de tablas de amortizaciÃ³n de prÃ©stamos en Cuis/Smalltalk con TDD
+  url: https://github.com/augromero/prestamos-smalltalk
+  tags: [cuis-smalltalk, smalltalk, tdd]
+
+- name: AtaLogo
+  description: A simple experimental Logo
+  url: https://github.com/pepdiz/Cuis-Smalltalk-AtaLogo
+  license: GPL-3.0
+  tags: []
+
+- name: Historical
+  description: Migration to Spur and other artifacts of only historical significance
+  url: https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Historical
+  license: NOASSERTION
+  tags: []
+
+- name: Shootout-Benchmark
+  description: Less trivial benchmark for Smalltalk
+  url: https://github.com/KenDickey/Cuis-Smalltalk-Shootout-Benchmark
+  tags: []
+
+- name: vast-export-for-cuis
+  description: This is code to export a Cuis package into a format suitable for importing in VAST. It may also work in Pharo and other Smalltalk dialects
+  url: https://github.com/gerasdf/vast-export-for-cuis
+  tags: []
+
+- name: Continuations
+  description: Continuations
+  url: https://github.com/KenDickey/Cuis-Smalltalk-Continuations
+  license: MIT
+  tags: []
+
+- name: Cuis-OpenGL
+  description: Cuis-OpenGL
+  url: https://github.com/pbella/Cuis-OpenGL
+  tags: []
+
+- name: Cuis-NeoCSV
+  description: Read and write CSV converting to or from Cuis-Smalltalk objects.  Port from http://www.smalltalkhub.com/#!/~SvenVanCaekenberghe/Neo
+  url: https://github.com/hhzl/Cuis-NeoCSV
+  license: MIT
+  tags: []
+
+- name: Cuis-OpenGL
+  description: Cuis-OpenGL
+  url: https://github.com/pbella/Cuis-OpenGL
+  tags: []
+
+- name: Turtle-Geometry
+  description: An abstract turtle geometry class
+  url: https://github.com/coderocket/Cuis-Smalltalk-Turtle-Geometry
+  license: MIT
+  tags: []
+
+- name: FFI
+  description: FFI
+  url: https://github.com/hhzl/Cuis-Smalltalk-FFI
+  tags: []
+
+- name: Ledger
+  description: A PetitParser for ledger transaction logs
+  url: https://github.com/ckeen/Cuis-Smalltalk-Ledger
+  license: MIT
+  tags: []
+
+- name: Learn
+  description: First attempt to try the integrated whole!
+  url: https://github.com/pmjadams/Cuis-Smalltalk-Learn
+  tags: []
+
+- name: Petrich
+  description: Binutils in Smalltalk
+  url: https://github.com/shingarov/Cuis-Smalltalk-Petrich
+  license: MIT
+  tags: []
+
+- name: Finance
+  description: Some classes used for Financial Analysis.
+  url: https://github.com/nachoba/Cuis-Smalltalk-Finance
+  tags: []
+
+- name: Beginner
+  description: learning smalltalk
+  url: https://github.com/YGJM/Cuis-Smalltalk-Beginner
+  tags: []
+
+- name: Animator
+  description: Simple Morph Animations
+  url: https://github.com/KenDickey/Cuis-Smalltalk-Animator
+  tags: []
+
+- name: Lite
+  description: Lite
+  url: https://github.com/serpi90/Cuis-Smalltalk-Lite
+  license: MIT
+  tags: []
+
+- name: Gemini-Kernel
+  description: A kernel for the gemini protocol
+  url: https://github.com/Phantasus/Cuis-Smalltalk-Gemini-Kernel
+  license: MIT
+  tags: []
+
+- name: Cuis-Immutable-Point
+  description: Cuis-Immutable-Point
+  url: https://github.com/pbella/Cuis-Immutable-Point
+  tags: []
+
+- name: Arcade-Physics
+  description: A very simple physics engine for arcade games
+  url: https://github.com/coderocket/Cuis-Smalltalk-Arcade-Physics
+  license: MIT
+  tags: []
+
+- name: QuickNote
+  description: Tool to take notes and, in particular, to write packages documentation
+  url: https://github.com/nmingotti/Cuis-Smalltalk-QuickNote
+  license: MIT
+  tags: []
+
+- name: cuis-system-updater
+  description: cuis-system-updater
+  url: https://github.com/npapagna/cuis-system-updater
+  license: MIT
+  tags: []
+
+- name: Cuis-Multilingual-TextConversion
+  description: Port of classes from Squeak to allow Cuis Smalltalk to read and write text files in different encodings.
+  url: https://github.com/hhzl/Cuis-Multilingual-TextConversion
+  tags: []
+
+- name: Artefact
+  description: Artefact is a light and fast framework for build a PDF file
+  url: https://github.com/garduino/Cuis-Smalltalk-Artefact
+  tags: []
+
+- name: Ultibo-Pilot
+  description: Flies Ultibo kernels
+  url: https://github.com/markfirmware/Cuis-Smalltalk-Ultibo-Pilot
+  license: MIT
+  tags: [qemu, smalltalk, ultibo]
+
+- name: SUnit-Assertions-Extra
+  description: Extra assertions for SUnit
+  url: https://github.com/gstn-caruso/SUnit-Assertions-Extra
+  license: MIT
+  tags: [cuis, cuis-smalltalk, rspec-matchers, smalltalk, sunit, test-driven-development, testing]
+
+- name: IE-EN-Dictionary
+  description: IE-EN-Dictionary
+  url: https://github.com/matt-00/Cuis-Smalltalk-IE-EN-Dictionary
+  license: MIT
+  tags: []
+
+- name: MyDataStructures
+  description: Test project. Make standard default data structures
+  url: https://github.com/nmingotti/Cuis-Smalltalk-MyDataStructures
+  license: MIT
+  tags: []
+
+- name: RedisBinaryClient
+  description: RedisBinaryClient
+  url: https://github.com/bpieber/Cuis-Smalltalk-RedisBinaryClient
+  tags: []
+
+- name: KomHttpServer
+  description: KomHttpServer
+  url: https://github.com/garduino/Cuis-Smalltalk-KomHttpServer
+  tags: []
+
+- name: HttpView2
+  description: HttpView2 is a lightweight web framework based on KomHttpServer
+  url: https://github.com/garduino/Cuis-Smalltalk-HttpView2
+  tags: []
+
+- name: STE-AddOns
+  description: Styles Editor for StyledTextEditor
+  url: https://github.com/KenDickey/Cuis-Smalltalk-STE-AddOns
+  license: MIT
+  tags: []
+
+- name: ForceDirectedLayout
+  description: Layout a graph by assigning vertices magnetic repulsion forces and edges spring attraction forces. 
+  url: https://github.com/coderocket/Cuis-Smalltalk-ForceDirectedLayout
+  license: MIT
+  tags: []
+
+- name: rubyfy-smalltalk
+  description: Modify the cuis smalltalk parser to accept `?` and `!` in the selectors the same way than Ruby does
+  url: https://github.com/gstn-caruso/rubyfy-smalltalk
+  license: MIT
+  tags: [cuis, cuis-smalltalk, parser, ruby, smalltalk]
+
+- name: ContentPack
+  description: A utility for Cuis and Squeak Smalltalk to move resources into and out of the image file as source code.
+  url: https://github.com/hhzl/ContentPack
+  tags: []
+
+- name: Colecciones-DenotativeObject-RecursiveList
+  description: Colecciones-DenotativeObject-RecursiveList
+  url: https://github.com/maximoprieto/Cuis-Smalltalk-Colecciones-DenotativeObject-RecursiveList
+  tags: []
+
+- name: Carmen-Sandiego-Game
+  description: This is an implementation of the famous spy game Carmen Sandiego develped in Cuis University, a Smalltalk distro for educational purpose in OOP 
+  url: https://github.com/LucasMattera/Carmen-Sandiego-Game
+  tags: [carmen-sandiego, cuis-smalltalk, cuis-university, oop, oop-principles, smalltalk]
+
+- name: AMQP
+  description: AMQP client
+  url: https://github.com/Cuis-Smalltalk/AMQP
+  license: MIT
+  tags: [amqp, amqp-client, cuis, cuis-smalltalk, message-queue, rabbitmq, smalltalk]
+
