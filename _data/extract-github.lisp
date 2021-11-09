@@ -43,23 +43,29 @@
 
 ;; (fetch-all "https://api.github.com/search/repositories?q=Cuis+language:Smalltalk")
 
+(defun remove-prefixes (string prefixes)
+  (dolist (prefix prefixes)
+    (when (str:starts-with-p prefix string)
+	(return-from remove-prefixes (subseq string (length prefix)))))
+    string)
+
 (defun extract-cuis-repos (filespec)
   (with-open-file (f filespec :direction :output :external-format :utf8
                               :if-exists :supersede
                               :if-does-not-exist :create)
     (loop for repo in (fetch-all "https://api.github.com/search/repositories?q=Cuis+language:Smalltalk")
           do
-	     (let ((repo-name (if (str:starts-with-p "Cuis-Smalltalk-" (access repo :name))
-				  (subseq (access repo :name)
-					  (length "Cuis-Smalltalk-"))
-				  (access repo :name))))
+	     (let ((repo-name (remove-prefixes (access repo :name) '("Cuis-Smalltalk-" "Cuis-"))))
                (format f "- name: ~a~%" repo-name)
 		     
                (format f "  description: ~a~%" (or (access repo :description) repo-name))
                (format f "  url: ~a~%" (access repo :html--url))
                (when (access repo :license)
 		 (format f "  license: ~a~%" (accesses repo :license :SPDX--ID)))
-               (format f "  tags: [~{~a~^, ~}]~%" (access repo :topics))
+               (format f "  tags: [~{~a~^, ~}]~%"
+		       (remove-if (lambda (topic)
+				    (member topic '("cuis" "cuis-smalltalk" "smalltalk") :test 'string=))
+				  (access repo :topics)))
                (terpri f)
                ))))
 

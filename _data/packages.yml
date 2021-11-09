@@ -38,11 +38,6 @@
   url: https://github.com/pbella/Cuis-OpenGL
   tags: [graphics, opengl, 3D]
 
-- name: AMPQ
-  description: AMQP 0.8 and 0.9.1 client library for Cuis Smalltalk, compatible with RabbitMQ and other AMQP 0.8 and 0.9.1 servers.
-  url: https://github.com/Cuis-Smalltalk/AMQP
-  tags: [message queues]
-
 - name: Games
   description: Games.
   url: https://github.com/Cuis-Smalltalk/Games
@@ -88,21 +83,6 @@
   license: MIT
   url: https://github.com/Phantasus/Cuis-Smalltalk-CBOR
   tags: [formats, persistence]
-
-- name: PopupFinder
-  description: This is a variation of Cuis Finder by Nicolas Papagna, that uses a popup morph as user interface.
-  url: https://github.com/mmontone/Cuis-PopupFinder
-  tags: [user interface, tools]
-
-- name: Finder
-  description: Finder is a system-wide search tool for Cuis Smalltalk.
-  url: https://github.com/npapagna/cuis-finder
-  tags: [user interface, tools]
-
-- name: Magritte
-  description: Magritte is fully dynamic meta-description framework for Smalltalk.
-  url: https://github.com/mmontone/Cuis-Magritte
-  tags: [reflection, metaprogramming]
 
 - name: PetitParser
   description: PetitParser combines ideas from scannerless parsing, parser combinators, parsing expression grammars (PEG) and packrat parsers to model grammars and parsers as objects that can be reconfigured dynamically.
