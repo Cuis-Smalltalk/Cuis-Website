@@ -1,6 +1,7 @@
-title: Cuis Smalltalk
+title: Cuis-Smalltalk
 
-description: "Cuis is a free Smalltalk-80 environment with a specific set of goals: being simple and powerful. It is also portable to any platform, fast and efficient."
+description: "Cuis is a free Smalltalk-80. It is simple and
+powerful. Portable to any platform, fast and efficient."
 #author: "Jorge Sanz"
 
 theme: minima
@@ -22,12 +23,11 @@ minima:
 # Minima: custom header links
 header_pages:
   - _pages/frontpage.md
+  - _pages/features.md
   - _pages/download.md
   - _pages/documentation.md
   - _pages/community.md
   - _pages/packages.md
-  - _pages/archive.md
-  - _pages/about.md
 
 include:
     - _pages

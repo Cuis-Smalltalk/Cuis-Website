@@ -24,12 +24,14 @@ $content-width:    1000px !default;
 
 .col {
     flex: 1;
+    margin: 15px;
 }
 
 img.doc {
     width:150px;
     float: left;
-    margin: 5px;
+    margin-right: 10px;
+    margin-bottom: 10px;
 }
 
 .pagination li {

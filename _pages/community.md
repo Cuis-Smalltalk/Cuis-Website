@@ -6,7 +6,7 @@ title: Community
 
 Cuis is maintained on its [Github Organization](https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev). 
 
-The main meeting point for Cuis users and developers is the [mailing list](https://lists.cuis.st/mailman/listinfo/cuis-dev). You can browse the archives for a glimpse of our discussions. An older mail list with pre-April-2019 messages can be found [here](http://cuis-smalltalk.org/pipermail/cuis-dev_cuis-smalltalk.org/). An even older mail list with messages staring in 2012 is available [here](http://jvuletich.org/mailman/listinfo/cuis_jvuletich.org).
+The main meeting point for Cuis users and developers is the [mailing list](https://lists.cuis.st/mailman/listinfo/cuis-dev). You can browse the archives for a glimpse of our discussions. Pre-April-2019 archives are found [here](http://cuis-smalltalk.org/pipermail/cuis-dev_cuis-smalltalk.org/) and [here](http://jvuletich.org/mailman/listinfo/cuis_jvuletich.org).
 
 ## Contributing to Cuis
 
