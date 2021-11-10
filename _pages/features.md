@@ -4,7 +4,25 @@ layout: page
 title: Features
 ---
 
-Cuis assumes very little on the underlying platform, and this lets it run out-of-the-box on Windows, MacOS, Linux, ChromeOS and WebBrowsers. Cuis shares the [OpenSmalltalk Virtual Machine](http://www.opensmalltalk.org) with Squeak, Pharo and Newspeak.
+Cuis is:
+
+- Small
+- Clean
+- Appropriable
+
+
+Additionally, Cuis is:
+
+- Open Source
+- Multiplatform
+
+ 
+Like other Smalltalk systems, Cuis is also:
+
+- A complete development environment written in itself
+- A pure, dynamic Object Oriented language
+
+Cuis assumes very little on the underlying platform, and this lets it run out-of-the-box on Windows, MacOS, Linux, ChromeOS and WebBrowsers. Cuis shares the [OpenSmalltalk Virtual Machine](http://www.opensmalltalk.org) with [Squeak](http://squeak.org), [Pharo](http://pharo.org) and [Newspeak](http://newspeaklanguage.org).
 
 What sets Cuis apart from the other members of the Squeak family is the focus on Smalltalk-80 and an active attitude towards system complexity:
 

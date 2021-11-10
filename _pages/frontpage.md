@@ -15,23 +15,6 @@ list_title: News
 
 Cuis is a free Smalltalk-80 environment with a specific set of goals: being simple and powerful. It is also portable to any platform, fast and efficient.
 
-Cuis is:
-
-- Small
-- Clean
-- Appropriable
-
-
-Additionally, Cuis is:
-
-- Open Source
-- Multiplatform
-
- 
-Like other Smalltalk systems, Cuis is also:
-
-- A complete development environment written in itself
-- A pure, dynamic Object Oriented language
 
 <img src="./assets/imgs/screenshot.png">
 
