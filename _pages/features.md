@@ -24,6 +24,31 @@ Like other Smalltalk systems, Cuis is also:
 
 Cuis assumes very little on the underlying platform, and this lets it run out-of-the-box on Windows, MacOS, Linux, ChromeOS and WebBrowsers. Cuis shares the [OpenSmalltalk Virtual Machine](http://www.opensmalltalk.org) with [Squeak](http://squeak.org), [Pharo](http://pharo.org) and [Newspeak](http://newspeaklanguage.org).
 
+
+<div class="row">
+	<div class="col">
+		<h3>Package</h3>
+		<img src="./assets/imgs/package.png" class="doc">
+
+		<p align="justify">Code management in Cuis is done
+		with its package system and your preferred VCS. Cuis
+		development is done on GitHub.
+
+		<br>
+<a href="https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/blob/master/Documentation/CodeManagementInCuis.md">Read</a></p>
+</div>
+
+<div class="col">
+		<h3>Refactoring tools</h3>
+		
+		<p align="justify"><img src="./assets/imgs/refactoring.png"
+		class="doc" style="width:120px;">The Cuis source code
+		browser is equipped in standard with a set of
+		refactoring features.
+		<br><a href="https://github.com/hernanwilkinson/Cuis-Smalltalk-Refactoring">Read</a></p>
+	</div>
+</div>
+
 What sets Cuis apart from the other members of the Squeak family is the focus on Smalltalk-80 and an active attitude towards system complexity:
 
 Unbound complexity growth, together with development strategies focused only in the short term, are the worst long term enemies of all software systems. As systems grow older, they usually become more complex. New features are added as layers on top of whatever is below, sometimes without really understanding it, and almost always without modifying it. Complexity and size grow without control. Evolution slows down. Understanding the system becomes harder every day. Bugs are harder to fix. Codebases become huge for no clear reason. At some point, the system can't evolve anymore and becomes "legacy code".
