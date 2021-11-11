@@ -4,9 +4,13 @@ layout: page
 title: Packages
 ---
 
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+
 {% assign packages = site.data.packages | concat: site.data.github | sort: 'name' %} 
 
 <div id="package-list">
+	<input class="search" placeholder="Search package" 
+		style="margin-left: 30px; margin-bottom: 20px;"/>
 	<ul class="list">
 		{% for package in packages %}
 		<li>
@@ -17,3 +21,13 @@ title: Packages
 		{% endfor %}
 	</ul>
 </div>
+
+<script>
+
+var options = {
+    valueNames: [ 'name', 'description', 'tags' ]
+};
+
+var packageList = new List('package-list', options);
+
+</script>
