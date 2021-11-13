@@ -24,13 +24,13 @@ $content-width:    1000px !default;
 
 .col {
     flex: 1;
-    margin: 15px;
+    margin: 30px;
 }
 
 img.doc {
     width:150px;
     float: left;
-    margin-right: 10px;
+    margin-right: 25px;
     margin-bottom: 10px;
 }
 
@@ -57,6 +57,7 @@ img.doc {
 body {
     font-family: 'Montserrat', sans-serif;
     color: #383838;
+  background-color: white;
 }
 
 .site-title::before {
