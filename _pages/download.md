@@ -16,7 +16,7 @@ the next section and follow the instructions.
 
 
 
-# Installation for the braves
+# Installation for the brave
 
 In case you want to use Cuis with another system or you want to enjoy
 its latest enhancements, you will install <em>by hand</em> all its
