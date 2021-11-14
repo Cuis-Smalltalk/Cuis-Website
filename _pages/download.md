@@ -12,7 +12,7 @@ bundles are easy to install for GNU/Linux, Mac OS X and Windows.  If
 you prefer to install by yourself your programming environment, jump to
 the next section and follow the instructions.
 
-<a href="https://github.com/Cuis-University/Cuis-University/releases/latest"><img src="./assets/imgs/download.png"></a> <a href="https://github.com/Cuis-University/Cuis-University/releases/latest">Choose you bundle</a>
+<a href="https://github.com/Cuis-University/Cuis-University/releases/latest"><img src="./assets/imgs/download.png"></a> <a href="https://github.com/Cuis-University/Cuis-University/releases/latest">Choose your bundle</a>
 
 
 
