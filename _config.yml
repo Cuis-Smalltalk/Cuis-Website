@@ -8,10 +8,10 @@ theme: minima
 base_url: /
 
 # Minima social links
-#twitter_username: Cuis-Smalltalk
+# twitter_username: Cuis-Smalltalk
 github_username: Cuis-Smalltalk
-#linkedin_username: Cuis-Smalltalk
-rss: rss
+# linkedin_username: Cuis-Smalltalk
+# rss: rss
 
 # Minima: show excerpts in the frontpage
 show_excerpts: true
