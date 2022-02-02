@@ -1,0 +1,64 @@
+- title: What's new?
+  description: Mars news meeting. Find out what landed recently in Cuis.
+  chair: Juan Vuletich
+  date: 2022/03/02
+- title: What's new?
+  description: Mars news meeting. Find out what landed recently in Cuis.
+  chair: Juan Vuletich
+  date: 2023/03/01
+- title: What's new?
+  description: June news meeting. Find out what landed recently in Cuis.
+  chair: Juan Vuletich
+  date: 2022/06/01
+- title: What's new?
+  description: June news meeting. Find out what landed recently in Cuis.
+  chair: Juan Vuletich
+  date: 2023/06/07
+- title: What's new?
+  description: September news meeting. Find out what landed recently in Cuis.
+  chair: Juan Vuletich
+  date: 2022/09/07
+- title: What's new?
+  description: December news meeting. Find out what landed recently in Cuis.
+  chair: Juan Vuletich
+  date: 2022/12/07
+- title: The Spotlight
+  description: Very useful tool written by Nicolás Papagna Maldonado.
+  chair: Hernan Wilkinson
+  date: 2022/04/06
+- title: Haver part I
+  description: A Cuis based Smalltalk With Modules.
+  chair: Gerald Klix
+  date: 2022/05/04
+- title: Haver part II
+  description: A Cuis based Smalltalk With Modules.
+  chair: Gerald Klix
+  date: 2023/02/08
+- title: Bézier curves
+  description: Manipulate Bézier curves with Morph through end-point and control-point handles to the HaloMorph.
+  chair: Ken Dickey
+  date: 2022/07/06
+- title: Refactoring with Cuis
+  description: A demo of all the refactoring tools we have right now and the ones we are working on.
+  chair: Hernan Wilkinson
+  date: 2023/05/03
+- title: TDD Guru
+  description: A tool to see how well you are doing TDD.
+  chair: Hernan Wilkinson
+  date: 2023/01/04
+- title: Extract Method Object refactoring.
+  description: XXX
+  chair: Hernan Wilkinson
+  date: 2023/07/05
+- title: Teaching Cuis
+  description: How we teach OO using Smalltalk (DenotativeObjects, etc).
+  chair: Hernan Wilkinson
+  date: 2022/10/05
+- title: Cuis on BeagleBone
+  description: Commercial Cuis application running on a touch screen GUI in a BeagleBone.
+  chair: Nicola Mingotti
+  date: 2022/11/02
+- title: Web application on Cuis
+  description: XXX.
+  chair: Nicola Mingotti
+  date: 2023/04/05
