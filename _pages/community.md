@@ -17,3 +17,41 @@ To contribute code to the base image, use the tools includede in Cuis, such as t
 Please use an image with all relevant packages already loaded, using updated versions, especially, of any affected packages. This will ensure we don't break them while we evolve Cuis.
 
 Any contribution must be under the MIT license.
+
+
+## Community meetings
+
+Work-In-Progress. Stay tunned.
+
+Every first Wednesday of each month, a member of the Cuis community
+chairs a virtual 30 min. meeting on a selected topic. Browse the
+incoming meetings below and save the date in your agenda.
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+
+{% assign meetings = site.data.meetings | sort: 'date' %} 
+
+<div id="meeting-list">
+  <ul class="list">
+    {% for meeting in meetings %}
+    <li>
+      <p><strong>{{ meeting.title }}</strong><br>
+	<em>{{ meeting.description }}</em><br>
+	{{ meeting.chair }}<br>
+	{{ meeting.date }}</p>			
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<script>
+
+var options = {
+    valueNames: [ 'title', 'description', 'chair', 'date'],
+	pagination: true,
+	page: 30
+};
+
+var meetingList = new List('meeting-list', options);
+
+</script>
