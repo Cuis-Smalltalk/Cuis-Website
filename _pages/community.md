@@ -19,12 +19,12 @@ Please use an image with all relevant packages already loaded, using updated ver
 Any contribution must be under the MIT license.
 
 
-## Community meetings
+## Monthly meetings
 
 Work-In-Progress. Stay tunned.
 
 Every first Wednesday of each month, a member of the Cuis community
-chairs a virtual 30 min. meeting on a selected topic. Browse the
+chairs a 30 min virtual meeting on a selected topic. Browse the
 incoming meetings below and save the date in your agenda.
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
@@ -32,13 +32,13 @@ incoming meetings below and save the date in your agenda.
 {% assign meetings = site.data.meetings | sort: 'date' %} 
 
 <div id="meeting-list">
-  <ul class="list">
+  <ul class="package-list">
     {% for meeting in meetings %}
     <li>
-      <p><strong>{{ meeting.title }}</strong><br>
-	<em>{{ meeting.description }}</em><br>
+      <h4 class="meeting">{{ meeting.title }}</h4>
+	<p><em>{{ meeting.description }}</em><br>
 	{{ meeting.chair }}<br>
-	{{ meeting.date }}</p>			
+	{{ meeting.date }} (1st Wednesday of the month)</p>
     </li>
     {% endfor %}
   </ul>
