@@ -5,6 +5,8 @@ $content-width:    1000px !default;
 
 @import "minima";
 
+
+
 .site-title {
     font-weight: bold;
     color: #0343DF;
@@ -51,6 +53,12 @@ img.doc {
 
 #package-list ul li {
     padding-bottom: 20px;
+}
+
+h4.meeting {
+    font-weight: bold;
+    font-variant: small-caps;
+    margin-bottom: 0px;
 }
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');

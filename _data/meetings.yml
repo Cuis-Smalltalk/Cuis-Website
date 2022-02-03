@@ -1,44 +1,44 @@
-- title: What's new?
+- title: What's New?
   description: Learn what landed recently in Cuis.
   chair: Community
   date: 2022-03
-- title: What's new?
+- title: What's New?
   description: Learn what landed recently in Cuis.
   chair: Community
   date: 2022-07
-- title: What's new?
+- title: What's New?
   description: Learn what landed recently in Cuis.
   chair: Community
   date: 2022-11
-- title: What's new?
+- title: What's New?
   description: Learn what landed recently in Cuis.
   chair: Community
   date: 2023-03
-- title: What's new?
+- title: What's New?
   description: Learn what landed recently in Cuis.
   chair: Community
   date: 2023-07
-- title: What's new?
+- title: What's New?
   description: Learn what landed recently in Cuis.
   chair: Community
   date: 2023-11
-- title: What's new?
+- title: What's New?
   description: Learn what landed recently in Cuis.
   chair: Community
   date: 2024-03 
 - title: The Spotlight
   description: XXX what is this wonderful tool -> Very useful tool written by Nicolás Papagna Maldonado.
   chair: Hernan Wilkinson
-  date: 2023-10
-- title: Haver part I
+  date: 2023-12
+- title: Haver, Part I
   description: A Cuis based Smalltalk With Modules.
   chair: Gerald Klix
   date: 2022-05
-- title: Haver part II
+- title: Haver, Part II
   description: A Cuis based Smalltalk With Modules.
   chair: Gerald Klix
   date: 2022-10
-- title: Bézier curves
+- title: Bézier Curves
   description: Manipulate Bézier curves with Morph through end-point and control-point handles to the HaloMorph.
   chair: Ken Dickey
   date: 2022-06
@@ -46,7 +46,7 @@
   description: Interactive geometry. Short introduction to the objective and concepts. Demo.
   chair: Hilaire Fernandes
   date: 2022-09
-- title: Automatic refactoring
+- title: Automatic Refactoring
   description: XXX what is automatic refactoring -> Demo and mini tutorial on automatic refactoring.
   chair: Hernan Wilkinson
   date: 2023-04
@@ -54,35 +54,35 @@
   description: A demo of all the refactoring tools we have right now and the ones we are working on.
   chair: Hernan Wilkinson
   date: 2023-06
-- title: Image processing II
+- title: Image Processing, Part II
   description: Cartography, planet wide datasets and satellite image rectification.
   chair: Juan Vuletich
-  date: 2023-09
+  date: 2023-10
 - title: Audio
-  description: Sound and music in Cuis. 
+  description: Sound and Music in Cuis. 
   chair: Juan Vuletich
-  date: 2023-12
+  date: 2024-01
 - title: TDD Guru
   description: A tool to see how well you are doing Test Driven Development (TDD).
   chair: Hernan Wilkinson
-  date: 2024-02
-- title: Extract Method Object refactoring.
+  date: 2024-04
+- title: Extract Method Object Refactoring.
   description: XXX
   chair: Hernan Wilkinson
-  date: 2024-01
+  date: 2024-02
 - title: Teaching Cuis
   description: How we teach OO using Smalltalk (DenotativeObjects, etc).
   chair: Hernan Wilkinson
   date: 2022-12
-- title: Image processing I
+- title: Image Processing, Part I
   description: XXX
   chair: Juan Vuletich
   date: 2023-02
-- title: Cuis on BeagleBone
+- title: Cuis on BeagleBone Black
   description: Commercial Cuis application running on a touch screen GUI in a BeagleBone.
   chair: Nicola Mingotti
   date: 2023-01
-- title: Web application on Cuis
+- title: Web Application on Cuis
   description: XXX.
   chair: Nicola Mingotti
   date: 2023-05
@@ -90,8 +90,12 @@
   description: Automatic Type Annotation for Dynamically Typed Languages. Introduction to the concept. Possibilities. Demo.
   chair: Hernan Wilkinson
   date: 2022-04
-- title: Code Coverage tool
+- title: Code Coverage Tool
   description: XXX
   chair:  Hernán Wilkinson, Nico Papagna
-  date: 2024-04
-
+  date: 2024-05
+- title: VM Plugin
+  description: How to write a simple VM plugin in Cuis.
+  chair: David Lewis
+  date: 2023-09
+  
