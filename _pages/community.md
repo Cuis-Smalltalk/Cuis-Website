@@ -21,11 +21,13 @@ Any contribution must be under the MIT license.
 
 ## Monthly meetings
 
-Work-In-Progress. Stay tunned.
-
-Every first Wednesday of each month, a member of the Cuis community
-chairs a 30 min virtual meeting on a selected topic. Browse the
-incoming meetings below and save the date in your agenda.
+Every first Wednesday of each month, at 16:00 GMT ([convert here to
+your local
+time](https://www.timeanddate.com/worldclock/converter.html?iso=20220205T160000&p1=tz_gmt)), a
+member of the Cuis community chairs a 30 min virtual meeting on a
+selected topic. Browse the incoming meetings list below, save the date in
+your agenda and join the meeting at
+[http://meeting.cuis-smalltalk.org](http://meeting.cuis-smalltalk.org).
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
 
@@ -38,7 +40,7 @@ incoming meetings below and save the date in your agenda.
       <h4 class="meeting">{{ meeting.title }}</h4>
 	<p><em>{{ meeting.description }}</em><br>
 	{{ meeting.chair }}<br>
-	{{ meeting.date }} (1st Wednesday of the month)</p>
+	{{ meeting.date }} (1st Wednesday of the month. 16:00 GMT)</p>
     </li>
     {% endfor %}
   </ul>

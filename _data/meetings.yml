@@ -27,9 +27,9 @@
   chair: Community
   date: 2024-03 
 - title: The Spotlight
-  description: XXX what is this wonderful tool -> Very useful tool written by Nicolás Papagna Maldonado.
-  chair: Hernan Wilkinson
-  date: 2023-12
+  description: The spotlight or finder is a tool that allows you to look for classes, senders, implementors, etc. very easily.
+  chair: Nicolas Papagna, Hernan Wilkinson
+  date: 2023-10
 - title: Haver, Part I
   description: A Cuis based Smalltalk With Modules.
   chair: Gerald Klix
@@ -46,10 +46,6 @@
   description: Interactive geometry. Short introduction to the objective and concepts. Demo.
   chair: Hilaire Fernandes
   date: 2022-09
-- title: Automatic Refactoring
-  description: XXX what is automatic refactoring -> Demo and mini tutorial on automatic refactoring.
-  chair: Hernan Wilkinson
-  date: 2023-04
 - title: Refactoring with Cuis
   description: A demo of all the refactoring tools we have right now and the ones we are working on.
   chair: Hernan Wilkinson
@@ -57,7 +53,7 @@
 - title: Image Processing, Part II
   description: Cartography, planet wide datasets and satellite image rectification.
   chair: Juan Vuletich
-  date: 2023-10
+  date: 2023-09
 - title: Audio
   description: Sound and Music in Cuis. 
   chair: Juan Vuletich
@@ -65,11 +61,7 @@
 - title: TDD Guru
   description: A tool to see how well you are doing Test Driven Development (TDD).
   chair: Hernan Wilkinson
-  date: 2024-04
-- title: Extract Method Object Refactoring.
-  description: XXX
-  chair: Hernan Wilkinson
-  date: 2024-02
+  date: 2023-12
 - title: Teaching Cuis
   description: How we teach OO using Smalltalk (DenotativeObjects, etc).
   chair: Hernan Wilkinson
@@ -79,23 +71,23 @@
   chair: Juan Vuletich
   date: 2023-02
 - title: Cuis on BeagleBone Black
-  description: Commercial Cuis application running on a touch screen GUI in a BeagleBone.
+  description: Developing a Cuis application in an embedded device with a little touchscreen, traps & pitfalls.
   chair: Nicola Mingotti
   date: 2023-01
 - title: Web Application on Cuis
   description: XXX.
   chair: Nicola Mingotti
-  date: 2023-05
+  date: 2023-04
 - title: LiveTyping
   description: Automatic Type Annotation for Dynamically Typed Languages. Introduction to the concept. Possibilities. Demo.
   chair: Hernan Wilkinson
   date: 2022-04
 - title: Code Coverage Tool
-  description: XXX
-  chair:  Hernán Wilkinson, Nico Papagna
-  date: 2024-05
+  description: Code coverage is very useful when doing TDD. This tool does not only checks message sends but also variable usage, boolean coverage, etc.
+  chair:  Hernán Wilkinson, Nicolas Papagna
+  date: 2024-02
 - title: VM Plugin
   description: How to write a simple VM plugin in Cuis.
   chair: David Lewis
-  date: 2023-09
+  date: 2023-05
   
