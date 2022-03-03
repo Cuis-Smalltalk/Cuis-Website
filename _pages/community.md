@@ -29,6 +29,8 @@ selected topic. Browse the incoming meetings list below, save the date in
 your agenda and join the meeting at
 [http://meeting.cuis-smalltalk.org](http://meeting.cuis-smalltalk.org).
 
+Jump directly to <a href="#meetings-archive">the meetings archive</a>.
+
 <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
 
 {% assign meetings = site.data.meetings | sort: 'date' %} 
@@ -57,3 +59,25 @@ var options = {
 var meetingList = new List('meeting-list', options);
 
 </script>
+
+
+## Meetings archive
+
+<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
+
+{% assign pastMeetings = site.data.pastMeetings | sort: 'date' %} 
+
+<div id="pastMeeting-list">
+  <ul class="package-list">
+    {% for pastMeeting in pastMeetings %}
+    <li>
+      <h4 class="meeting"><a href="{{ pastMeeting.video }}">{{ pastMeeting.title }}</a></h4>
+	<p><em>{{ pastMeeting.description }}</em><br>
+	{{ pastMeeting.chair }}<br>
+	{{ pastMeeting.date }}</p>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+
+<script>
