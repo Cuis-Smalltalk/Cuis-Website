@@ -74,10 +74,6 @@
   description: XXX.
   chair: Nicola Mingotti
   date: 2023-04
-- title: LiveTyping
-  description: Automatic Type Annotation for Dynamically Typed Languages. Introduction to the concept. Possibilities. Demo.
-  chair: Hernan Wilkinson
-  date: 2022-04
 - title: Code Coverage Tool
   description: Code coverage is very useful when doing TDD. This tool does not only checks message sends but also variable usage, boolean coverage, etc.
   chair:  Hernán Wilkinson, Nicolas Papagna
