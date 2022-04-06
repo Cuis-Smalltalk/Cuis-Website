@@ -65,7 +65,7 @@ var meetingList = new List('meeting-list', options);
 
 <script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
 
-{% assign pastMeetings = site.data.pastMeetings | sort: 'date' %} 
+{% assign pastMeetings = site.data.pastMeetings | sort: 'date' | reverse %} 
 
 <div id="pastMeeting-list">
   <ul class="package-list">
