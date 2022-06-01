@@ -13,3 +13,8 @@
   chair: Gerald Klix
   date: 2022-05
   video: https://youtu.be/0HagwHP6pGs
+- title: Bézier Curves
+  description: Manipulate Bézier curves with Morph through end-point and control-point handles to the HaloMorph.
+  chair: Ken Dickey
+  date: 2022-06
+  video: https://youtu.be/cmdvcrOoQ4o
