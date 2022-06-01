@@ -30,10 +30,6 @@
   description: A Cuis based Smalltalk With Modules.
   chair: Gerald Klix
   date: 2022-10
-- title: Bézier Curves
-  description: Manipulate Bézier curves with Morph through end-point and control-point handles to the HaloMorph.
-  chair: Ken Dickey
-  date: 2022-06
 - title: Dr. Geo
   description: Interactive geometry. Short introduction to the objective and concepts. Demo.
   chair: Hilaire Fernandes
