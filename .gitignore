@@ -5,3 +5,5 @@ _site/
 .vscode
 **/*.swp
 *~
+#macOS custom attributes
+.DS_Store

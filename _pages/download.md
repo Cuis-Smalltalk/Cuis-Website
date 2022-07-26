@@ -6,11 +6,9 @@ title: Download
 
 # Quick Start
 
-Get started easily with one of the Cuis-University bundles. They are
-special versions of Cuis to teach programming at the university. These
-bundles are easy to install for GNU/Linux, Mac OS X and Windows.  If
-you prefer to install by yourself your programming environment, jump to
-the next section and follow the instructions.
+The easy way to get a glimpse of Cuis: Get with one of the Cuis-University bundles. Cuis-University is a special distribution of Cuis maintained by prof. Hernan Wilkinson, used at courses on Programming and Software Engineering in several universities. These bundles are easy to install for GNU/Linux, Mac OS X and Windows.
+
+Please note that this is not the main Cuis distribution, and can't be updated as Cuis evolves. If you prefer to install by yourself your programming environment, jump to the next section and follow the instructions.
 
 <a href="https://github.com/Cuis-University/Cuis-University/releases/latest"><img src="./assets/imgs/download.png"></a> <a href="https://github.com/Cuis-University/Cuis-University/releases/latest">Choose your bundle</a>
 
@@ -18,11 +16,6 @@ the next section and follow the instructions.
 
 # Installation for the brave
 
-In case you want to use Cuis with another system or you want to enjoy
-its latest enhancements, you will install <em>by hand</em> all its
-consisting parts: the source code repository, the latest image and the
-appropriate virtual machine for your system.
+If you want to enjoy the latest enhancements to Cuis, report bugs, or contribute back to the project, you will install the Cuis-Smalltalk code repositories and an appropriate virtual machine for your system.
 
-To do so, <a
-href="https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev#setting-up-cuis-in-your-machine">follow
-the detailed instructions</a> at Cuis' GitHub wiki.
+To do so, <a href="https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev#setting-up-cuis-in-your-machine"> follow the detailed instructions</a> at Cuis' GitHub repo.
