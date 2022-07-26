@@ -14,8 +14,14 @@ Please note that this is not the main Cuis distribution, and can't be updated as
 
 
 
-# Installation for the brave
+# Full installation (for the brave)
 
 If you want to enjoy the latest enhancements to Cuis, report bugs, or contribute back to the project, you will install the Cuis-Smalltalk code repositories and an appropriate virtual machine for your system.
 
-To do so, <a href="https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev#setting-up-cuis-in-your-machine"> follow the detailed instructions</a> at Cuis' GitHub repo.
+To do so, <a href="https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/blob/master/Documentation/GettingStarted.md"> follow the detailed instructions</a> at Cuis' GitHub repo.
+
+
+
+# Removing Cuis from your system
+
+The installation procedures above don't modify your system. If later you want to remove Cuis from your computer, just remove the Cuis folder you created. That's all.
