@@ -27,7 +27,7 @@ time](https://www.timeanddate.com/worldclock/converter.html?iso=20220205T160000&
 member of the Cuis community chairs a 30 min virtual meeting on a
 selected topic. Browse the incoming meetings list below, save the date in
 your agenda and join the meeting at
-[http://meeting.cuis-smalltalk.org](http://meeting.cuis.st).
+[http://meeting.cuis.st](http://meeting.cuis.st).
 
 Jump directly to <a href="#meetings-archive">the meetings archive</a>.
 
