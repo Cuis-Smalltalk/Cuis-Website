@@ -19,7 +19,7 @@ If you are learning Smalltalk, the Cuis community can help you. Check the ["Lear
 		<h3>Wiki</h3>
 		<p align="justify"><img src="./assets/imgs/wiki.png" class="doc" style="width:120px;">
 		A wiki with technical information and notes about Cuis-Smalltalk.
-		<br><a href="https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/wiki">read more</a></p>
+		<br><a href="https://github.com/nmingotti/The-Cuis-CookBook/wiki">read more</a></p>
 	</div>
 </div>
 <div class="row">
