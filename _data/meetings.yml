@@ -26,10 +26,6 @@
   description: A Cuis based Smalltalk With Modules.
   chair: Gerald Klix
   date: 2022-10
-- title: Dr. Geo
-  description: Interactive geometry. Short introduction to the objective and concepts. Demo.
-  chair: Hilaire Fernandes
-  date: 2022-09
 - title: Refactoring with Cuis
   description: A demo of all the refactoring tools we have right now and the ones we are working on.
   chair: Hernan Wilkinson
