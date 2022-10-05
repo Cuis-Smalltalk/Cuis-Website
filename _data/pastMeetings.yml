@@ -27,4 +27,9 @@
   description: Interactive geometry. Short introduction to the objective and concepts. Demo.
   chair: Hilaire Fernandes
   date: 2022-09
-  video: https://youtu.be/gHGfDM8eTCY 
+  video: https://youtu.be/gHGfDM8eTCY
+- title: Haver, Part II
+  description: A Cuis based Smalltalk With Modules.
+  chair: Gerald Klix
+  date: 2022-10
+  video: https://youtu.be/FaoElLW31XM

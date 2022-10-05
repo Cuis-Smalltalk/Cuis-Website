@@ -22,10 +22,6 @@
   description: The spotlight or finder is a tool that allows you to look for classes, senders, implementors, etc. very easily.
   chair: Nicolas Papagna, Hernan Wilkinson
   date: 2023-10
-- title: Haver, Part II
-  description: A Cuis based Smalltalk With Modules.
-  chair: Gerald Klix
-  date: 2022-10
 - title: Refactoring with Cuis
   description: A demo of all the refactoring tools we have right now and the ones we are working on.
   chair: Hernan Wilkinson
