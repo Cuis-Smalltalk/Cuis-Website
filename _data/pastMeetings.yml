@@ -5,7 +5,7 @@
   video: https://youtu.be/LqxIv2LXuf8
 - title: LiveTyping
   description: Automatic Type Annotation for Dynamically Typed Languages. Introduction to the concept. Possibilities. Demo.
-  chair: Hernan Wilkinson
+  chair: Hernán Wilkinson
   date: 2022-04
   video: https://youtu.be/5ITBQ8a5vlQ
 - title: Haver, Part I
@@ -33,3 +33,8 @@
   chair: Gerald Klix
   date: 2022-10
   video: https://youtu.be/FaoElLW31XM
+- title: Teaching Cuis
+  description: How we teach OO using Smalltalk (DenotativeObjects, etc).
+  chair: Hernán Wilkinson
+  date: 2022-12
+  video:https://youtu.be/6GMRpzTKSBg

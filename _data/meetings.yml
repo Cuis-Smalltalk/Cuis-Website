@@ -16,11 +16,11 @@
   date: 2024-03 
 - title: The Spotlight
   description: The spotlight or finder is a tool that allows you to look for classes, senders, implementors, etc. very easily.
-  chair: Nicolas Papagna, Hernan Wilkinson
+  chair: Nicolas Papagna, Hernán Wilkinson
   date: 2023-10
 - title: Refactoring with Cuis
   description: A demo of all the refactoring tools we have right now and the ones we are working on.
-  chair: Hernan Wilkinson
+  chair: Hernán Wilkinson
   date: 2023-06
 - title: Image Processing, Part II
   description: Cartography, planet wide datasets and satellite image rectification.
@@ -32,12 +32,8 @@
   date: 2024-01
 - title: TDD Guru
   description: A tool to see how well you are doing Test Driven Development (TDD).
-  chair: Hernan Wilkinson
+  chair: Hernán Wilkinson
   date: 2023-12
-- title: Teaching Cuis
-  description: How we teach OO using Smalltalk (DenotativeObjects, etc).
-  chair: Hernan Wilkinson
-  date: 2022-12
 - title: Image Processing, Part I
   description: XXX
   chair: Juan Vuletich
