@@ -38,10 +38,6 @@
   description: XXX
   chair: Juan Vuletich
   date: 2023-02
-- title: Cuis on BeagleBone Black
-  description: Developing a Cuis application in an embedded device with a little touchscreen, traps & pitfalls.
-  chair: Nicola Mingotti
-  date: 2023-01
 - title: Web Application on Cuis
   description: XXX.
   chair: Nicola Mingotti
