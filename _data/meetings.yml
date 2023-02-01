@@ -22,7 +22,7 @@
   description: A demo of all the refactoring tools we have right now and the ones we are working on.
   chair: Hernán Wilkinson
   date: 2023-06
-- title: Image Processing, Part II
+- title: Image Processing, Part I
   description: Cartography, planet wide datasets and satellite image rectification.
   chair: Juan Vuletich
   date: 2023-09
@@ -34,10 +34,10 @@
   description: A tool to see how well you are doing Test Driven Development (TDD).
   chair: Hernán Wilkinson
   date: 2023-12
-- title: Image Processing, Part I
-  description: XXX
+- title: Image Processing, Part II
+  description: Cartography, planet wide datasets and satellite image rectification.
   chair: Juan Vuletich
-  date: 2023-02
+  date: 2024-04
 - title: Web Application on Cuis
   description: XXX.
   chair: Nicola Mingotti
