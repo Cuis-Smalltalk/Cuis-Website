@@ -1,10 +1,6 @@
 - title: What's New?
   description: Learn what landed recently in Cuis.
   chair: Community
-  date: 2023-03
-- title: What's New?
-  description: Learn what landed recently in Cuis.
-  chair: Community
   date: 2023-07
 - title: What's New?
   description: Learn what landed recently in Cuis.
@@ -38,9 +34,9 @@
   description: Cartography, planet wide datasets and satellite image rectification.
   chair: Juan Vuletich
   date: 2024-04
-- title: Web Application on Cuis
-  description: XXX.
-  chair: Nicola Mingotti
+- title: Cuis and Unicode
+  description: Learn about the implementation of Unicode within Cuis.
+  chair: Juan Vuletich
   date: 2023-04
 - title: Code Coverage Tool
   description: Code coverage is very useful when doing TDD. This tool does not only checks message sends but also variable usage, boolean coverage, etc.
