@@ -33,11 +33,7 @@
 - title: Image Processing, Part II
   description: Cartography, planet wide datasets and satellite image rectification.
   chair: Juan Vuletich
-  date: 2024-04
-- title: Cuis and Unicode
-  description: Learn about the implementation of Unicode within Cuis.
-  chair: Juan Vuletich
-  date: 2023-04
+  date: 2024-04 
 - title: Code Coverage Tool
   description: Code coverage is very useful when doing TDD. This tool does not only checks message sends but also variable usage, boolean coverage, etc.
   chair:  Hernán Wilkinson, Nicolas Papagna

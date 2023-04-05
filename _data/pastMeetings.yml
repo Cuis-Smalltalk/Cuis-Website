@@ -38,3 +38,8 @@
   chair: Hernán Wilkinson
   date: 2022-12
   video: https://youtu.be/6GMRpzTKSBg
+- title: Cuis and Unicode
+  description: Learn about the implementation of Unicode within Cuis.
+  chair: Juan Vuletich
+  date: 2023-04
+  video: https://youtu.be/fWJyLsv1mUw
