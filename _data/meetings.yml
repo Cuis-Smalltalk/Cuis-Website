@@ -38,8 +38,4 @@
   description: Code coverage is very useful when doing TDD. This tool does not only checks message sends but also variable usage, boolean coverage, etc.
   chair:  Hernán Wilkinson, Nicolas Papagna
   date: 2024-02
-- title: VM Plugin
-  description: How to write a simple VM plugin in Cuis.
-  chair: David Lewis
-  date: 2023-05
   

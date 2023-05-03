@@ -43,3 +43,8 @@
   chair: Juan Vuletich
   date: 2023-04
   video: https://youtu.be/fWJyLsv1mUw
+ - title: VM Plugin
+   description: How to write a simple VM plugin in Cuis.
+   chair: David Lewis
+   date: 2023-05
+   video: https://youtu.be/XcgPTewqutQ 
