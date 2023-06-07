@@ -14,10 +14,6 @@
   description: The spotlight or finder is a tool that allows you to look for classes, senders, implementors, etc. very easily.
   chair: Nicolas Papagna, Hernán Wilkinson
   date: 2023-10
-- title: Refactoring with Cuis
-  description: A demo of all the refactoring tools we have right now and the ones we are working on.
-  chair: Hernán Wilkinson
-  date: 2023-06
 - title: Image Processing, Part I
   description: Cartography, planet wide datasets and satellite image rectification.
   chair: Juan Vuletich
