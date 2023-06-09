@@ -93,4 +93,4 @@ Copyright (c) Apple Computer, Inc. 1985-1996
 
 Copyright (c) Contributors to Squeak project. 1997-2022
 
-Copyright (c) Contributors to Cuis Smalltalk project. 2009-2022
+Copyright (c) Contributors to Cuis Smalltalk project. 2009-2023
