@@ -68,9 +68,11 @@ Complexity puts a limit to the level of understanding of the system a person mig
 		
 		<img src="./assets/imgs/small.png" class="doc" style="width:120px;">
 		<p align="justify">Smalltalk is a small and	
-		consistent programming language. Cuis is a very compact
-		implementation of Smalltalk. The user ability to
-		understand the system is one of the major concern of
+		consistent language. Cuis
+		is a very compact implementation
+		of Smalltalk. The user ability to
+		understand the system is one 
+		of the major concern of
 		the Cuis' community.</p>
 
 	</div>
