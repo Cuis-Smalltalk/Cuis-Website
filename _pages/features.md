@@ -53,10 +53,11 @@ Complexity puts a limit to the level of understanding of the system a person mig
 
 		<p align="justify"> The Morphic framework in
 		Cuis has been redesigned to
-		make building zoomable, vector
-		graphics based GUIs easier than
-		ever. It is rendered with its high
-		quality <em>Vector Graphics</em> back-end. It's entirely
+		make building zoomable,
+		vector graphics based GUIs
+		easier than ever. Morphs
+		are drawn its high quality
+		<em>Vector Graphics</em> back-end. It's entirely
 		written with Cuis and accelerated with a plug-in.
 		<br>
 <a href="https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/tree/master/Documentation/Presentations/2021-01-FAST-VectorGraphicsInCuisSmalltalk">read mode</a></p>
