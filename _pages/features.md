@@ -55,9 +55,9 @@ Complexity puts a limit to the level of understanding of the system a person mig
 		Cuis has been redesigned to
 		make building zoomable,
 		vector graphics based GUIs
-		easier than ever. Morphs
-		are drawn its high quality
-		<em>Vector Graphics</em> back-end. It's entirely
+		easier than ever. Morphs are
+		drawn its high quality		<em>Vector
+		Graphics</em> back-end. It's entirely
 		written with Cuis and accelerated with a plug-in.
 		<br>
 <a href="https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/tree/master/Documentation/Presentations/2021-01-FAST-VectorGraphicsInCuisSmalltalk">read mode</a></p>
@@ -67,9 +67,9 @@ Complexity puts a limit to the level of understanding of the system a person mig
 		<h3>Small & Simple</h3>
 		
 		<img src="./assets/imgs/small.png" class="doc" style="width:120px;">
-		<p align="justify">Smalltalk is a very compact and
-		coherent programming language. Cuis is a very compact
-		Smalltalk implementation. The user ability to
+		<p align="justify">Smalltalk is a small and	
+		consistent programming language. Cuis is a very compact
+		implementation of Smalltalk. The user ability to
 		understand the system is one of the major concern of
 		the Cuis' community.</p>
 
