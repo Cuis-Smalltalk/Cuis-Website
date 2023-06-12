@@ -48,16 +48,16 @@ Complexity puts a limit to the level of understanding of the system a person mig
 
 <div class="row">
 	<div class="col">
-		<h3>Morphic 3</h3>
+		<h3>Morphic 3 / Vector Graphics</h3>
 		<img src="./assets/imgs/morphic3.png" class="doc">
 
-		<p align="justify">This framework's aim is to build
-		the next standard in 2D user interface. It is zoomable
-		and rendered with its high quality <em>Vector
-		Graphics</em> back-end. It's entirely written with
-		Cuis and accelerated with a plug-in.
+		<p align="justify"> The Morphic framework in Cuis has
+		been redesigned to make zoomable, vector graphics based
+		user interfaces easier than ever. It is rendered with its
+		high quality <em>Vector Graphics</em> back-end. It's
+		entirely written with Cuis and accelerated with a plug-in.
 		<br>
-<a href="http://www.jvuletich.org/Morphic3/Morphic3-201006.html">read mode</a></p>
+<a href="https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/tree/master/Documentation/Presentations/2021-01-FAST-VectorGraphicsInCuisSmalltalk">read mode</a></p>
 </div>
 
 <div class="col">
@@ -91,6 +91,6 @@ Copyright (c) Xerox Corp. 1981, 1982
 
 Copyright (c) Apple Computer, Inc. 1985-1996
 
-Copyright (c) Contributors to Squeak project. 1997-2022
+Copyright (c) Contributors to Squeak project. 1997-2023
 
 Copyright (c) Contributors to Cuis Smalltalk project. 2009-2023
