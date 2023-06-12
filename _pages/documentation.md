@@ -6,6 +6,8 @@ title: Documentation
 
 If you are learning Smalltalk, the Cuis community can help you. Check the ["Learning Cuis Smalltalk"](https://github.com/Cuis-Smalltalk/Learning-Cuis "Learning Cuis Smalltalk") repository. It includes several great tutorials. Also, the TerseGuide.pck.st package (in the /Packages folder in this repo) is useful both as a guide and a reference.
 
+Main project documentation is at the [Documentation](https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/tree/master/Documentation) folder in the main Cuis repository. It includes installation and use guides, and several [Presentations](https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/tree/master/Documentation/Presentations)
+
 ## Resources
 
 <div class="row">
