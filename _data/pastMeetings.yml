@@ -54,7 +54,7 @@
   date: 2023-06
   video: https://youtu.be/ur_Z_UQZEts
 - title: What's New?
-  description: Update on how Shout handles scripts in Workspaces and Inspectors (5 min). How to write a simple SVG exporter based on MorphCanvas double dispatching, use case in Dr. Geo (5 min). Revisiting the Dynabook concept with Cuis-Smalltalk. How to view and to edit business objects related to educational institution (5 min); Paper Morph, stunning hand writing rendering with VectorGraphics (5 min); General consideration on revisiting the Dynabook concept (5 min).
+  description: Update on how Shout handles scripts in Workspaces and Inspectors. How to write a simple SVG exporter based on MorphCanvas double dispatching, use case in Dr. Geo. Revisiting the Dynabook concept with Cuis-Smalltalk. How to view and to edit business objects related to educational institution. Paper Morph, stunning hand writing rendering with VectorGraphics. General consideration on revisiting the Dynabook concept.
   chair: Community
   date: 2023-07
   video: https://youtu.be/uAMkjTzHr8E
