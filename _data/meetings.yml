@@ -10,10 +10,6 @@
   description: The spotlight or finder is a tool that allows you to look for classes, senders, implementors, etc. very easily.
   chair: Nicolas Papagna, Hernán Wilkinson
   date: 2023-10
-- title: Image Processing, Part I
-  description: Cartography, planet wide datasets and satellite image rectification.
-  chair: Juan Vuletich
-  date: 2023-09
 - title: Audio
   description: Sound and Music in Cuis. 
   chair: Juan Vuletich
