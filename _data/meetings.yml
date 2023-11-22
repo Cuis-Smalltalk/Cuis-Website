@@ -1,15 +1,7 @@
 - title: What's New?
   description: Learn what landed recently in Cuis.
   chair: Community
-  date: 2023-11
-- title: What's New?
-  description: Learn what landed recently in Cuis.
-  chair: Community
   date: 2024-03 
-- title: The Spotlight
-  description: The spotlight or finder is a tool that allows you to look for classes, senders, implementors, etc. very easily.
-  chair: Nicolas Papagna, Hernán Wilkinson
-  date: 2023-10
 - title: Audio
   description: Sound and Music in Cuis. 
   chair: Juan Vuletich
