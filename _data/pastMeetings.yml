@@ -63,3 +63,13 @@
   chair: Juan Vuletich
   date: 2023-09
   video: https://youtu.be/m1EWCYSZL4w
+- title: The Spotlight
+  description: The spotlight or finder is a tool that allows you to look for classes, senders, implementors, etc. very easily.
+  chair: Nicolas Papagna, Hernán Wilkinson
+  date: 2023-10
+  video: http://cuis.st
+- title: What's New?
+  description: Learn what landed recently in Cuis. Smalltalk 2023 Fast event in Buenos Aires
+  chair: Community
+  date: 2023-11
+  video: https://youtu.be/6KUWOABjuqc  
