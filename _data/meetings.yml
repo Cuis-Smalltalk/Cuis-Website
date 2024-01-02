@@ -1,21 +1,21 @@
-- title: What's New?
-  description: Learn what landed recently in Cuis.
-  chair: Community
-  date: 2024-03 
+- title: Cuis release process
+  description: Presentation of the new Cuis release process. It is an important change for the Cuis-Smalltalk community. LabWare (http://www.labware.com) has decided to support the Cuis community in this effort. The presentation will be followed by a Questions & Answers session.
+  chair: Juan Vuletich
+  date: 2024-01
 - title: Audio
   description: Sound and Music in Cuis. 
   chair: Juan Vuletich
-  date: 2024-01
-- title: TDD Guru
-  description: A tool to see how well you are doing Test Driven Development (TDD).
-  chair: Hernán Wilkinson
-  date: 2023-12
-- title: Image Processing, Part II
-  description: Cartography, planet wide datasets and satellite image rectification.
-  chair: Juan Vuletich
-  date: 2024-04 
+  date: 2024-02
 - title: Code Coverage Tool
   description: Code coverage is very useful when doing TDD. This tool does not only checks message sends but also variable usage, boolean coverage, etc.
   chair:  Hernán Wilkinson, Nicolas Papagna
-  date: 2024-02
+  date: 2024-03
+- title: What's New?
+  description: Learn what landed recently in Cuis.
+  chair: Community
+  date: 2024-04 
+- title: Image Processing, Part II
+  description: Cartography, planet wide datasets and satellite image rectification.
+  chair: Juan Vuletich
+  date: 2024-05 
   

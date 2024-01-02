@@ -72,4 +72,9 @@
   description: Learn what landed recently in Cuis. Smalltalk 2023 Fast event in Buenos Aires
   chair: Community
   date: 2023-11
-  video: https://youtu.be/6KUWOABjuqc  
+  video: https://youtu.be/6KUWOABjuqc
+- title: TDD Guru
+  description: A tool to see how well you are doing Test Driven Development (TDD).
+  chair: Hernán Wilkinson
+  date: 2023-12
+  video: http://cuis.st
