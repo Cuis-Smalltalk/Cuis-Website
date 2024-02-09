@@ -6,7 +6,7 @@ title: Download
 
 # Quick Start
 
-The easiest way to set up Cuis in your system is the the latest Stable Release: https://github.com/Cuis-Smalltalk/Cuis6-2
+The easiest way to set up Cuis in your system is the the latest [Cuis Stable Release](https://github.com/Cuis-Smalltalk/Cuis6-2).
 
 
 
@@ -14,7 +14,7 @@ The easiest way to set up Cuis in your system is the the latest Stable Release: 
 
 If you want to enjoy the latest enhancements to Cuis, report bugs, or contribute back to the project, you will install the Cuis-Smalltalk code repositories and an appropriate VM for your system.
 
-To do so, use the Cuis Rolling Release: https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev
+To do so, use the [Cuis Rolling Release](https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev).
 
 
 
