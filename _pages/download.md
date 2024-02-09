@@ -6,19 +6,15 @@ title: Download
 
 # Quick Start
 
-The easy way to get a glimpse of Cuis is to get with one of the Cuis-University bundles. Cuis-University is a special distribution of Cuis maintained by prof. Hernan Wilkinson, used at courses on Programming and Software Engineering in several universities. These bundles include several packages already loaded, and are easy to install for GNU/Linux, Mac OS X and Windows.
-
-Please note that this is not the main Cuis distribution. Therefore it can't be updated as Cuis evolves. If you plan to keep using Cuis, it is best to jump to the next section and follow the instructions.
-
-<a href="https://github.com/Cuis-University/Cuis-University/releases/latest"><img src="./assets/imgs/download.png"></a> <a href="https://github.com/Cuis-University/Cuis-University/releases/latest">Choose your bundle</a>
+The easiest way to set up Cuis in your system is the the latest Stable Release: https://github.com/Cuis-Smalltalk/Cuis6-2
 
 
 
-# Full installation
+# Latest Developments
 
 If you want to enjoy the latest enhancements to Cuis, report bugs, or contribute back to the project, you will install the Cuis-Smalltalk code repositories and an appropriate VM for your system.
 
-To do so, <a href="https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/blob/master/Documentation/GettingStarted.md"> follow the detailed instructions</a> at Cuis' GitHub repo.
+To do so, use the Cuis Rolling Release: https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev
 
 
 
