@@ -83,3 +83,8 @@
   chair: Juan Vuletich
   date: 2024-01
   video: https://youtu.be/T7gMvxblwo0
+- title: Code Coverage Tool
+  description: Code coverage is very useful when doing TDD. This tool does not only checks message sends but also variable usage, boolean coverage, etc.
+  chair:  Nicolas Papagna
+  date: 2024-03
+  video: https://youtu.be/KO5Q-Oap8mg
