@@ -23,7 +23,7 @@ Any contribution must be under the MIT license.
 
 Every first Wednesday of each month, at 16:00 GMT ([convert here to
 your local
-time](https://www.timeanddate.com/worldclock/converter.html?iso=20220205T160000&p1=tz_gmt)), a
+time](https://timee.io/20240403T1600?tl=Cuis-Meeting&rf=m)), a
 member of the Cuis community chairs a 30 min virtual meeting on a
 selected topic. Browse the incoming meetings list below, save the date in
 your agenda and join the meeting at
