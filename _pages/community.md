@@ -8,6 +8,10 @@ Cuis is maintained on its [Github Organization](https://github.com/Cuis-Smalltal
 
 The main meeting point for Cuis users and developers is the [mailing list](https://lists.cuis.st/mailman/listinfo/cuis-dev). You can browse the archives for a glimpse of our discussions. Pre-April-2019 archives are found [here](http://cuis-smalltalk.org/pipermail/cuis-dev_cuis-smalltalk.org/) and [here](http://jvuletich.org/mailman/listinfo/cuis_jvuletich.org).
 
+The latest changes to Cuis-Smalltalk can be browsed in the [Core
+updates commits](
+https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/commits/master/CoreUpdates).
+
 ## Contributing to Cuis
 
 For the recommended way of handling your own projects based on Cuis, please read [Code Management in Cuis](https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/blob/master/Documentation/CodeManagementInCuis.md), about developing packages for Cuis, and [Using Git and GitHub to host and manage Cuis code](https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/blob/master/Documentation/CuisAndGitHub.md). While Cuis should work equally well with any file-based DVCS, we encourage the use of Git and GitHub.
