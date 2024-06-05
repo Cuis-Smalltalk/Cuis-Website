@@ -98,5 +98,8 @@
   chair: Community
   date: 2024-05 
   video: https://youtu.be/NPoZBoDbD7o
-
-
+- title: How-to Package
+  description: We discussed the Package system, its features, possible developments. We shared ideas how to tag/branch packages to meet the stable release of Cuis.
+  chair: Community
+  date: 2024-06
+  video: https://youtu.be/jRt-LETwSmw
