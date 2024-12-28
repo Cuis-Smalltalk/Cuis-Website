@@ -35,7 +35,7 @@ Stories of successful use cases of Cuis-Smalltalk in various contexts.
     (University of Buenos Aires, Universidad Nacional de Quilmes,
     UCA).
       <br><em>January 2018</em>
-      <br><a href="http://...">read more</a></p>
+      <br><a href="http://sites.google.com/view/cuis-university">read more</a></p>
   </div>
 </div>
 
