@@ -31,14 +31,29 @@ Stories of successful use cases of Cuis-Smalltalk in various contexts.
     <img src="./assets/imgs/story_cuis-university.jpg" class="doc" style="width:300px;">
     <p align="justify">A variant of Cuis, called Cuis-University, is
     used in a course teaching object-oriented programming at the
-    Computer Science Department of several university in Argentina
-    (University of Buenos Aires, Universidad Nacional de Quilmes,
-    UCA).
+    Computer Science Department of several universities in Argentina
+    (Universidad de Buenos Aires, Universidad Nacional de Quilmes,
+    Universidad Catolica Argentina).
       <br><em>January 2018</em>
       <br><a href="http://sites.google.com/view/cuis-university">read more</a></p>
   </div>
 </div>
 
+<div class="row">
+  <div class="col">
+    <h3>GNU Dr. Geo</h3>
+    <img src="./assets/imgs/story_drgeo.png" class="doc" style="width:300px;">
+    <p align="justify">Dr. Geo aims to be an open, easy to study,
+      modify and extend interactive geometry software. It is
+      distributed with its source code. You can modify its own source
+      code while using it. Ten years old kids use Dr. Geo to explore
+      Euclidean geometric sketches; agile kids extend and program it
+      with its embedded dynamic Smalltalk language and user
+      interface.
+      <br><em>December 2022</em>
+      <br><a href="http://www.gnu.org/s/dr-geo">read more</a></p>
+  </div>
+</div>
 
 
 <!--
