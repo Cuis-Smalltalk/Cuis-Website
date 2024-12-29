@@ -20,10 +20,10 @@ Stories of successful use cases of Cuis-Smalltalk in various contexts.
       Smalltalk proved to be an agile and flexible environment for
       these tasks, enabling both quick experiments and their growth
       into useful frameworks and applications.</p>
-      <p class="signature">
+      <div class="signature">
 	May 2017
 	<br><a href="https://www.youtube.com/watch?v=m1EWCYSZL4w">learn more</a>
-      </p>
+      </div>
   </div>
 </div>
 
@@ -36,8 +36,10 @@ Stories of successful use cases of Cuis-Smalltalk in various contexts.
     Computer Science Department of several universities in Argentina
     (Universidad de Buenos Aires, Universidad Nacional de Quilmes,
     Universidad Catolica Argentina).</p>
-      <br><em>January 2018</em>
-      <br><a href="http://sites.google.com/view/cuis-university">read more</a></p>
+    <p class="signature">
+      January 2018
+      <br><a href="http://sites.google.com/view/cuis-university">read more</a>
+    </p>
   </div>
 </div>
 
