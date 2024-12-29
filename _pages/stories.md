@@ -19,7 +19,8 @@ Stories of successful use cases of Cuis-Smalltalk in various contexts.
       decoder for radio signals (SDR) was implemented too. Cuis
       Smalltalk proved to be an agile and flexible environment for
       these tasks, enabling both quick experiments and their growth
-      into useful frameworks and applications.
+      into useful frameworks and applications.</p>
+      <p style="text-align: right;">
       <br><em>May 2017</em>
       <br><a href="https://www.youtube.com/watch?v=m1EWCYSZL4w">learn more</a></p>
   </div>
