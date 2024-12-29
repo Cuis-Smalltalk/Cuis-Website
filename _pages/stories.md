@@ -49,7 +49,9 @@ Stories of successful use cases of Cuis-Smalltalk in various contexts.
       code while using it. Ten years old kids use Dr. Geo to explore
       Euclidean geometric sketches; agile kids extend and program it
       with its embedded dynamic Smalltalk language and user
-      interface.
+      interface. It is used in junior high school in Geneva to teach
+      both mathematics and programming with its dedicated Euclidean
+      geometry specific language in Smalltalk.
       <br><em>December 2022</em>
       <br><a href="http://www.gnu.org/s/dr-geo">read more</a></p>
   </div>
