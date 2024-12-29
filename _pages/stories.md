@@ -42,7 +42,7 @@ Stories of successful use cases of Cuis-Smalltalk in various contexts.
 <div class="row">
   <div class="col">
     <h3>GNU Dr. Geo</h3>
-    <img src="./assets/imgs/story_drgeo.png" class="doc" style="width:300px;">
+    <img src="./assets/imgs/story_drgeo.jpg" class="doc" style="width:300px;">
     <p align="justify">Dr. Geo aims to be an open, easy to study,
       modify and extend interactive geometry software. It is
       distributed with its source code. You can modify its own source
