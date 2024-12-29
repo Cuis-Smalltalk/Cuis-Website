@@ -20,10 +20,10 @@ Stories of successful use cases of Cuis-Smalltalk in various contexts.
       Smalltalk proved to be an agile and flexible environment for
       these tasks, enabling both quick experiments and their growth
       into useful frameworks and applications.</p>
-      <div class="signature">
+      <p class="signature">
 	May 2017
 	<br><a href="https://www.youtube.com/watch?v=m1EWCYSZL4w">learn more</a>
-      </div>
+      </p>
   </div>
 </div>
 
@@ -55,9 +55,11 @@ Stories of successful use cases of Cuis-Smalltalk in various contexts.
       with its embedded dynamic Smalltalk language and user
       interface. It is used in junior high school in Geneva to teach
       both mathematics and programming with its dedicated Euclidean
-      geometry specific language in Smalltalk.
-      <br><em>December 2022</em>
-      <br><a href="http://www.gnu.org/s/dr-geo">read more</a></p>
+      geometry specific language in Smalltalk.</p>
+    <p class="signature">
+      December 2022
+      <br><a href="http://www.gnu.org/s/dr-geo">read more</a>
+    </p>
   </div>
 </div>
 
