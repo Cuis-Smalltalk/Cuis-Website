@@ -21,8 +21,8 @@ Stories of successful use cases of Cuis-Smalltalk in various contexts.
       these tasks, enabling both quick experiments and their growth
       into useful frameworks and applications.</p>
       <p class="signature">
-	May 2017
-	<br><a href="https://www.youtube.com/watch?v=m1EWCYSZL4w">learn more</a>
+	May 2017<br>
+	<a href="https://www.youtube.com/watch?v=m1EWCYSZL4w">learn more</a>
       </p>
   </div>
 </div>
@@ -37,8 +37,8 @@ Stories of successful use cases of Cuis-Smalltalk in various contexts.
     (Universidad de Buenos Aires, Universidad Nacional de Quilmes,
     Universidad Catolica Argentina).</p>
     <p class="signature">
-      January 2018
-      <br><a href="http://sites.google.com/view/cuis-university">read more</a>
+      January 2018<br>
+      <a href="http://sites.google.com/view/cuis-university">read more</a>
     </p>
   </div>
 </div>
@@ -57,8 +57,8 @@ Stories of successful use cases of Cuis-Smalltalk in various contexts.
       both mathematics and programming with its dedicated Euclidean
       geometry specific language in Smalltalk.</p>
     <p class="signature">
-      December 2022
-      <br><a href="http://www.gnu.org/s/dr-geo">read more</a>
+      December 2022<br>
+      <a href="http://www.gnu.org/s/dr-geo">read more</a>
     </p>
   </div>
 </div>
@@ -68,10 +68,12 @@ Stories of successful use cases of Cuis-Smalltalk in various contexts.
 <div class="row">
   <div class="col">
     <h3>Story 1</h3>
-    <img src="./assets/imgs/story.png" class="doc" style="width:300px;">
-    <p align="justify">A paragraph describing the story.
-      <br><em>28 December 2024</em>
-      <br><a href="http://...">read more</a></p>
+    <img src="./assets/imgs/story_project.jpg" class="doc" style="width:300px;">
+    <p align="justify">A paragraph describing the story.</p>
+    <p class="signature">
+      28 December 2024<br>
+      <a href="http://...">read more</a>
+    </p>
   </div>
 </div>
   -->
