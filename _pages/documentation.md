@@ -15,7 +15,7 @@ The Cuis-Smalltalk developer repository contains additional [structural document
 		<h3>The Cuis Book</h3>
 		<img src="./assets/imgs/book.png" class="doc">
 		<p align="justify">A book about Cuis Smalltalk. A community effort to bring documentation to people new to Smalltalk and even computer programming.
-		<br><a href="https://cuis-smalltalk.github.io/TheCuisBook/">read more</a></p>
+		<br><a href="https://DrCuis.github.io/TheCuisBook/">read more</a></p>
 	</div>
 	<div class="col">
 		<h3>Wiki</h3>
