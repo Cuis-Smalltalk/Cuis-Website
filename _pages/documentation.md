@@ -4,9 +4,11 @@ layout: page
 title: Documentation
 ---
 
-If you are learning Smalltalk, the [Cuis Documentation Project](http://github.com/DrCuis) can help you. For example, check the ["Learning Cuis Smalltalk"](https://github.com/DrCuis/Learning-Cuis) repository. It includes several great tutorials. Also, the "Terse Guide" to install directly from the environment is useful both as a guide and a reference (in Cuis World Menu Help>Terse Guide to Cuis). 
+If you are learning Smalltalk, the [Cuis Documentation
+Project](http://github.com/DrCuis) can help you. The "Terse
+Guide" to install directly from the environment is useful both as a
+guide and a reference (in Cuis World Menu Help>Terse Guide to Cuis).
 
-The Cuis-Smalltalk developer repository contains additional [structural documentation](https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/tree/master/Documentation) worth checking out, it also includes several [Presentations](https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/tree/master/Documentation/Presentations).
 
 ## Resources
 
@@ -29,7 +31,7 @@ The Cuis-Smalltalk developer repository contains additional [structural document
 		<h3>UI tour</h3>
 		<p align="justify"><img src="./assets/imgs/ui-tour.png" class="doc">
 		The user interface enables you to access most of the code and to conduct Smalltalk experiments on your own. You can review its features in the Quick UI Tour.
-		<br><a href="https://github.com/Cuis-Smalltalk/Learning-Cuis/blob/master/Quick-UI-Tour.md">read more</a></p>
+		<br><a href="https://github.com/DrCuis/Tutorials/tree/main/100-Quick-Tour">read more</a></p>
 	</div>
 	<div class="col">
 		<h3>Videos</h3>
