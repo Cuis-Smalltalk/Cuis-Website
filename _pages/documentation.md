@@ -4,10 +4,9 @@ layout: page
 title: Documentation
 ---
 
-If you are learning Smalltalk, the [Cuis Documentation
-Project](http://github.com/DrCuis) can help you. The "Terse
-Guide" to install directly from the environment is useful both as a
-guide and a reference (in Cuis World Menu Help>Terse Guide to Cuis).
+For a kick start, read The "Terse Guide" to install directly from the
+environment. It is useful both as a guide and a reference (in Cuis
+World Menu Help>Terse Guide to Cuis).
 
 
 ## Resources
@@ -16,33 +15,40 @@ guide and a reference (in Cuis World Menu Help>Terse Guide to Cuis).
 	<div class="col">
 		<h3>Cuis Books</h3>
 		<img src="./assets/imgs/book.png" class="doc">
-		<p align="justify">		
-		<ul>
-		  <li><b>The Cuis book.</b> It is all about
-		    programming Smalltalk with Cuis. Whether you want
-		    to learn programming or to discover what Smalltalk
-		    has to offer, the book guides you in a journey to
-		    learn both the language, the tools and to code a
-		    modest replica of the <em>Spacewar!</em>
-		    game. (<a href="https://DrCuis.github.io/TheCuisBook">read
-		    more</a>)</li>
-
-		  <li><b>Design GUI with Morph.</b> Learn how to
-		  design simple graphic user interface with Morph
-		  object. The book tutors you to learn both
-		  fundamental facets of Morph and design patterns
-		  applied to GUI
-		  developments. (<a href="https://DrCuis.github.io/DesignGUI">read
-		  more</a>)</li>
-		      
-		</ul>
-		</p>
+		
+		<p align="justify">
+		<b><a href="https://DrCuis.github.io/TheCuisBook">The
+		Cuis book.<a/></b> It is all about programming
+		Smalltalk with Cuis. Whether you want to learn
+		programming or to discover what Smalltalk has to
+		offer, the book guides you in a journey to learn both
+		the language, the tools and to code a modest replica
+		of the <em>Spacewar!</em> game.</p>
+		
+		<p align="justify">
+		<b><a href="https://DrCuis.github.io/DesignGUI">Design
+		GUI with Morph.</a></b> Learn how to design simple
+		graphic user interface with Morph object. The book
+		tutors you to learn both fundamental facets of Morph
+		and design patterns applied to GUI
+		developments. <em>The book still needs to be
+		peer-reviewed, help welcomed</em></p>
 	</div>
 	<div class="col">
-		<h3>Wiki</h3>
-		<p align="justify"><img src="./assets/imgs/wiki.png" class="doc" style="width:120px;">
-		A wiki with technical information and notes about Cuis-Smalltalk.
-		<br><a href="https://github.com/nmingotti/The-Cuis-CookBook/wiki">read more</a></p>
+	  <h3>The Cuis Documentation Project</h3>
+	  <img src="./assets/imgs/wiki.png" class="doc" style="width:120px;">
+	  
+	       <p align="justify">If you are learning Smalltalk, the
+	       Cuis Documentation Project can help you.  The
+	       documentation is presented in Tutorials, How-to guides,
+	       References and Explanations.<br>[read
+	       more](http://doc.cuis.st)
+
+	       <br>Worth reading is this [unmaintained
+	       wiki](href="https://github.com/nmingotti/The-Cuis-CookBook/wiki)
+	       with still useful technical information and notes about
+	       Cuis-Smalltalk.
+	       </p>
 	</div>
 </div>
 <div class="row">
