@@ -14,10 +14,29 @@ guide and a reference (in Cuis World Menu Help>Terse Guide to Cuis).
 
 <div class="row">
 	<div class="col">
-		<h3>The Cuis Book</h3>
+		<h3>Cuis Books</h3>
 		<img src="./assets/imgs/book.png" class="doc">
-		<p align="justify">A book about Cuis Smalltalk. A community effort to bring documentation to people new to Smalltalk and even computer programming.
-		<br><a href="https://DrCuis.github.io/TheCuisBook/">read more</a></p>
+		<p align="justify">		
+		<ul>
+		  <li><b>The Cuis book.</b> It is all about
+		    programming Smalltalk with Cuis. Whether you want
+		    to learn programming or to discover what Smalltalk
+		    has to offer, the book guides you in a journey to
+		    learn both the language, the tools and to code a
+		    modest replica of the <em>Spacewar!</em>
+		    game. (<a href="https://DrCuis.github.io/TheCuisBook">read
+		    more</a>)</li>
+
+		  <li><b>Design GUI with Morph.</b> Learn how to
+		  design simple graphic user interface with Morph
+		  object. The book tutors you to learn both
+		  fundamental facets of Morph and design patterns
+		  applied to GUI
+		  developments. (<a href="https://DrCuis.github.io/DesignGUI">read
+		  more</a>)</li>
+		      
+		</ul>
+		</p>
 	</div>
 	<div class="col">
 		<h3>Wiki</h3>
