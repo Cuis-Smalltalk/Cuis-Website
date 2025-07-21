@@ -18,7 +18,7 @@ World Menu Help>Terse Guide to Cuis).
 		
 		<p align="justify">
 		<b><a href="https://DrCuis.github.io/TheCuisBook">The
-		Cuis book.<a/></b> It is all about programming
+		Cuis book.</a></b> It is all about programming
 		Smalltalk with Cuis. Whether you want to learn
 		programming or to discover what Smalltalk has to
 		offer, the book guides you in a journey to learn both
@@ -28,7 +28,7 @@ World Menu Help>Terse Guide to Cuis).
 		<p align="justify">
 		<b><a href="https://DrCuis.github.io/DesignGUI">Design
 		GUI with Morph.</a></b> Learn how to design simple
-		graphic user interface with Morph object. The book
+		graphic user interface with Morph objects. The book
 		tutors you to learn both fundamental facets of Morph
 		and design patterns applied to GUI
 		developments. <em>The book still needs to be
