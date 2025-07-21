@@ -41,11 +41,9 @@ World Menu Help>Terse Guide to Cuis).
 	       <p align="justify">If you are learning Smalltalk, the
 	       Cuis Documentation Project can help you.  The
 	       documentation is presented in Tutorials, How-to guides,
-	       References and Explanations.<br>[read
-	       more](http://doc.cuis.st)
+	       References and Explanations.<br>[read more](http://doc.cuis.st)
 
-	       <br>Worth reading is this [unmaintained
-	       wiki](href="https://github.com/nmingotti/The-Cuis-CookBook/wiki)
+	       <br>Worth reading is this [unmaintained wiki](https://github.com/nmingotti/The-Cuis-CookBook/wiki)
 	       with still useful technical information and notes about
 	       Cuis-Smalltalk.
 	       </p>
