@@ -32,7 +32,7 @@ World Menu Help>Terse Guide to Cuis).
 		tutors you to learn both fundamental facets of Morph
 		and design patterns applied to GUI
 		developments. <em>The book still needs to be
-		peer-reviewed, help welcomed</em></p>
+		peer-reviewed, help welcomed.</em></p>
 	</div>
 	<div class="col">
 	  <h3>The Cuis Documentation Project</h3>
@@ -42,12 +42,12 @@ World Menu Help>Terse Guide to Cuis).
 	       Cuis Documentation Project can help you.  The
 	       documentation is presented in Tutorials, How-to guides,
 	       References and
-	       Explanations. <br><a href="http://doc.cuis.st">read
+	       Explanations. <a href="http://doc.cuis.st">read
 	       more</a>
 
 	       <br>Worth reading is
 	       this <a href="https://github.com/nmingotti/The-Cuis-CookBook/wiki">unmaintained
-	       wiki></a> with still useful technical information and
+	       wiki</a> with still useful technical information and
 	       notes about Cuis-Smalltalk.
 	       </p>
 	</div>
