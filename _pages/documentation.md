@@ -52,7 +52,7 @@ World Menu Help>Terse Guide to Cuis).
 	       more</a>
 
 	       <br>Worth browsing is also
-	       the <a href="http://95.179.246.60/mediawiki/index.php">Cuis
+	       the <a href="http://95.179.246.60/mediawiki/index.php/The_Cuis_Cookbook">Cuis
 	       Cook Book</a> of Dr. Nicola Mingotti. It contains a lot
 	       of useful technical information and notes.
 	       </p>
