@@ -26,13 +26,19 @@ World Menu Help>Terse Guide to Cuis).
 		of the <em>Spacewar!</em> game.</p>
 		
 		<p align="justify">
-		<b><a href="https://DrCuis.github.io/DesignGUI">Design
-		GUI with Morph.</a></b> Learn how to design simple
-		graphic user interface with Morph objects. The book
-		tutors you to learn both fundamental facets of Morph
-		and design patterns applied to GUI
-		developments. <em>The book still needs to be
-		peer-reviewed, help welcomed.</em></p>
+		<b><a href="https://DrCuis.github.io/DesignGUI">The
+		Morph Book vol. I - Design Graphic User
+		Interface.</a></b> Learn how to design simple graphic
+		user interface with Morph objects. The book tutors you
+		to learn both fundamental facets of Morph and design
+		patterns applied to GUI developments.</p>
+		
+		<p align="justify">
+		<b><a href="https://DrCuis.github.io/TheArtOfMorph">The
+		Morph Book vol. II - The Art of Morph.</a></b> Learn
+		how to design from scratch your own morph with the
+		Cuis' Morphic 3 framework.</p>
+		
 	</div>
 	<div class="col">
 	  <h3>The Cuis Documentation Project</h3>
