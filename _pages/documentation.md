@@ -51,10 +51,10 @@ World Menu Help>Terse Guide to Cuis).
 	       Explanations. <a href="http://doc.cuis.st">read
 	       more</a>
 
-	       <br>Worth reading is the
-	       unmaintained <a href="https://github.com/nmingotti/The-Cuis-CookBook/wiki">Cuis
-	       cook book</a> with still useful technical information
-	       and notes.
+	       <br>Worth browsing is also
+	       the <a href="http://95.179.246.60/mediawiki/index.php">Cuis
+	       Cook Book</a> of Dr. Nicola Mingotti. It contains a lot
+	       of useful technical information and notes.
 	       </p>
 	</div>
 </div>
