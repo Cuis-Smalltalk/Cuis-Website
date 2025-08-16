@@ -6,7 +6,7 @@ title: Download
 
 # Quick Start
 
-The easiest way to set up Cuis in your system is the the latest [Cuis Stable Release](https://github.com/Cuis-Smalltalk/Cuis7-0).
+The easiest way to set up Cuis in your system is the the latest [Cuis Stable Release](https://github.com/Cuis-Smalltalk/Cuis7-2).
 
 
 
