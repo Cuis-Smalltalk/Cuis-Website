@@ -1,5 +1,5 @@
 ---
-title: "Cuis Documentation Project"
+title: "Documentation & Papers"
 date: 2023-06-12
 layout: post
 ---
