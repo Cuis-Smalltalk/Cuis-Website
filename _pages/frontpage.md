@@ -22,4 +22,4 @@ Cuis is a free Smalltalk-80 environment with a specific set of goals: being simp
 
 
 <img src="./assets/imgs/screenshot.png">
-
+<p class="legend">legend</p>
