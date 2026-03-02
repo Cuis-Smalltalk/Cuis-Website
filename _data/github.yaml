@@ -636,3 +636,9 @@
   license: MIT
   tags: [amqp, amqp-client, message-queue, rabbitmq]
 
+- name: XCodeTheme
+  description: Themes inspired by Apple's Xcode IDE
+  url: https://github.com/KikyTokamuro/Cuis-Smalltalk-XCodeTheme
+  license: MIT
+  tags: [themes, user interface]
+
