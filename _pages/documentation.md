@@ -27,8 +27,8 @@ World Menu Help>Terse Guide to Cuis).
 		
 		<p align="justify">
 		<b><a href="https://DrCuis.github.io/DesignGUI">The
-		Morph Book vol. I - Design Graphic User
-		Interface.</a></b> Learn how to design simple graphic
+		Morph Book vol. I - Designing Graphic User
+		Interfaces.</a></b> Learn how to design simple graphic
 		user interface with Morph objects. The book tutors you
 		to learn both fundamental facets of Morph and design
 		patterns applied to GUI developments.</p>
