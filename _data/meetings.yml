@@ -1,7 +1,7 @@
-- title: XP with Sound and Morphic
-  description: Luciano presents his experiments with sound and morphic in the field of digital signal processing.
-  chair: Luciano Notarfrancesco
-  date:  2025-12
+- title: Blueprint
+  description: Blueprint is a rework of the Cuis-Smalltalk system desktop done purely by a code agent (artificial intelligence) directed in natural language, no Smalltalk code was written by hand.
+  chair: Milan Lajtos
+  date: 2026-07
 - title: Image Processing, Part II
   description: Cartography, planet wide datasets and satellite image rectification.
   chair: Juan Vuletich
@@ -10,4 +10,3 @@
   description: Sound and Music in Cuis. 
   chair: Juan Vuletich
   date: TBD
-  
