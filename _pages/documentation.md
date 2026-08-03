@@ -40,6 +40,7 @@ World Menu Help>Terse Guide to Cuis).
 		Cuis' Morphic 3 framework.</p>
 		
 	</div>
+
 	<div class="col">
 	  <h3>The Cuis Documentation Project</h3>
 	  <img src="./assets/imgs/wiki.png" class="doc" style="width:120px;">
@@ -49,16 +50,16 @@ World Menu Help>Terse Guide to Cuis).
 	       documentation is presented in Tutorials, How-to guides,
 	       References and
 	       Explanations. <a href="http://doc.cuis.st">read
-	       more</a>
+	       more</a></p>
 
 
-	       <b>For an overview of Cuis, read the <a
-           href="https://github.com/DrCuis/Learning-Cuis">Learning
-           Cuis</a> page. Mark's <a
-           href="https://mvolkmann.github.io/blog/smalltalk/01-quick-introduction/">blog</a>
-           offers a quick introduction to Smalltalk that is well worth
-           reading; be sure to also check out his other pages about
-           Cuis-Smalltalk.
+	       <p align="justify">For an overview of Cuis, read the <a
+	       href="https://github.com/DrCuis/Learning-Cuis">Learning
+	       Cuis</a> page. Mark's <a
+	       href="https://mvolkmann.github.io/blog/smalltalk/01-quick-introduction/">blog</a>
+	       offers a quick introduction to Smalltalk that is well
+	       worth reading; be sure to also check out his other
+	       pages about Cuis-Smalltalk.</p>
 
 	</div>
 </div>
@@ -69,6 +70,7 @@ World Menu Help>Terse Guide to Cuis).
 		The user interface enables you to access most of the code and to conduct Smalltalk experiments on your own. You can review its features in the Quick UI Tour.
 		<br><a href="https://github.com/DrCuis/Tutorials/tree/main/100-Quick-Tour">read more</a></p>
 	</div>
+	
 	<div class="col">
 		<h3>Videos</h3>
 		<p align="justify"><img src="./assets/imgs/video.png" class="doc" style="width: 120px;">
