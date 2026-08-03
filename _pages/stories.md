@@ -8,22 +8,43 @@ Stories of successful use cases of Cuis-Smalltalk in various contexts.
 
 <div class="row">
   <div class="col">
-    <h3>Satellite Image and Signal Processing</h3>
-    <img src="./assets/imgs/story_satellogic.jpg" class="doc" style="width:300px;">
-    <p align="justify">Satellogic implemented a model to simulate the
-      non-ideal behavior of image sensors and optical systems,
-      including motion blur. It includes raw images processing with
-      deblur, coded exposure, automatic registration, resampling and
-      HDR.  Image compression, transmission over an unreliable low
-      bitrate link, and decoding were also implemented. A dedicated
-      decoder for radio signals (SDR) was implemented too. Cuis
-      Smalltalk proved to be an agile and flexible environment for
-      these tasks, enabling both quick experiments and their growth
-      into useful frameworks and applications.</p>
-      <p class="signature">
-	May 2017<br>
-	<a href="https://www.youtube.com/watch?v=m1EWCYSZL4w">learn more</a>
-      </p>
+    <h3>DyboApp</h3>
+    <img src="./assets/imgs/story_dyboapp.jpg" class="doc" style="width:300px;">
+    <p align="justify">DyboApp is the end-user software component of
+    the Dybo Project — a dedicated computer system designed
+    specifically for teachers and students. It is built from the
+    ground up to bring pedagogical flow, clarity, and administrative
+    comfort. It is developed with the Cuis-Smalltalk system on top of
+    GNU/Linux, it combines an administrative context and interactive
+    pedagogical binders: handwritten stylus annotations on documents
+    merged with live Dynamic Knowledge Models (DKMs)—interactive
+    Smalltalk objects tailored for subjects like mathematics, history,
+    languages, etc.</p>
+    <p class="signature">
+      3 August 2026<br>
+      <a href="https://github.com/Dynamic-Book/DyboApp">read more</a>
+    </p>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col">
+    <h3>GNU Dr. Geo</h3>
+    <img src="./assets/imgs/story_drgeo.jpg" class="doc" style="width:300px;">
+    <p align="justify">Dr. Geo aims to be an open, easy to study,
+      modify and extend interactive geometry software. It is
+      distributed with its source code. You can modify its own source
+      code while using it. Ten years old kids use Dr. Geo to explore
+      Euclidean geometric sketches; agile kids extend and program it
+      with its embedded dynamic Smalltalk language and user
+      interface. It is used in junior high school in Geneva to teach
+      both mathematics and programming with its dedicated Euclidean
+      geometry specific language in Smalltalk.</p>
+    <p class="signature">
+      December 2022<br>
+      <a href="http://www.gnu.org/s/dr-geo">read more</a>
+    </p>
   </div>
 </div>
 
@@ -45,23 +66,25 @@ Stories of successful use cases of Cuis-Smalltalk in various contexts.
 
 <div class="row">
   <div class="col">
-    <h3>GNU Dr. Geo</h3>
-    <img src="./assets/imgs/story_drgeo.jpg" class="doc" style="width:300px;">
-    <p align="justify">Dr. Geo aims to be an open, easy to study,
-      modify and extend interactive geometry software. It is
-      distributed with its source code. You can modify its own source
-      code while using it. Ten years old kids use Dr. Geo to explore
-      Euclidean geometric sketches; agile kids extend and program it
-      with its embedded dynamic Smalltalk language and user
-      interface. It is used in junior high school in Geneva to teach
-      both mathematics and programming with its dedicated Euclidean
-      geometry specific language in Smalltalk.</p>
-    <p class="signature">
-      December 2022<br>
-      <a href="http://www.gnu.org/s/dr-geo">read more</a>
-    </p>
+    <h3>Satellite Image and Signal Processing</h3>
+    <img src="./assets/imgs/story_satellogic.jpg" class="doc" style="width:300px;">
+    <p align="justify">Satellogic implemented a model to simulate the
+      non-ideal behavior of image sensors and optical systems,
+      including motion blur. It includes raw images processing with
+      deblur, coded exposure, automatic registration, resampling and
+      HDR.  Image compression, transmission over an unreliable low
+      bitrate link, and decoding were also implemented. A dedicated
+      decoder for radio signals (SDR) was implemented too. Cuis
+      Smalltalk proved to be an agile and flexible environment for
+      these tasks, enabling both quick experiments and their growth
+      into useful frameworks and applications.</p>
+      <p class="signature">
+	May 2017<br>
+	<a href="https://www.youtube.com/watch?v=m1EWCYSZL4w">learn more</a>
+      </p>
   </div>
 </div>
+
 
 
 <!--
