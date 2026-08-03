@@ -17,8 +17,8 @@ World Menu Help>Terse Guide to Cuis).
 		<img src="./assets/imgs/book.png" class="doc">
 		
 		<p align="justify">
-		<b><a href="https://DrCuis.github.io/TheCuisBook">The
-		Cuis book.</a></b> It is all about programming
+		<a href="https://DrCuis.github.io/TheCuisBook">The
+		Cuis book.</a> It is all about programming
 		Smalltalk with Cuis. Whether you want to learn
 		programming or to discover what Smalltalk has to
 		offer, the book guides you in a journey to learn both
@@ -26,16 +26,16 @@ World Menu Help>Terse Guide to Cuis).
 		of the <em>Spacewar!</em> game.</p>
 		
 		<p align="justify">
-		<b><a href="https://DrCuis.github.io/DesignGUI">The
+		<a href="https://DrCuis.github.io/DesignGUI">The
 		Morph Book vol. I - Designing Graphic User
-		Interfaces.</a></b> Learn how to design simple graphic
+		Interfaces.</a> Learn how to design simple graphic
 		user interface with Morph objects. The book tutors you
 		to learn both fundamental facets of Morph and design
 		patterns applied to GUI developments.</p>
 		
 		<p align="justify">
-		<b><a href="https://DrCuis.github.io/TheArtOfMorph">The
-		Morph Book vol. II - The Art of Morph.</a></b> Learn
+		<a href="https://DrCuis.github.io/TheArtOfMorph">The
+		Morph Book vol. II - The Art of Morph.</a> Learn
 		how to design from scratch your own morph with the
 		Cuis' Morphic 3 framework.</p>
 		
@@ -48,14 +48,13 @@ World Menu Help>Terse Guide to Cuis).
 	       <p align="justify">If you are learning Smalltalk, the
 	       Cuis Documentation Project can help you.  The
 	       documentation is presented in Tutorials, How-to guides,
-	       References and
-	       Explanations. <a href="http://doc.cuis.st">read
-	       more</a></p>
+	       References and Explanations.<br>
+	       <a href="http://doc.cuis.st">read more</a></p>
 
 
 	       <p align="justify">For an overview of Cuis, read the <a
 	       href="https://github.com/DrCuis/Learning-Cuis">Learning
-	       Cuis</a> page. Mark's <a
+	       Cuis</a>> page. Mark's <a
 	       href="https://mvolkmann.github.io/blog/smalltalk/01-quick-introduction/">blog</a>
 	       offers a quick introduction to Smalltalk that is well
 	       worth reading; be sure to also check out his other
@@ -80,4 +79,14 @@ World Menu Help>Terse Guide to Cuis).
 </div>
 
 
-Additionally, there are many tutorials and references for Smalltalk in the web. They apply quite well to Cuis, especially those written originally for Smalltalk-80 or Squeak. These books ["Smalltalk-80 the language and its implementation"](http://stephane.ducasse.free.fr/FreeBooks/BlueBook/Bluebook.pdf) and ["Inside Smalltalk volume I"](http://stephane.ducasse.free.fr/FreeBooks/InsideST/InsideSmalltalk.pdf) are great introductory texts, and they are also the reference for the language and basic class library. Both are freely available. Read other references from [Stef's Free Online Smalltalk Books](http://stephane.ducasse.free.fr/FreeBooks/) collection.
+Additionally, there are many tutorials and references for Smalltalk in
+the web. They apply quite well to Cuis, especially those written
+originally for Smalltalk-80 or Squeak. These books ["Smalltalk-80 the
+language and its
+implementation"](http://stephane.ducasse.free.fr/FreeBooks/BlueBook/Bluebook.pdf)
+and ["Inside Smalltalk volume
+I"](http://stephane.ducasse.free.fr/FreeBooks/InsideST/InsideSmalltalk.pdf)
+are great introductory texts, and they are also the reference for the
+language and basic class library. Both are freely available. Read
+other references from [Stef's Free Online Smalltalk
+Books](http://stephane.ducasse.free.fr/FreeBooks/) collection.
