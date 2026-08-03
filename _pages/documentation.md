@@ -54,7 +54,7 @@ World Menu Help>Terse Guide to Cuis).
 
 	       <p align="justify">For an overview of Cuis, read the <a
 	       href="https://github.com/DrCuis/Learning-Cuis">Learning
-	       Cuis</a>> page. Mark's <a
+	       Cuis</a> page. Mark's <a
 	       href="https://mvolkmann.github.io/blog/smalltalk/01-quick-introduction/">blog</a>
 	       offers a quick introduction to Smalltalk that is well
 	       worth reading; be sure to also check out his other
