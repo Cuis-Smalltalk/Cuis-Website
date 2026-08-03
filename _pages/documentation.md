@@ -51,11 +51,15 @@ World Menu Help>Terse Guide to Cuis).
 	       Explanations. <a href="http://doc.cuis.st">read
 	       more</a>
 
-	       <br>Worth browsing is also
-	       the <a href="http://95.179.246.60/mediawiki/index.php/The_Cuis_Cookbook">Cuis
-	       Cook Book</a> of Dr. Nicola Mingotti. It contains a lot
-	       of useful technical information and notes.
-	       </p>
+
+	       <b>For an overview of Cuis, read the <a
+           href="https://github.com/DrCuis/Learning-Cuis">Learning
+           Cuis</a> page. Mark's <a
+           href="https://mvolkmann.github.io/blog/smalltalk/01-quick-introduction/">blog</a>
+           offers a quick introduction to Smalltalk that is well worth
+           reading; be sure to also check out his other pages about
+           Cuis-Smalltalk.
+
 	</div>
 </div>
 <div class="row">
