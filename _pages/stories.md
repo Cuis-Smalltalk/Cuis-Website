@@ -8,6 +8,25 @@ Stories of successful use cases of Cuis-Smalltalk in various contexts.
 
 <div class="row">
   <div class="col">
+    <h3>Cuis-Smalltalk on Android</h3>
+    <img src="./assets/imgs/story_android.jpg" class="doc" style="width:300px;">
+
+    <p align="justify">Run Cuis-Smalltalk — or a custom image —
+    natively on an Android phone or tablet. No Termux, no desktop: one
+    APK that boots a real OpenSmalltalk VM and shows the live
+    Smalltalk world on screen. Work with a minimum Android 9 and ARM
+    64 CPU architecture</p>
+
+<p class="signature">
+      30 August 2026<br>
+      <a href="https://github.com/agustincico/opensmalltalk-android">read more</a>
+    </p>
+  </div>
+</div>
+
+
+<div class="row">
+  <div class="col">
     <h3>DyboApp</h3>
     <img src="./assets/imgs/story_dyboapp.jpg" class="doc" style="width:300px;">
     <p align="justify">DyboApp is the end-user software component of
