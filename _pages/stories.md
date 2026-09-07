@@ -9,7 +9,7 @@ Stories of successful use cases of Cuis-Smalltalk in various contexts.
 
 <div class="row">
   <div class="col">
-    <h3>Story 1</h3>
+    <h3>Signals</h3>
     <img src="./assets/imgs/story_signals.jpg" class="doc" style="width:300px;">
 
     <p align="justify">Signals is a lively environment for real-time
