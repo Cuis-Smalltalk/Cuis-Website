@@ -6,6 +6,26 @@ title: Stories
 
 Stories of successful use cases of Cuis-Smalltalk in various contexts.
 
+
+<div class="row">
+  <div class="col">
+    <h3>Story 1</h3>
+    <img src="./assets/imgs/story_signals.jpg" class="doc" style="width:300px;">
+
+    <p align="justify">Signals is a lively environment for real-time
+    musical synthesis. It includes a modular framework for digital
+    signal processing of audio, a dataflow-oriented visual programming
+    environment for building synthesizers and effects, and a tracker
+    for sequencing synthesizers, effects and video. </p>
+
+    <p class="signature">
+      7 August 2026<br>
+      <a href="https://github.com/len/Signals">read more</a>
+    </p>
+  </div>
+</div>
+
+
 <div class="row">
   <div class="col">
     <h3>Cuis-Smalltalk on Android</h3>
