@@ -18,8 +18,7 @@ Stories of successful use cases of Cuis-Smalltalk in various contexts.
     environment for building synthesizers and effects, and a tracker
     for sequencing synthesizers, effects and video. </p>
 
-    <p class="signature">
-      7 August 2026<br>
+    <p class="signature">7 September 2026<br>
       <a href="https://github.com/len/Signals">read more</a>
     </p>
   </div>
