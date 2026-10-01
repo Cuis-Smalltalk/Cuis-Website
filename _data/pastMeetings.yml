@@ -1,5 +1,5 @@
-- title: What's New?
-  description: Learn what landed recently in Cuis.
+- title: UI Widgets, ARM and the Debugger
+  description: "Cuis-Smalltalk-UI widgets, Hilaire Fernandes (not recorded). Cuis GUI running on ARM embedded with 5' touch screen, Nicola Mingotti. Debugger improvements, Nicolás Papagna Maldonado."
   chair: Community
   date: 2022-03
   video: https://youtu.be/LqxIv2LXuf8
@@ -18,8 +18,8 @@
   chair: Ken Dickey
   date: 2022-06
   video: https://youtu.be/cmdvcrOoQ4o
-- title: What's New?
-  description: Learn what landed recently in Cuis.
+- title: Inline Refactorings and Unicode
+  description: "Inline temporary and inline method refactorings, Fernando Balboa. Recent advances in Unicode editors and files, Juan Vuletich."
   chair: Community
   date: 2022-07
   video: https://youtu.be/jQeIeI-wwQs
@@ -53,8 +53,8 @@
   chair: Hernán Wilkinson
   date: 2023-06
   video: https://youtu.be/ur_Z_UQZEts
-- title: What's New?
-  description: Update on how Shout handles scripts in Workspaces and Inspectors. How to write a simple SVG exporter based on MorphCanvas double dispatching, use case in Dr. Geo. Revisiting the Dynabook concept with Cuis-Smalltalk. How to view and to edit business objects related to educational institution. Paper Morph, stunning hand writing rendering with VectorGraphics. General consideration on revisiting the Dynabook concept.
+- title: Shout, SVG Export and the Dynabook
+  description: Update on how Shout handles scripts in Workspaces and Inspectors. How to write a simple SVG exporter based on MorphCanvas double dispatching, use case in Dr. Geo. Revisiting the Dynabook concept with Cuis Smalltalk. How to view and to edit business objects related to educational institution. Paper Morph, stunning hand writing rendering with VectorGraphics. General consideration on revisiting the Dynabook concept.
   chair: Community
   date: 2023-07
   video: https://youtu.be/uAMkjTzHr8E
@@ -68,7 +68,7 @@
   chair: Nicolas Papagna, Hernán Wilkinson
   date: 2023-10
   video: https://youtu.be/ftUe3qcB3Ww?si=I_0HAnOqkhwPNPp1
-- title: What's New?
+- title: Smalltalks 2023
   description: Learn what landed recently in Cuis. Smalltalk 2023 Fast event in Buenos Aires
   chair: Community
   date: 2023-11
@@ -79,7 +79,7 @@
   date: 2023-12
   video: http://cuis.st
 - title: Cuis release process
-  description: Presentation of the new Cuis release process. It is an important change for the Cuis-Smalltalk community. LabWare (http://www.labware.com) has decided to support the Cuis community in this effort. The presentation will be followed by a Questions & Answers session.
+  description: Presentation of the new Cuis release process. It is an important change for the Cuis Smalltalk community. LabWare (http://www.labware.com) has decided to support the Cuis community in this effort. The presentation will be followed by a Questions & Answers session.
   chair: Juan Vuletich
   date: 2024-01
   video: https://youtu.be/T7gMvxblwo0
@@ -88,8 +88,8 @@
   chair:  Nicolas Papagna
   date: 2024-03
   video: https://youtu.be/KO5Q-Oap8mg
-- title: What's New?
-  description: Learn what landed recently in Cuis.
+- title: Vector Graphics and Porting
+  description: "Vector Graphics discussion. Porting code to Cuis. Bootstrapping & Library. Ideas for future contents of the meetings."
   chair: Community
   date: 2024-04 
   video: https://youtu.be/YiSihiHVA-I
@@ -113,8 +113,8 @@
   chair: Community
   date: 2024-10
   video: https://youtu.be/M9OQNkS525g
-- title: What's new?
-  description: Juan Vuletich presents past (2023-2024) and future evolution (2025-2026) of Cuis-Smalltalk
+- title: Cuis Past and Future
+  description: Juan Vuletich presents past (2023-2024) and future evolution (2025-2026) of Cuis Smalltalk
   chair: Community
   date: 2024-12
   video: https://youtu.be/u4xROqt6sd4
@@ -128,33 +128,33 @@
   chair: Community
   date: 2025-04
   video: https://youtu.be/p8zFswnoYzQ
-- title: What's new?
+- title: DrCuis, Animation and Clipping
   description: (1) Presentation of DrCuis & discussion, Hilaire (~5 min) (2) Animation demo & how-to guide, Ken (~5 min) (3) Concern on layerNumber and suggestion of improvment, Ken (~15 min) (4) Nested clipping and other changes in VectorGraphics, Juan (~15 min) (5) Free discussion
   chair: Community
   date: 2025-06
   video: https://youtu.be/g3qXem7rijE
-- title: What's new?
+- title: AI and Smalltalk
   description: We discussed about AI in general and in Smalltalk
   chair: Community
   date: 2025-08
   video: https://youtu.be/c3s9IC8z3gE
-- title: What's new?
+- title: Raspberry Pi 5 and Morphic 3
   description: We have three demonstrations on refactoring tempory variable, Cuis running on Raspberry PI 5, reference frames in Morphic 3
   chair: Community
   date: 2025-09
   video: https://youtu.be/Dbmgblks3ps
-- title: What's new?
+- title: Morphs and DSP
   description: Morph discussion, DSP project with Cuis by Luciano
   chair: Community
   date: 2025-10
   video: https://youtu.be/0tklHTA4OnA
-- title: What's new?
+- title: DSP and OK-LCH Colors
   description: Cuis experiments with sound and morphic in the field of digital signal processing and  OK-LCH color editor.
   chair: Luciano Notarfrancesco & Ken Dickey
   date: 2026-01
   video: https://youtu.be/Lr5N7A-8mgg
 - title: Blueprint
-  description: Blueprint(https://youtu.be/5TV1Li12ry0) is a rework of the Cuis-Smalltalk system desktop done purely by a code agent (artificial intelligence) directed in natural language, no Smalltalk code was written by hand. 
+  description: <a href="https://youtu.be/5TV1Li12ry0">Blueprint</a> is a rework of the Cuis Smalltalk system desktop done purely by a code agent (artificial intelligence) directed in natural language, no Smalltalk code was written by hand. 
   chair: Milan Lajtos
   date: 2026-07
   video: https://youtu.be/HPcCg66tdrM

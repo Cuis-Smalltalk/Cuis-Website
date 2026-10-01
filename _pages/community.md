@@ -1,14 +1,17 @@
 ---
 permalink: /community
 layout: page
+icon: users
+window: transcript
 title: Community
+description: "Mailing list, monthly meetings and how to contribute."
 ---
 
 Cuis is maintained on its [Github Organization](https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev). 
 
 The main meeting point for Cuis users and developers is the [mailing list](https://lists.cuis.st/mailman/listinfo/cuis-dev). You can browse the archives for a glimpse of our discussions. Pre-April-2019 archives are found [here](http://jvuletich.org/mailman/listinfo/cuis_jvuletich.org).
 
-The latest changes to Cuis-Smalltalk can be browsed in the [Core
+The latest changes to Cuis Smalltalk can be browsed in the [Core
 updates commits](
 https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/commits/master/CoreUpdates).
 
@@ -29,59 +32,10 @@ Every first Wednesday of each month, at 16:00 GMT ([convert here to
 your local
 time](https://timee.io/20240403T1600?tl=Cuis-Meeting&rf=m)), a
 member of the Cuis community chairs a 30 min virtual meeting on a
-selected topic. Browse the incoming meetings list below, save the date in
-your agenda and join the meeting at
+selected topic. Join the meeting at
 [http://meeting.cuis.st](http://meeting.cuis.st).
 
-Jump directly to <a href="#meetings-archive">the meetings archive</a>.
+## Past meetings
 
-<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
-
-{% assign meetings = site.data.meetings | sort: 'date' %} 
-
-<div id="meeting-list">
-  <ul class="package-list">
-    {% for meeting in meetings %}
-    <li>
-      <h4 class="meeting">{{ meeting.title }}</h4>
-	<p><em>{{ meeting.description }}</em><br>
-	{{ meeting.chair }}<br>
-	{{ meeting.date }} (1st Wednesday of the month. 16:00 GMT)</p>
-    </li>
-    {% endfor %}
-  </ul>
-</div>
-
-<script>
-
-var options = {
-    valueNames: [ 'title', 'description', 'chair', 'date'],
-	pagination: true,
-	page: 30
-};
-
-var meetingList = new List('meeting-list', options);
-
-</script>
-
-
-## Meetings archive
-
-<script src="//cdnjs.cloudflare.com/ajax/libs/list.js/2.3.1/list.min.js"></script>
-
-{% assign pastMeetings = site.data.pastMeetings | sort: 'date' | reverse %} 
-
-<div id="pastMeeting-list">
-  <ul class="package-list">
-    {% for pastMeeting in pastMeetings %}
-    <li>
-      <h4 class="meeting"><a href="{{ pastMeeting.video }}">{{ pastMeeting.title }}</a></h4>
-	<p><em>{{ pastMeeting.description }}</em><br>
-	{{ pastMeeting.chair }}<br>
-	{{ pastMeeting.date }}</p>
-    </li>
-    {% endfor %}
-  </ul>
-</div>
-
-<script>
+{% assign pastMeetings = site.data.pastMeetings | sort: 'date' | reverse %}
+{% include meetings.html meetings=pastMeetings %}
