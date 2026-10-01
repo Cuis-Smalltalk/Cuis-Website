@@ -18,21 +18,18 @@ For more details on how to create content, use Github interface, etc. feel free 
 
 ## Run and develop
 
-Have a look at instructions at [Jekyll](https://jekyllrb.com/) website.
+GitHub Pages builds the site with the versions listed at [pages.github.com/versions](https://pages.github.com/versions/) (Ruby 3.3.4, `github-pages` 232). To run it locally with the same versions, use Docker:
+
+```
+docker compose up
+```
+
+The site is served at http://localhost:4000 and rebuilds on every change.
+
+Without Docker, with Ruby 3.3.4 installed:
 
 ```
 bundle install
-```
-
-then:
-
-```
-bundle exec jekyll serve
-```
-
-or:
-
-```
 bundle exec jekyll serve --livereload
 ```
 

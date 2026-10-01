@@ -7,3 +7,4 @@ _site/
 *~
 #macOS custom attributes
 .DS_Store
+.idea
