@@ -41,7 +41,7 @@ Workspace contains code related to the application.</figcaption>
 
 > "I think you have a very elegant design aesthetic."
 >
-> <img src="./assets/imgs/faces/JohnMaloney.jpg" alt="" width="120" height="120"> **<a href="https://wiki.squeak.org/squeak/385">John Maloney</a>**
+> <img src="./assets/imgs/faces/JohnMaloney3.jpg" alt="" width="120" height="120"> **<a href="https://wiki.squeak.org/squeak/385">John Maloney</a>**
 {: .workspace}
 
 </div>
