@@ -1,0 +1,30 @@
+<ul class="meetings">
+  {%- for meeting in include.meetings %}
+  <li>
+    {%- if meeting.video contains "youtu.be/" %}
+    <h4>{{ meeting.title }}</h4>
+    {%- assign id = meeting.video | split: "youtu.be/" | last | split: "?" | first %}
+    <a class="video" href="{{ meeting.video }}"><img src="https://i.ytimg.com/vi/{{ id }}/sddefault.jpg" alt="{{ meeting.title | escape }}"><svg width="68" height="48"><use href="{{ "/assets/icons.svg#youtube" | relative_url }}"></use></svg></a>
+    {%- else %}
+    <h4><a href="{{ meeting.video }}">{{ meeting.title }}</a></h4>
+    {%- endif %}
+    <p><em>{{ meeting.description }}</em></p>
+    <p class="post-meta">
+      <svg class="icon"><use href="{{ "/assets/icons.svg#user" | relative_url }}"></use></svg>{{ meeting.chair }}<br>
+      <svg class="icon"><use href="{{ "/assets/icons.svg#calendar" | relative_url }}"></use></svg>{{ meeting.date }}
+    </p>
+  </li>
+  {%- endfor %}
+</ul>
+<script>
+document.currentScript.previousElementSibling.querySelectorAll('a.video').forEach(link => link.addEventListener('click', event => {
+  event.preventDefault();
+  const player = document.createElement('iframe');
+  player.className = 'video';
+  player.src = 'https://www.youtube.com/embed' + new URL(link.href).pathname + '?autoplay=1';
+  player.title = link.querySelector('img').alt;
+  player.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+  player.allowFullscreen = true;
+  link.replaceWith(player);
+}));
+</script>

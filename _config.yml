@@ -1,38 +1,36 @@
-title: Cuis-Smalltalk
+title: Cuis Smalltalk
 description: "Proudly developed by Juan Vuletich and the Cuis community."
+tagline: "The modern Smalltalk-80"
 author: "Copyright © 2009-2026 Juan Vuletich"
 
-theme: minima
+theme: null
 
-base_url: /
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
 
-# Minima social links
-# twitter_username: Cuis-Smalltalk
-github_username: Cuis-Smalltalk
-# linkedin_username: Cuis-Smalltalk
-# rss: rss
+date_format: "%Y-%m-%d"
 
-# Minima: show excerpts in the frontpage
-show_excerpts: true
+defaults:
+  - scope:
+      type: posts
+    values:
+      window: senders
 
-minima:
-  date_format: "%Y-%m-%d"
-
-# Minima: custom header links
 header_pages:
   - _pages/frontpage.md
   - _pages/features.md
   - _pages/download.md
   - _pages/documentation.md
   - _pages/stories.md
+  - _pages/news.md
   - _pages/community.md
   - _pages/packages.md
 
 include:
     - _pages
 
-exclude: 
-    - .gitignore
+exclude:
     - docker-compose.yml
     - Gemfile
     - Gemfile.lock

@@ -1,0 +1,9 @@
+<ul class="post-list">
+  {%- for post in include.posts -%}
+  <li>
+    <span class="post-meta">{{ post.date | date: site.date_format }}</span>
+    <h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+    {{ post.excerpt }}
+  </li>
+  {%- endfor -%}
+</ul>

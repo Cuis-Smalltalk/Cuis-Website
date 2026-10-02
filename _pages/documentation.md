@@ -1,7 +1,10 @@
 ---
 permalink: /documentation
 layout: page
+icon: book-open
+window: workspace
 title: Documentation
+description: "Books, tutorials and references to learn Cuis and Smalltalk."
 ---
 
 For a kick start, read The "Terse Guide" to install directly from the
@@ -14,9 +17,9 @@ World Menu Help>Terse Guide to Cuis).
 <div class="row">
 	<div class="col">
 		<h3>Cuis Books</h3>
-		<img src="./assets/imgs/book.png" class="doc">
+		<img src="./assets/imgs/documentation/book.png" class="doc">
 		
-		<p align="justify">
+		<p>
 		<a href="https://DrCuis.github.io/TheCuisBook">The
 		Cuis book.</a> It is all about programming
 		Smalltalk with Cuis. Whether you want to learn
@@ -25,7 +28,7 @@ World Menu Help>Terse Guide to Cuis).
 		the language, the tools and to code a modest replica
 		of the <em>Spacewar!</em> game.</p>
 		
-		<p align="justify">
+		<p>
 		<a href="https://DrCuis.github.io/DesignGUI">The
 		Morph Book vol. I - Designing Graphic User
 		Interfaces.</a> Learn how to design simple graphic
@@ -33,7 +36,7 @@ World Menu Help>Terse Guide to Cuis).
 		to learn both fundamental facets of Morph and design
 		patterns applied to GUI developments.</p>
 		
-		<p align="justify">
+		<p>
 		<a href="https://DrCuis.github.io/TheArtOfMorph">The
 		Morph Book vol. II - The Art of Morph.</a> Learn
 		how to design from scratch your own morph with the
@@ -43,36 +46,36 @@ World Menu Help>Terse Guide to Cuis).
 
 	<div class="col">
 	  <h3>The Cuis Documentation Project</h3>
-	  <img src="./assets/imgs/wiki.png" class="doc" style="width:120px;">
+	  <img src="./assets/imgs/documentation/wiki.png" class="doc">
 	  
-	       <p align="justify">If you are learning Smalltalk, the
+	       <p>If you are learning Smalltalk, the
 	       Cuis Documentation Project can help you.  The
 	       documentation is presented in Tutorials, How-to guides,
 	       References and Explanations.<br>
 	       <a href="http://doc.cuis.st">read more</a></p>
 
 
-	       <p align="justify">For an overview of Cuis, read the <a
+	       <p>For an overview of Cuis, read the <a
 	       href="https://github.com/DrCuis/Learning-Cuis">Learning
 	       Cuis</a> page. Mark's <a
 	       href="https://mvolkmann.github.io/blog/smalltalk/01-quick-introduction/">blog</a>
 	       offers a quick introduction to Smalltalk that is well
 	       worth reading; be sure to also check out his other
-	       pages about Cuis-Smalltalk.</p>
+	       pages about Cuis Smalltalk.</p>
 
 	</div>
 </div>
 <div class="row">
 	<div class="col">
 		<h3>UI tour</h3>
-		<p align="justify"><img src="./assets/imgs/ui-tour.png" class="doc">
+		<p><img src="./assets/imgs/documentation/ui-tour.png" class="doc">
 		The user interface enables you to access most of the code and to conduct Smalltalk experiments on your own. You can review its features in the Quick UI Tour.
 		<br><a href="https://github.com/DrCuis/Tutorials/tree/main/100-Quick-Tour">read more</a></p>
 	</div>
 	
 	<div class="col">
 		<h3>Videos</h3>
-		<p align="justify"><img src="./assets/imgs/video.png" class="doc" style="width: 120px;">
+		<p><img src="./assets/imgs/documentation/video.png" class="doc">
 		Video series at the Cuis Smalltalk YouTube Channel.
 		<br><a href="https://www.youtube.com/playlist?list=PLbevs6Mp0MMMaR5gSYzJQXQ56OplFSCJk">watch</a></p>
 	</div>
