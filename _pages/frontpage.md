@@ -7,7 +7,7 @@ list_title: Latest news
 
 <div class="hero" markdown="1">
 
-# The modern Smalltalk-80
+# {{ site.description }}
 
 Cuis is a **free Smalltalk-80 environment** with a specific set of goals: being **simple and powerful**.<br>It is also **portable to any platform**, fast and efficient.
 {: .lead}
