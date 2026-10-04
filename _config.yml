@@ -18,7 +18,7 @@ defaults:
 
 header_pages:
   - _pages/frontpage.md
-  - _pages/features.md
+  - _pages/overview.md
   - _pages/documentation.md
   - _pages/stories.md
   - _pages/news.md

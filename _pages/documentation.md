@@ -106,8 +106,8 @@ The ideas behind Smalltalk and Cuis, and why they are the way they are.
 		<p>The purpose of the Smalltalk project is to provide computer support for the creative spirit in everyone.</p>
 	</li>
 	<li>
-		<a href="{{ source }}AboutCuis.md">About Cuis Smalltalk</a>
-		<p>What Cuis is, the philosophy behind it, the origin of its name, the project and community, and how to learn and contribute.</p>
+		<a href="./overview">About Cuis Smalltalk</a>
+		<p>What Cuis is, the philosophy behind it, and the origin of its name.</p>
 	</li>
 	<li>
 		<a href="{{ source }}Philosophical/OnSmalltalk80.md">Cuis is a Smalltalk-80 system. Why?</a>
