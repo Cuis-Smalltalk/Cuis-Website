@@ -8,7 +8,6 @@ description: Stories of successful use cases of Cuis Smalltalk in various contex
 ---
 
 
-
 <div class="stories">
 
 <article class="story">

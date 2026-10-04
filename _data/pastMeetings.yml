@@ -47,7 +47,7 @@
   description: How to write a simple VM plugin in Cuis.
   chair: David Lewis
   date: 2023-05
-  video: https://youtu.be/XcgPTewqutQ 
+  video: https://youtu.be/XcgPTewqutQ
 - title: Refactoring with Cuis
   description: A demo of all the refactoring tools we have right now and the ones we are working on.
   chair: Hernán Wilkinson
@@ -91,12 +91,12 @@
 - title: Vector Graphics and Porting
   description: "Vector Graphics discussion. Porting code to Cuis. Bootstrapping & Library. Ideas for future contents of the meetings."
   chair: Community
-  date: 2024-04 
+  date: 2024-04
   video: https://youtu.be/YiSihiHVA-I
 - title: How-to "You don't lose your work"
   description: During this meeting we discussed "You don't lose your work". How the user work is saved automatically? Change Set. Package.
   chair: Community
-  date: 2024-05 
+  date: 2024-05
   video: https://youtu.be/NPoZBoDbD7o
 - title: How-to Package
   description: We discussed the Package system, its features, possible developments. We shared ideas how to tag/branch packages to meet the stable release of Cuis.
@@ -154,7 +154,7 @@
   date: 2026-01
   video: https://youtu.be/Lr5N7A-8mgg
 - title: Blueprint
-  description: <a href="https://youtu.be/5TV1Li12ry0">Blueprint</a> is a rework of the Cuis Smalltalk system desktop done purely by a code agent (artificial intelligence) directed in natural language, no Smalltalk code was written by hand. 
+  description: <a href="https://youtu.be/5TV1Li12ry0">Blueprint</a> is a rework of the Cuis Smalltalk system desktop done purely by a code agent (artificial intelligence) directed in natural language, no Smalltalk code was written by hand.
   chair: Milan Lajtos
   date: 2026-07
   video: https://youtu.be/HPcCg66tdrM

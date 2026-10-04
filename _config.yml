@@ -26,11 +26,11 @@ header_pages:
   - _pages/packages.md
 
 include:
-    - _pages
+  - _pages
 
 exclude:
-    - docker-compose.yml
-    - Gemfile
-    - Gemfile.lock
-    - LICENSE
-    - README.md
+  - docker-compose.yml
+  - Gemfile
+  - Gemfile.lock
+  - LICENSE
+  - README.md

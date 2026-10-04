@@ -46,7 +46,7 @@
 (defun remove-prefixes (string prefixes)
   (dolist (prefix prefixes)
     (when (str:starts-with-p prefix string)
-	(return-from remove-prefixes (subseq string (length prefix)))))
+        (return-from remove-prefixes (subseq string (length prefix)))))
     string)
 
 (defun extract-cuis-repos (filespec)
@@ -55,17 +55,17 @@
                               :if-does-not-exist :create)
     (loop for repo in (fetch-all "https://api.github.com/search/repositories?q=Cuis+language:Smalltalk")
           do
-	     (let ((repo-name (remove-prefixes (access repo :name) '("Cuis-Smalltalk-" "Cuis-"))))
+             (let ((repo-name (remove-prefixes (access repo :name) '("Cuis-Smalltalk-" "Cuis-"))))
                (format f "- name: ~a~%" repo-name)
-		     
+
                (format f "  description: ~a~%" (or (access repo :description) repo-name))
                (format f "  url: ~a~%" (access repo :html--url))
                (when (access repo :license)
-		 (format f "  license: ~a~%" (accesses repo :license :SPDX--ID)))
+                 (format f "  license: ~a~%" (accesses repo :license :SPDX--ID)))
                (format f "  tags: [~{~a~^, ~}]~%"
-		       (remove-if (lambda (topic)
-				    (member topic '("cuis" "cuis-smalltalk" "smalltalk") :test 'string=))
-				  (access repo :topics)))
+                       (remove-if (lambda (topic)
+                                    (member topic '("cuis" "cuis-smalltalk" "smalltalk") :test 'string=))
+                                  (access repo :topics)))
                (terpri f)
                ))))
 

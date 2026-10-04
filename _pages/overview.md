@@ -35,35 +35,34 @@ Cuis assumes very little on the underlying platform, and this lets it run **out-
 
 </div>
 
-
 ## Highlights
 
 <div class="row">
-	<div class="col">
-		<h3>Package</h3>
-		<img src="./assets/imgs/features/package.png" class="doc">
-		<p>Code management in Cuis is done with its package system and your preferred VCS. Cuis development is done on GitHub.<br><a href="https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/blob/master/Documentation/CodeManagementInCuis.md">read more</a></p>
-	</div>
+  <div class="col">
+    <h3>Package</h3>
+    <img src="./assets/imgs/features/package.png" class="doc">
+    <p>Code management in Cuis is done with its package system and your preferred VCS. Cuis development is done on GitHub.<br><a href="https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/blob/master/Documentation/CodeManagementInCuis.md">read more</a></p>
+  </div>
 
-	<div class="col">
-		<h3>Refactoring tools</h3>
-		<img src="./assets/imgs/features/refactoring.png" class="doc">
-		<p>The Cuis source code browser comes equipped with a set of refactoring features.<br><a href="https://github.com/hernanwilkinson/Cuis-Smalltalk-Refactoring">read more</a></p>
-	</div>
+  <div class="col">
+    <h3>Refactoring tools</h3>
+    <img src="./assets/imgs/features/refactoring.png" class="doc">
+    <p>The Cuis source code browser comes equipped with a set of refactoring features.<br><a href="https://github.com/hernanwilkinson/Cuis-Smalltalk-Refactoring">read more</a></p>
+  </div>
 </div>
 
 <div class="row">
-	<div class="col">
-		<h3>Morphic 3 / Vector Graphics</h3>
-		<img src="./assets/imgs/features/morphic3.png" class="doc">
-		<p>The Morphic framework in Cuis has been redesigned to make building zoomable, vector graphics based GUIs easier than ever. Morphs are drawn by its high quality <em>Vector Graphics</em> back-end. It's entirely written with Cuis and accelerated with a plug-in.<br><a href="https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/tree/master/Documentation/Presentations/2021-01-FAST-VectorGraphicsInCuisSmalltalk">read more</a></p>
-	</div>
+  <div class="col">
+    <h3>Morphic 3 / Vector Graphics</h3>
+    <img src="./assets/imgs/features/morphic3.png" class="doc">
+    <p>The Morphic framework in Cuis has been redesigned to make building zoomable, vector graphics based GUIs easier than ever. Morphs are drawn by its high quality <em>Vector Graphics</em> back-end. It's entirely written with Cuis and accelerated with a plug-in.<br><a href="https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/tree/master/Documentation/Presentations/2021-01-FAST-VectorGraphicsInCuisSmalltalk">read more</a></p>
+  </div>
 
-	<div class="col">
-		<h3>Small & Simple</h3>
-		<img src="./assets/imgs/features/small.png" class="doc">
-		<p>Smalltalk is a small and consistent language. Cuis is a very compact implementation of Smalltalk. The user's ability to understand the system is one of the major concerns of the Cuis community.</p>
-	</div>
+  <div class="col">
+    <h3>Small & Simple</h3>
+    <img src="./assets/imgs/features/small.png" class="doc">
+    <p>Smalltalk is a small and consistent language. Cuis is a very compact implementation of Smalltalk. The user's ability to understand the system is one of the major concerns of the Cuis community.</p>
+  </div>
 </div>
 
 <section class="section dark" markdown="1">
@@ -99,11 +98,9 @@ As Cuis evolves, we keep on these values. Every update, be it a bug fix or a fea
 
 </section>
 
-
 ## About the name
 
 Cuis is the common name of a [small animal](https://en.wikipedia.org/wiki/Southern_mountain_cavy) that lives in Argentina's countryside. Cuis Smalltalk was originally forked from Squeak Smalltalk, so picking the onomatopoeia of the voice of a mouse for the name makes sense. As the project was started in Buenos Aires, 'Cuis' (essentially 'Squeak' in Rioplatense Spanish) was the obvious choice.
-
 
 ## License
 

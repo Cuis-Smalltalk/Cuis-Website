@@ -71,7 +71,7 @@
   license: MIT
   url: https://github.com/Phantasus/Cuis-Smalltalk-URI-Kernel
   tags: [networking, web]
-  
+
 - name: Gemini-Kernel
   description: This package implements the gemini protocol and provides basic browsing capabilities.
   license: MIT

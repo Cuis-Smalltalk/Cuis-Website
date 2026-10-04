@@ -29,4 +29,3 @@ Workspace contains code related to the application.</figcaption>
 
 {% assign featured = site.data.quotes | where_exp: "quote", "quote.featured" | sort: "featured" %}
 {% include quotes.html quotes=featured excerpts=true more=true band=true %}
-

@@ -364,7 +364,7 @@
   tags: []
 
 - name: cuis-finder-asWidget
-  description: Cuis finder de Nico PM convertido a widget 
+  description: Cuis finder de Nico PM convertido a widget
   url: https://github.com/hernanwilkinson/cuis-finder-asWidget
   tags: []
 
@@ -460,7 +460,7 @@
   tags: []
 
 - name: Projects
-  description: Create hierarchical projects similar to those in the original Smalltalk-80 system. 
+  description: Create hierarchical projects similar to those in the original Smalltalk-80 system.
   url: https://github.com/coderocket/Cuis-Smalltalk-Projects
   license: MIT
   tags: []
@@ -604,7 +604,7 @@
   tags: []
 
 - name: ForceDirectedLayout
-  description: Layout a graph by assigning vertices magnetic repulsion forces and edges spring attraction forces. 
+  description: Layout a graph by assigning vertices magnetic repulsion forces and edges spring attraction forces.
   url: https://github.com/coderocket/Cuis-Smalltalk-ForceDirectedLayout
   license: MIT
   tags: []
@@ -626,7 +626,7 @@
   tags: []
 
 - name: Carmen-Sandiego-Game
-  description: This is an implementation of the famous spy game Carmen Sandiego develped in Cuis University, a Smalltalk distro for educational purpose in OOP 
+  description: This is an implementation of the famous spy game Carmen Sandiego develped in Cuis University, a Smalltalk distro for educational purpose in OOP
   url: https://github.com/LucasMattera/Carmen-Sandiego-Game
   tags: [carmen-sandiego, cuis-university, oop, oop-principles]
 
@@ -641,4 +641,3 @@
   url: https://github.com/KikyTokamuro/Cuis-Smalltalk-XCodeTheme
   license: MIT
   tags: [themes, user interface]
-

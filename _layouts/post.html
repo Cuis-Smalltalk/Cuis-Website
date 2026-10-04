@@ -1,13 +1,12 @@
 ---
 layout: default
 ---
-<article>
 
+<article>
   <header class="post-header">
     <h1>{{ page.title | escape }}</h1>
     <p class="post-meta"><time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: site.date_format }}</time></p>
   </header>
 
   {{ content }}
-
 </article>
