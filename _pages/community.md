@@ -39,5 +39,5 @@ On the first Wednesday of each month, at 16:00 GMT ([convert here to your local 
 
 ## Past meetings
 
-{% assign pastMeetings = site.data.pastMeetings | sort: 'date' | reverse %}
+{% assign pastMeetings = site.data.past-meetings | sort: 'date' | reverse %}
 {% include videos.html videos=pastMeetings %}

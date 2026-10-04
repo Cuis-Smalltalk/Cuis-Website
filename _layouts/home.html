@@ -16,7 +16,7 @@ layout: default
 </p>
 
 <h2>Latest meeting</h2>
-{%- assign meetings = site.data.pastMeetings | sort: 'date' | reverse | slice: 0, 1 %}
+{%- assign meetings = site.data.past-meetings | sort: 'date' | reverse | slice: 0, 1 %}
 {% include videos.html videos=meetings %}
 
 <p><a href="{{ "/community#past-meetings" | relative_url }}">Past meetings</a></p>
