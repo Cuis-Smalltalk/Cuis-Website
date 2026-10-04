@@ -1,0 +1,33 @@
+<ul class="videos">
+  {%- for video in include.videos %}
+  <li>
+    <h4>{{ video.title }}</h4>
+    {%- if video.video contains "youtu.be/" %}
+    {%- assign id = video.video | split: "youtu.be/" | last | split: "?" | first %}
+    <a class="video" href="{{ video.video }}"><img src="https://i.ytimg.com/vi/{{ id }}/sddefault.jpg" alt="{{ video.title | escape }}"><svg width="68" height="48"><use href="{{ "/assets/icons.svg#youtube" | relative_url }}"></use></svg></a>
+    {%- else %}
+    {%- assign host = video.video | split: "//" | last | split: "/" | first %}
+    <a class="video external" href="{{ video.video }}"><span><svg class="icon"><use href="{{ "/assets/icons.svg#external-link" | relative_url }}"></use></svg>{{ host }}</span></a>
+    {%- endif %}
+    <p><em>{{ video.description }}</em></p>
+    <p class="post-meta">
+      <svg class="icon"><use href="{{ "/assets/icons.svg#user" | relative_url }}"></use></svg>{{ video.chair | default: video.speaker }}<br>
+      <svg class="icon"><use href="{{ "/assets/icons.svg#calendar" | relative_url }}"></use></svg>{{ video.date }}{% if video.event %} · {{ video.event }}{% endif %}
+      {%- if video.slides %}<br><a href="{{ video.slides }}">Slides</a>{% endif %}
+      {%- if video.code %}<br><a href="{{ video.code }}">Code</a>{% endif %}
+    </p>
+  </li>
+  {%- endfor %}
+</ul>
+<script>
+document.currentScript.previousElementSibling.querySelectorAll('a.video:not(.external)').forEach(link => link.addEventListener('click', event => {
+  event.preventDefault();
+  const player = document.createElement('iframe');
+  player.className = 'video';
+  player.src = 'https://www.youtube.com/embed' + new URL(link.href).pathname + '?autoplay=1';
+  player.title = link.querySelector('img').alt;
+  player.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+  player.allowFullscreen = true;
+  link.replaceWith(player);
+}));
+</script>

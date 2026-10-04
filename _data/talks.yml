@@ -1,0 +1,81 @@
+- title: A Tour to the Morphic UI in Cuis
+  description: Morphic is a User Interface framework that encourages the construction of domain specific visual metaphors and interactive graphical objects.
+  speaker: Juan Vuletich
+  event: Smalltalks 2025
+  date: "2025-11"
+  video: https://youtu.be/TWtYkqhfqNQ
+  code: https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/blob/master/Documentation/Presentations/2025-11-TourToMorphicUIinCuis/Smalltalks2025.pck.st
+- title: "Cuis Smalltalk: Fulfilled Goals, Challenges for the Future"
+  description: In this talk we'll explore more recent developments, and plans for future work, to better satisfy the needs of developers, teachers, students and businesses.
+  speaker: Juan Vuletich
+  event: Smalltalks 2024
+  date: "2024-11"
+  video: https://youtu.be/0FMl1LHus1s
+  slides: https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/blob/master/Documentation/Presentations/2024-11-Cuis-PastAndFuture/Vuletich-Cuis-MDQ-2024.pdf
+- title: Smalltalk's Past, Present, and Future
+  description: Juan Vuletich on Richard Feldman's Software Unscripted podcast.
+  speaker: Juan Vuletich
+  event: Software Unscripted
+  date: "2024-06-23"
+  video: https://shows.acast.com/software-unscripted/episodes/smalltalks-past-present-and-future-with-juan-vuletich
+- title: Cuis Smalltalk and the History of Computing's Future
+  description: Juan Vuletich on Kris Jenkins' Developer Voices podcast.
+  speaker: Juan Vuletich
+  event: Developer Voices
+  date: "2024-06-19"
+  video: https://youtu.be/sokb6zZC-ZE
+- title: Bootstrap and Dynamic Libraries
+  description: "Bootstrap: creating minimal images from scratch. Dynamic Cuis Libraries: a binary format for Cuis code that is powerful and quick to load."
+  speaker: Juan Vuletich
+  event: UK Smalltalk User Group
+  date: "2024-02-28"
+  video: https://youtu.be/d9x5dZJJ44s
+  slides: https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/blob/master/Documentation/Presentations/2024-02-UKSTUG-BootstrapAndDynamicLibraries/BootstrapAndDynamicLibraries.pdf
+- title: "Bootstrap: Creating Minimal Images from Scratch"
+  description: A new tool called 'Bootstrap' allows the creation of minimal Smalltalk images from scratch.
+  speaker: Juan Vuletich
+  event: Smalltalks 2023
+  date: "2023-11"
+  video: https://youtu.be/MfAclig5XyI
+  slides: https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/blob/master/Documentation/Presentations/2023-11-Bootstrap/Bootstrap.key.pdf
+- title: Dynamic Cuis Libraries
+  description: Dynamic Cuis Libraries are binary files with pre-compiled code that can be loaded into a running Cuis image.
+  speaker: Felipe Zak
+  event: Smalltalks 2023
+  date: "2023-11"
+  video: https://youtu.be/OLpI0y3mGHU
+  slides: https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/blob/master/Documentation/Presentations/2023-11-DynamicCuisLibraries/DynamicCuisLibraries.pdf
+- title: "Cuis: The Smalltalk with a fully zoomable, vector graphics GUI"
+  description: The Cuis project was started in 2004 with the goal of turning Morphic into a Zoomable User Interface, based on high quality Vector Graphics.
+  speaker: Juan Vuletich
+  event: Smalltalks 2022
+  date: "2022-11"
+  video: https://youtu.be/7dRQ52ttZdM
+  slides: https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/blob/master/Documentation/Presentations/2022-11-TheSmalltalkWithZoomableVectorGraphics/CuisPresentationSmalltalks2022.pdf
+- title: Nested Morph Coordinate Systems in Cuis
+  speaker: Ken Dickey
+  event: UK Smalltalk User Group
+  date: "2022-02-23"
+  video: https://youtu.be/_pks-DuRvgI
+- title: Live Typing
+  speaker: Hernán Wilkinson
+  event: UK Smalltalk User Group
+  date: "2021-06-30"
+  video: https://youtu.be/t8xf5YReV50
+- title: Vector Graphics in Cuis Smalltalk
+  speaker: Juan Vuletich
+  event: UK Smalltalk User Group
+  date: "2021-03-31"
+  video: https://youtu.be/X0yVrl0LqGc
+  slides: https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/blob/master/Documentation/Presentations/2021-03-UKSTUG-VectorGraphicsInCuisSmalltalk/UKSTUG-VectorGraphicsInCuisSmalltalk.pdf
+- title: Vector Graphics in Cuis Smalltalk
+  speaker: Juan Vuletich
+  event: FAST Talks
+  date: "2021-01-08"
+  video: https://youtu.be/_NB2_Q4bYEk
+  slides: https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/blob/master/Documentation/Presentations/2021-01-FAST-VectorGraphicsInCuisSmalltalk/FAST-VectorGraphicsInCuisSmalltalk.pdf
+- title: Cuis Smalltalk - Past, Present and Future
+  speaker: Hernán Wilkinson and Juan Vuletich
+  event: Smalltalks 2019
+  date: "2019-08"
+  video: https://youtu.be/AkZ9zOzrn_w

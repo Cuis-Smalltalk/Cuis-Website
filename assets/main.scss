@@ -1,7 +1,7 @@
 ---
 ---
 
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400&family=Unbounded:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400&family=Unbounded:wght@800&display=swap");
 
 $paper: #fbf8f1;
 $ink: #1d1d1f;
@@ -124,6 +124,69 @@ a {
 :focus-visible {
   outline: 2px solid;
   outline-offset: 2px;
+}
+
+[id] {
+  scroll-margin-top: 80px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+code {
+  font-family: "IBM Plex Mono", ui-monospace, monospace;
+  font-size: 0.875em;
+}
+
+:not(pre) > code {
+  border-radius: 4px;
+  padding: 0.25em 0.5em;
+  background-color: color-mix(in srgb, $ink 7%, transparent);
+  overflow-wrap: anywhere;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+.copyable {
+  border-radius: 4px;
+  padding: 0.25em 0;
+  background-color: color-mix(in srgb, $ink 7%, transparent);
+  font-size: 0.875em;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+
+  > code {
+    padding-right: 0.6em;
+    background: none;
+    font-size: 1em;
+  }
+
+  button {
+    border: 0;
+    border-left: 1px solid color-mix(in srgb, $ink 15%, transparent);
+    padding: 0 0.6em;
+    background: none;
+    color: $grey;
+    font-size: 1.15em;
+    line-height: 1;
+    vertical-align: -0.1em;
+    cursor: pointer;
+
+    &:hover {
+      color: $ink;
+    }
+  }
+
+  .icon {
+    margin: 0;
+  }
+}
+
+[hidden] {
+  display: none !important;
 }
 
 .wrapper {
@@ -268,7 +331,7 @@ a {
 }
 
 .post-list,
-.meetings,
+.videos,
 .list,
 .pagination {
   padding-left: 0;
@@ -334,6 +397,141 @@ a {
     border-top: 1px solid $line;
     padding-top: 24px;
   }
+}
+
+.shelves {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
+  a {
+    flex: none;
+    border: 1px solid var(--window);
+    border-radius: 999px;
+    padding: 4px 14px;
+    background-color: #fff;
+    color: $ink;
+    font-size: $small-font-size;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  @include media-query($on-laptop) {
+    margin: 0 (-$spacing-unit / 2);
+    padding: 0 40px 0 $spacing-unit / 2;
+    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent);
+    mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent);
+  }
+}
+
+.skip {
+  margin-top: -0.5em;
+  font-size: $small-font-size;
+  color: $grey;
+}
+
+.kickstart {
+  border: 1px solid var(--window);
+  border-radius: 8px;
+  padding: 24px 28px;
+  background-color: #fff;
+  box-shadow: 6px 6px 0 var(--window);
+
+  ol {
+    margin: 0;
+    padding-left: 1.4em;
+  }
+
+  li > span {
+    display: block;
+  }
+
+  @include media-query($on-palm) {
+    padding: 20px;
+  }
+}
+
+.choices {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 10px;
+  margin-bottom: 16px;
+}
+
+.choice-group {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+}
+
+.choice {
+  display: inline-flex;
+  border: 1px solid $ink;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 2px 2px 0 $ink;
+
+  button {
+    border: 0;
+    padding: 4px 14px;
+    background-color: #fff;
+    color: $ink;
+    font: inherit;
+    font-size: $small-font-size;
+    font-weight: 700;
+    cursor: pointer;
+
+    + button {
+      border-left: 1px solid $ink;
+    }
+
+    &[aria-pressed="true"] {
+      background-color: var(--window);
+      color: $on-window;
+    }
+  }
+}
+
+.note {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  margin: $spacing-unit 0;
+  border: 1px solid var(--window);
+  border-radius: 8px;
+  padding: 14px 18px;
+  box-shadow: 3px 3px 0 var(--window);
+  background-color: color-mix(in srgb, var(--window) 20%, #fff);
+  font-size: $small-font-size;
+
+  .icon {
+    flex: none;
+    width: 20px;
+    height: 20px;
+    margin: 2px 0 0;
+  }
+
+  p {
+    margin: 0;
+  }
+}
+
+kbd {
+  border: 1px solid $ink;
+  border-radius: 4px;
+  padding: 1px 8px;
+  background-color: $paper;
+  box-shadow: 2px 2px 0 $ink;
+  font-family: inherit;
+  font-size: 0.8em;
+  font-weight: 700;
+  white-space: nowrap;
 }
 
 .fine-print {
@@ -402,7 +600,7 @@ a {
 .row,
 .quote-list,
 .list,
-.meetings {
+.videos {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: $spacing-unit;
@@ -414,14 +612,14 @@ a {
 
 .col,
 .list > li,
-.meetings > li {
+.videos > li {
   overflow: hidden;
 }
 
 .col,
 .quotes blockquote,
 .list > li,
-.meetings > li {
+.videos > li {
   overflow-wrap: anywhere;
   border: 1px solid var(--window);
   border-radius: 8px;
@@ -433,7 +631,7 @@ a {
 .col > h3,
 .quotes footer,
 .list h4,
-.meetings h4 {
+.videos h4 {
   margin: 0 -20px 1em;
   font-size: 1em;
   padding: 8px 20px;
@@ -516,6 +714,39 @@ a {
   }
 }
 
+.split {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(unquote("min(360px, 100%)"), 1fr));
+  gap: 0 $spacing-unit * 2;
+
+  h3 {
+    margin-bottom: 0;
+  }
+}
+
+.doc-list {
+  columns: 2 360px;
+  column-gap: $spacing-unit * 2;
+  padding-left: 0;
+  list-style: none;
+
+  li {
+    break-inside: avoid;
+    border-top: 1px solid $line;
+    padding: 12px 0;
+  }
+
+  a {
+    font-weight: 700;
+  }
+
+  p {
+    margin: 4px 0 0;
+    font-size: $small-font-size;
+    color: $grey;
+  }
+}
+
 .list > li {
   display: flex;
   flex-direction: column;
@@ -525,11 +756,11 @@ a {
   flex-grow: 1;
 }
 
-.meetings {
+.videos {
   grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
 }
 
-.meetings > li {
+.videos > li {
   display: grid;
   grid-row: span 4;
   grid-template-rows: subgrid;
@@ -544,13 +775,13 @@ a {
   }
 }
 
-.meetings .post-meta {
+.videos .post-meta {
   grid-row: 4;
   border-top: 1px solid $line;
   padding-top: 12px;
 }
 
-.meetings > :first-child {
+.videos > :first-child {
   grid-column: 1 / -1;
 
   @media (min-width: $on-laptop) {
@@ -585,12 +816,37 @@ a {
     aspect-ratio: inherit;
     object-fit: cover;
   }
+
+  &.external {
+    background-color: color-mix(in srgb, var(--window) 25%, #fff);
+    color: $ink;
+    text-decoration: none;
+
+    span {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 8px;
+      font-size: $small-font-size;
+      font-weight: 700;
+    }
+
+    .icon {
+      width: 48px;
+      height: 48px;
+      margin: 0;
+    }
+  }
 }
 
 .doc {
   float: left;
   width: 120px;
   margin: 0 15px 10px 0;
+}
+
+.col p + p {
+  clear: left;
 }
 
 .story h2,

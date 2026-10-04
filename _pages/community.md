@@ -38,4 +38,4 @@ selected topic. Join the meeting at
 ## Past meetings
 
 {% assign pastMeetings = site.data.pastMeetings | sort: 'date' | reverse %}
-{% include meetings.html meetings=pastMeetings %}
+{% include videos.html videos=pastMeetings %}
