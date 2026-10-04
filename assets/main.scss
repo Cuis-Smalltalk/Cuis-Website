@@ -325,6 +325,11 @@ code {
   vertical-align: -0.15em;
 }
 
+.news-links {
+  display: flex;
+  justify-content: space-between;
+}
+
 .post-meta {
   font-size: $small-font-size;
   color: $grey;

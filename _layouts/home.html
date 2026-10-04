@@ -8,9 +8,12 @@ layout: default
 {%- assign latest = site.posts | slice: 0, 3 -%}
 {% include post-list.html posts=latest %}
 
-<p><a href="{{ "/news" | relative_url }}">Older news</a></p>
-
-<p>subscribe <a href="{{ "/feed.xml" | relative_url }}">via RSS</a></p>
+<p class="news-links">
+  <a href="{{ "/news" | relative_url }}">Older news</a>
+  <a href="{{ "/feed.xml" | relative_url }}" title="Subscribe via RSS">
+    <svg class="icon"><use href="{{ "/assets/icons.svg#rss" | relative_url }}"></use></svg>Subscribe
+  </a>
+</p>
 
 <h2>Latest meeting</h2>
 {%- assign meetings = site.data.pastMeetings | sort: 'date' | reverse | slice: 0, 1 %}
