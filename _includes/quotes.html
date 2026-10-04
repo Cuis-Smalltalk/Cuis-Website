@@ -1,0 +1,23 @@
+<div class="quotes{% if include.band %} band{% endif %}">
+  <div class="quote-list">
+    {%- for quote in include.quotes %}
+    {%- assign text = quote.text %}
+    {%- if include.excerpts and quote.excerpt %}{% assign text = quote.excerpt %}{% endif %}
+    <blockquote class="{% cycle 'quotes': 'transcript', 'browser', 'workspace', 'versions-browser', 'package-installer', 'package-downloader' %}">
+      {{ text | prepend: '"' | append: '"' | markdownify }}
+      <footer>
+        {%- if quote.photo %}
+        <img src="{{ "/assets/imgs/faces/" | append: quote.photo | relative_url }}" alt="" width="120" height="120">
+        {%- else %}
+        <span class="avatar"><svg><use href="{{ "/assets/icons.svg#user" | relative_url }}"></use></svg></span>
+        {%- endif %}
+        <strong>{% if quote.author_url %}<a href="{{ quote.author_url }}">{{ quote.author }}</a>{% else %}{{ quote.author }}{% endif %}</strong>
+      </footer>
+      <p class="post-meta"><time datetime="{{ quote.date | date: "%Y-%m-%d" }}">{{ quote.date | date: site.date_format }}</time> · {% if quote.private %}Private communication{% else %}<a href="{{ quote.source }}">Source</a>{% endif %}</p>
+    </blockquote>
+    {%- endfor %}
+  </div>
+  {%- if include.more %}
+  <p class="more"><a class="button" href="{{ "/quotes" | relative_url }}">More nice comments about Cuis</a></p>
+  {%- endif %}
+</div>

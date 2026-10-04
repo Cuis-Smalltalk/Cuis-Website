@@ -1,0 +1,80 @@
+- text: "I like it... It's nice and clean and simple and pretty. Nice stuff!"
+  author: Alan Kay
+  author_url: https://en.wikipedia.org/wiki/Alan_Kay
+  photo: alan-kay.jpg
+  date: 2007-04-27
+  source: https://lists.squeakfoundation.org/pipermail/squeak-dev/2007-April/115962.html
+  featured: 1
+
+- text: "Yay, Juan. You GO, guy! ...a great example of malleable software (and a clever mind) at work."
+  author: Dan Ingalls
+  author_url: https://en.wikipedia.org/wiki/Dan_Ingalls
+  photo: dan-ingalls.jpg
+  date: 2007-04-27
+  source: https://lists.squeakfoundation.org/pipermail/squeak-dev/2007-April/115948.html
+  featured: 2
+
+- text: "I think you have a very elegant design aesthetic... Well, advice is easy; design is hard. Good luck with Morphic 3.0!"
+  excerpt: "I think you have a very elegant design aesthetic."
+  author: John Maloney
+  author_url: https://wiki.squeak.org/squeak/385
+  photo: john-maloney.jpg
+  date: 2007-11-19
+  private: true
+  featured: 3
+
+- text: "It's one of the smallest, definitely the fastest, and probably the best structured (Squeak) kernel that has been built. Juan spent a lot of time on it and it shows."
+  author: Andreas Raab
+  date: 2009-07-09
+  source: https://lists.squeakfoundation.org/pipermail/squeak-dev/2009-July/137101.html
+
+- text: "I have been following your work (though from a distance) with enthusiasm, and greatly appreciate your attempts to unwind the complexity that grew up around Morphic, without the need to throw it out."
+  author: Dan Ingalls
+  author_url: https://en.wikipedia.org/wiki/Dan_Ingalls
+  photo: dan-ingalls.jpg
+  date: 2009-09-04
+  private: true
+
+- text: "It has a clean, crisp feel and is a pleasure to use."
+  author: David T. Lewis
+  date: 2010-11-07
+  source: https://lists.squeakfoundation.org/pipermail/squeak-dev/2010-November/154868.html
+
+- text: "If you would like to see Morphic done beautifully, check out Cuis. I simply cannot rave enough about how wonderful an experience it's been to work with."
+  author: Casey Ransberger
+  date: 2011-01-07
+  source: https://lists.squeakfoundation.org/pipermail/squeak-dev/2011-January/156362.html
+
+- text: "Extremely impressive Juan. Congratulations. Morphic3 is something that sounds worth breaking backward-compatibility..."
+  author: Chris Muller
+  date: 2012-12-17
+  source: https://jvuletich.org/pipermail/cuis_jvuletich.org/2012-December/008731.html
+
+- text: "Cuis represents the best of Squeak: Elegant simplicity, high quality, and a sense of vision... I really do appreciate Cuis."
+  author: David T. Lewis
+  date: 2012-12-17
+  source: https://jvuletich.org/pipermail/cuis_jvuletich.org/2012-December/008735.html
+
+- text: "I like Cuis very much."
+  author: John Sarkela
+  photo: john-sarkela.jpg
+  date: 2017-05-16
+  source: https://lists.squeakfoundation.org/pipermail/squeak-dev/2017-May/194586.html
+
+- text: "I have been very impressed by the quality of Cuis. It is a master piece of craftsmen work, with a lot of love in small details."
+  author: Hilaire Fernandes
+  photo: hilaire-fernandes.jpg
+  date: 2020-04-28
+  source: https://lists.cuis.st/mailman/archives/cuis-dev/2020-April/001368.html
+
+- text: "My favorite playful Smalltalks right now: Cuis... It is so small, yet has all of the coolest parts of Squeak and extends into areas like ML and vector graphics. It feels accessible and manageable."
+  author: Mark Guzdial
+  photo: mark-guzdial.jpg
+  date: 2022-01-04
+  source: https://x.com/guzdial/status/1478535020293898245
+
+- text: "I fell so enthusiastic about Cuis. It gave me back enthusiasm regarding programming with Smalltalk. With Cuis, the limits are your creativity and the energy you put in the balance; Cuis is very rarely an obstacle. For a casual programmer as me it is critical, my time is precious and every minutes spend on Cuis must be productive. Thanks Juan. Thanks too to its capable, friendly and warm community."
+  author: Hilaire Fernandes
+  photo: hilaire-fernandes.jpg
+  date: 2022-01-27
+  source: https://lists.cuis.st/mailman/archives/cuis-dev/2022-January/004925.html

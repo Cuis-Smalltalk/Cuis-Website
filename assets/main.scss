@@ -63,7 +63,7 @@ body {
 }
 
 h1, h2, h3, h4,
-.quotes blockquote p:last-child {
+.quotes footer strong {
   font-family: $display;
   line-height: 1.2;
   letter-spacing: -0.02em;
@@ -124,21 +124,6 @@ a {
 :focus-visible {
   outline: 2px solid;
   outline-offset: 2px;
-}
-
-blockquote {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-
-  p:first-child {
-    font-size: 22px;
-    font-style: italic;
-  }
-
-  p:last-child {
-    order: -1;
-  }
 }
 
 .wrapper {
@@ -415,7 +400,7 @@ blockquote {
 }
 
 .row,
-.quotes,
+.quote-list,
 .list,
 .meetings {
   display: grid;
@@ -446,7 +431,7 @@ blockquote {
 }
 
 .col > h3,
-.quotes blockquote p:last-child,
+.quotes footer,
 .list h4,
 .meetings h4 {
   margin: 0 -20px 1em;
@@ -461,24 +446,46 @@ blockquote {
 }
 
 .quotes {
-  margin: $spacing-unit * 2 calc(50% - 50vw);
-  padding: $spacing-unit * 4 calc(50vw - 50%) $spacing-unit * 3;
-  row-gap: $spacing-unit * 2;
-  background-color: $blue;
+  margin: $spacing-unit * 3 0 $spacing-unit * 2;
+
+  &.band {
+    margin: $spacing-unit * 2 calc(50% - 50vw);
+    padding: $spacing-unit * 4 calc(50vw - 50%) $spacing-unit * 3;
+    background-color: $blue;
+  }
 
   $face: clamp(0px, 36cqi, 120px);
+
+  .quote-list {
+    grid-template-columns: repeat(auto-fit, minmax(unquote("max(260px, (100% - #{$spacing-unit * 2}) / 3)"), 1fr));
+    row-gap: $spacing-unit * 2;
+  }
 
   blockquote {
     position: relative;
     container-type: inline-size;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
   }
 
-  blockquote p:last-child {
+  blockquote p:first-child {
+    font-size: 22px;
+    font-style: italic;
+  }
+
+  footer {
+    order: -1;
     padding: 20px calc(#{$face} + 34px) 20px 20px;
     border-radius: 7px 7px 0 0;
   }
 
-  img {
+  .post-meta {
+    margin-top: auto;
+  }
+
+  img,
+  .avatar {
     position: absolute;
     top: calc(#{$face} * -0.4);
     right: 16px;
@@ -487,6 +494,25 @@ blockquote {
     border: 3px solid #fff;
     border-radius: 50%;
     box-shadow: 4px 4px 0 $ink;
+  }
+
+  .avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    aspect-ratio: 1;
+    background-color: $line;
+    color: $grey;
+
+    svg {
+      width: 55%;
+      height: 55%;
+    }
+  }
+
+  .more {
+    margin: $spacing-unit * 2 0 0;
+    text-align: center;
   }
 }
 

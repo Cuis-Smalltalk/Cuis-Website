@@ -27,22 +27,6 @@ on the application’s execution; under the application view, a
 Workspace contains code related to the application.</figcaption>
 </figure>
 
-<div class="quotes" markdown="1">
-
-> "I like it... It's nice and clean and simple and pretty. Nice stuff!"
->
-> <img src="./assets/imgs/faces/alan-kay.jpg" alt="" width="120" height="120"> **<a href="https://en.wikipedia.org/wiki/Alan_Kay">Alan Kay</a>**
-{: .transcript}
-
-> "Yay, Juan. You GO, guy! ...a great example of malleable software (and a clever mind) at work."
->
-> <img src="./assets/imgs/faces/dan-ingalls.jpg" alt="" width="120" height="120"> **<a href="https://en.wikipedia.org/wiki/Dan_Ingalls">Dan Ingalls</a>**
-{: .browser}
-
-> "I think you have a very elegant design aesthetic."
->
-> <img src="./assets/imgs/faces/john-maloney.jpg" alt="" width="120" height="120"> **<a href="https://wiki.squeak.org/squeak/385">John Maloney</a>**
-{: .workspace}
-
-</div>
+{% assign featured = site.data.quotes | where_exp: "quote", "quote.featured" | sort: "featured" %}
+{% include quotes.html quotes=featured excerpts=true more=true band=true %}
 
