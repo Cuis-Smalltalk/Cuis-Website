@@ -24,6 +24,22 @@ $on-tablet: 1039px;
   }
 }
 
+@mixin card($shadow: 6px) {
+  border: 1px solid var(--window);
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: $shadow $shadow 0 var(--window);
+}
+
+@mixin panel {
+  @include card;
+  padding: 24px 28px;
+
+  @include media-query($on-palm) {
+    padding: 20px;
+  }
+}
+
 body {
   margin: 0;
   font: 18px/1.6 "IBM Plex Sans", sans-serif;
@@ -441,11 +457,7 @@ code {
 }
 
 .kickstart {
-  border: 1px solid var(--window);
-  border-radius: 8px;
-  padding: 24px 28px;
-  background-color: #fff;
-  box-shadow: 6px 6px 0 var(--window);
+  @include panel;
 
   ol {
     margin: 0;
@@ -453,10 +465,6 @@ code {
 
   li > span {
     display: block;
-  }
-
-  @include media-query($on-palm) {
-    padding: 20px;
   }
 }
 
@@ -507,10 +515,8 @@ code {
   align-items: flex-start;
   gap: 14px;
   margin: $spacing-unit 0;
-  border: 1px solid var(--window);
-  border-radius: 8px;
+  @include card(3px);
   padding: 14px 18px;
-  box-shadow: 3px 3px 0 var(--window);
   background-color: color-mix(in srgb, var(--window) 20%, #fff);
   font-size: $small-font-size;
 
@@ -523,6 +529,34 @@ code {
 
   p {
     margin: 0;
+  }
+}
+
+.email {
+  @include panel;
+  margin: $spacing-unit 0;
+
+  > :first-child {
+    margin-top: 0;
+    font-size: $small-font-size;
+    color: $grey;
+  }
+
+  > :last-child {
+    margin-bottom: 0;
+  }
+
+  blockquote {
+    margin: 0;
+    border-left: 3px solid var(--window);
+    padding-left: 16px;
+    font-style: italic;
+  }
+
+  hr {
+    margin: 24px 0;
+    border: 0;
+    border-top: 1px solid $line;
   }
 }
 
@@ -678,11 +712,8 @@ kbd {
 .list > li,
 .videos > li {
   overflow-wrap: anywhere;
-  border: 1px solid var(--window);
-  border-radius: 8px;
+  @include card;
   padding: 0 20px;
-  background-color: #fff;
-  box-shadow: 6px 6px 0 var(--window);
 }
 
 .col > h3,

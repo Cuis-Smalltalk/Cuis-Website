@@ -113,7 +113,7 @@ The ideas behind Smalltalk and Cuis, and why they are the way they are.
     <p>So, {{ site.time | date: "%Y" | minus: 1980 }} years after Smalltalk-80, what does it mean to say that Cuis is a Smalltalk-80 system?</p>
   </li>
   <li>
-    <a href="{{ source }}Philosophical/OnMakingDynabooksReal.md">Making Dynabooks Real</a>
+    <a href="{{ "/documentation/making-dynabooks-real" | relative_url }}">Making Dynabooks Real</a>
     <p>A great email message from Alan Kay on the Dynabook.</p>
   </li>
   <li>
