@@ -109,8 +109,8 @@ The ideas behind Smalltalk and Cuis, and why they are the way they are.
     <p>What Cuis is, the philosophy behind it, and the origin of its name.</p>
   </li>
   <li>
-    <a href="{{ source }}Philosophical/OnSmalltalk80.md">Cuis is a Smalltalk-80 system. Why?</a>
-    <p>So, 35 years after Smalltalk-80, what does it mean to say that Cuis is a Smalltalk-80 system?</p>
+    <a href="{{ "/documentation/why-smalltalk-80" | relative_url }}">Cuis is a Smalltalk-80 system. Why?</a>
+    <p>So, {{ site.time | date: "%Y" | minus: 1980 }} years after Smalltalk-80, what does it mean to say that Cuis is a Smalltalk-80 system?</p>
   </li>
   <li>
     <a href="{{ source }}Philosophical/OnMakingDynabooksReal.md">Making Dynabooks Real</a>
