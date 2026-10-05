@@ -186,7 +186,7 @@ How to work with Cuis, from everyday tasks to its internals.
         <p>Cuis doesn't do version control by itself. Instead, we suggest using external VCS tools.</p>
       </li>
       <li>
-        <a href="{{ source }}CodeRecoveryInCuis.md">Code Recovery in Cuis</a>
+        <a href="{{ "/documentation/code-recovery" | relative_url }}">Code Recovery in Cuis</a>
         <p>To recover our code, the [recent changes] button in FileList will open a ChangeList on the selected file.</p>
       </li>
       <li>
