@@ -1,5 +1,5 @@
 ---
-permalink: /documentation
+permalink: /documentation/
 layout: page
 icon: book-open
 window: workspace
@@ -105,7 +105,7 @@ The ideas behind Smalltalk and Cuis, and why they are the way they are.
     <p>The purpose of the Smalltalk project is to provide computer support for the creative spirit in everyone.</p>
   </li>
   <li>
-    <a href="./overview">About Cuis Smalltalk</a>
+    <a href="{{ "/overview" | relative_url }}">About Cuis Smalltalk</a>
     <p>What Cuis is, the philosophy behind it, and the origin of its name.</p>
   </li>
   <li>
@@ -121,7 +121,7 @@ The ideas behind Smalltalk and Cuis, and why they are the way they are.
     <p>In 2003, Juan Vuletich, by then an active collaborator in the Squeak project, decided that a zoomable and scalable GUI was needed for Smalltalk.</p>
   </li>
   <li>
-    <a href="./quotes">Nice comments about Cuis</a>
+    <a href="{{ "/quotes" | relative_url }}">Nice comments about Cuis</a>
     <p>This is what the creators of Smalltalk and Morphic, and other prominent Smalltalk users have said about Cuis.</p>
   </li>
 </ul>
@@ -133,13 +133,13 @@ The ideas behind Smalltalk and Cuis, and why they are the way they are.
 <div class="row">
   <div class="col">
     <h3>The Cuis Book</h3>
-    <img src="./assets/imgs/documentation/book.png" class="doc">
+    <img src="{{ "/assets/imgs/documentation/book.png" | relative_url }}" class="doc">
     <p><a href="https://DrCuis.github.io/TheCuisBook">The Cuis book.</a> It is all about programming Smalltalk with Cuis. Whether you want to learn programming or to discover what Smalltalk has to offer, the book guides you in a journey to learn both the language, the tools and to code a modest replica of the <em>Spacewar!</em> game. Written by Hilaire Fernandes with Ken Dickey and Juan Vuletich. You can also download the <a href="https://github.com/DrCuis/TheCuisBook/releases/latest/download/TheCuisBook.pdf">pdf version</a>.</p>
   </div>
 
   <div class="col">
     <h3>The Cuis Documentation Project</h3>
-    <img src="./assets/imgs/documentation/wiki.png" class="doc">
+    <img src="{{ "/assets/imgs/documentation/wiki.png" | relative_url }}" class="doc">
     <p>If you are learning Smalltalk, the Cuis Documentation Project can help you.  The documentation is presented in Tutorials, How-to guides, References and Explanations.<br><a href="http://doc.cuis.st">read more</a></p>
   </div>
 
@@ -198,7 +198,7 @@ How to work with Cuis, from everyday tasks to its internals.
         <p>This document describes the Process to handle Stable Releases for Cuis.</p>
       </li>
       <li>
-        <a href="{{ source }}GettingHelpWithCuis.md">Getting help with Cuis</a>
+        <a href="{{ "/documentation/getting-help" | relative_url }}">Getting help with Cuis</a>
         <p>In the Cuis community, questions are most welcome. The main place for them is our mail list.</p>
       </li>
       <li>
@@ -277,4 +277,4 @@ Papers on aspects of Cuis Smalltalk.
 ## See also {#see-also}
 
 - A [playlist of videos about Cuis](https://www.youtube.com/playlist?list=PLbevs6Mp0MMMaR5gSYzJQXQ56OplFSCJk).
-- The [Monthly Community Meetings](./community#past-meetings), recorded in video.
+- The [Monthly Community Meetings]({{ "/community#past-meetings" | relative_url }}), recorded in video.

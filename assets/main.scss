@@ -449,7 +449,6 @@ code {
 
   ol {
     margin: 0;
-    padding-left: 1.4em;
   }
 
   li > span {
@@ -559,6 +558,59 @@ kbd {
 
 .post-header .post-meta {
   color: inherit;
+}
+
+.breadcrumb {
+  ol {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 0 12px;
+    padding: 0;
+    list-style: none;
+    font-size: $small-font-size;
+    font-weight: 700;
+  }
+
+  li::after {
+    content: "›";
+    margin: 0 8px;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+.page-content ol:not(nav ol) {
+  counter-reset: step;
+  padding-left: 0;
+  list-style: none;
+
+  > li {
+    counter-increment: step;
+    position: relative;
+    padding-left: 44px;
+
+    + li {
+      margin-top: 12px;
+    }
+
+    &::before {
+      content: counter(step);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 28px;
+      height: 28px;
+      border: 1px solid $ink;
+      border-radius: 50%;
+      background-color: var(--window);
+      color: $on-window;
+      font: 800 13px/28px $display;
+      text-align: center;
+      box-shadow: 2px 2px 0 $ink;
+    }
+  }
 }
 
 .hero {

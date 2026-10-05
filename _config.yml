@@ -10,11 +10,21 @@ plugins:
 
 date_format: "%Y-%m-%d"
 
+collections:
+  docs:
+    output: true
+    permalink: /documentation/:path
+
 defaults:
   - scope:
       type: posts
     values:
       window: senders
+  - scope:
+      type: docs
+    values:
+      layout: doc
+      window: workspace
 
 header_pages:
   - _pages/frontpage.md

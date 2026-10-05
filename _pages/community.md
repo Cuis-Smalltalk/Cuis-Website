@@ -7,7 +7,7 @@ title: Community
 description: "Mailing list, monthly meetings and how to contribute."
 ---
 
-Cuis has an active community of developers and users. Our main meeting point is the [mailing list](https://lists.cuis.st/mailman/listinfo/cuis-dev). You are welcome in our community! If you use Cuis or are curious about our work, subscribe to the mailing list to ask questions and tell us about your own projects and ideas. Please take a look at [Getting help with Cuis](https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/blob/master/Documentation/GettingHelpWithCuis.md).
+Cuis has an active community of developers and users. Our main meeting point is the [mailing list](https://lists.cuis.st/mailman/listinfo/cuis-dev). You are welcome in our community! If you use Cuis or are curious about our work, subscribe to the mailing list to ask questions and tell us about your own projects and ideas. Please take a look at [Getting help with Cuis]({{ "/documentation/getting-help" | relative_url }}).
 
 You can browse the [archives](https://lists.cuis.st/mailman/archives/cuis-dev/) for a glimpse of previous discussions. Before April 2019, we used cuis-dev@cuis-smalltalk.org: [zip with messages](https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/blob/master/Documentation/MailList/cuis-dev_cuis-smalltalk.org.txt.zip). Before April 2016, we used cuis@jvuletich.org: [archives](http://jvuletich.org/mailman/listinfo/cuis_jvuletich.org).
 

@@ -14,7 +14,8 @@
         {%- for path in site.header_pages -%}
           {%- assign my_page = site.pages | where: "path", path | first -%}
           {%- if my_page.title -%}
-          <a class="page-link" href="{{ my_page.url | relative_url }}"{% if my_page.url == page.url %} aria-current="page"{% endif %}><svg class="icon"><use href="{{ "/assets/icons.svg#" | append: my_page.icon | relative_url }}"></use></svg>{{ my_page.title | escape }}</a>
+          {%- assign section = page.url | slice: 0, my_page.url.size -%}
+          <a class="page-link" href="{{ my_page.url | relative_url }}"{% if my_page.url == page.url %} aria-current="page"{% elsif my_page.url != "/" and section == my_page.url %} aria-current="true"{% endif %}><svg class="icon"><use href="{{ "/assets/icons.svg#" | append: my_page.icon | relative_url }}"></use></svg>{{ my_page.title | escape }}</a>
           {%- endif -%}
         {%- endfor -%}
       </div>
