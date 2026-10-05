@@ -31,7 +31,7 @@ Cuis is an Open Source, multiplatform [Smalltalk-80](https://en.wikipedia.org/wi
 </div>
 </div>
 
-Cuis assumes very little on the underlying platform, and this lets it run **out-of-the-box** on **Windows, macOS, Linux, ChromeOS and web browsers**. Cuis shares the [OpenSmalltalk Virtual Machine](https://opensmalltalk.org) with [Squeak](https://squeak.org), [Pharo](https://pharo.org) and [Newspeak](https://newspeaklanguage.org).
+Cuis assumes very little on the underlying platform, and this lets it run **out-of-the-box** on **Windows, macOS, Linux, ChromeOS and web browsers**. Cuis runs on the [OpenSmalltalk Virtual Machine](https://opensmalltalk.org).
 
 </div>
 
