@@ -1,0 +1,81 @@
+---
+title: Managing your code in Cuis
+description: "Packages, ChangeSets, and how to host and version your code with Git and GitHub."
+---
+
+Cuis includes tools and procedures for managing Smalltalk code. Central to this is the management of Packages and Package Files (.pck), and ChangeSets and ChangeSet files (.cs.st). Code that is not part of the Cuis Core image itself, like applications, frameworks and libraries, should be stored in *Packages*. New code that is meant as patches, fixes or additions, that could eventually become part of Cuis itself, is not part of any *Package*, and is therefore automatically stored in *ChangeSets*.
+
+## Packages
+
+Let's start with *Packages*. The Package implementation in Cuis is based on PackageInfo, the standard way to specify packages in Squeak and its derivatives, and used, for example, by Monticello. It uses Package names to specify prefixes for Class and Method categories. Classes and Methods whose categories match a Package's prefixes belong in that Package. More details about how PackageInfo decides what code belongs in a package are available at <https://wiki.squeak.org/squeak/3329>.
+
+To install packages *(.pck.st files)* in Cuis, use the **FileList**, navigate to the appropriate directory (on disk, or in a GitHub repository, etc.), select the package file and click on <kbd>Install Package</kbd>.
+
+Cuis includes a tool to manage installed *Packages*. It is at <kbd>World</kbd> / <kbd>Open</kbd> / <kbd>Installed Packages</kbd>. To create a new package (instead of installing an existing one from a file), click on <kbd>Create Package</kbd>. This creates a new package, and associates with it all the existing code in the image that matches the package name.
+
+The operations available on installed or newly created packages are:
+
+- <kbd>Save</kbd> Saves a package on the file system. Overwrites any existing version. It is good to save the package from time to time, to reduce the risk of losing code.
+- <kbd>Delete</kbd> Removes the Package instance from the image. **Does not remove any code.** This means, effectively, to merge back the code into Cuis.
+- <kbd>Browse unsaved Changes</kbd> This opens a ChangeSorter on the ChangeSet that captures all the changes done to the Package since it was last saved. Therefore it shows the work done on the package that would be lost if the package is not saved.
+- <kbd>Browse package code</kbd> This opens a Class Browser that only shows the code that belongs in the package. This is useful for working on a package, or studying it.
+- <kbd>Add requirement</kbd> This opens a select list of loaded packages. Each package provides a *Feature*. You can CANCEL, require the current Cuis base version (at a minimum) or require any of the packages on the list. Required packages will be loaded before the selected package (`Feature require: #'your-package'.`). When a package is selected, the lower browser pane shows its requirements, which may be deleted. **Don't forget to *Save* your package after adding or deleting requirements!**
+
+The tool shows, for each Package, the name, whether it is dirty (has unsaved changes) and the file it was installed from / saved to.
+
+Handling Packages like this, Cuis behaves as a sort of document editor (like, for example, a regular text editor) whose documents are *Package* files *(.pck.st)*.
+
+## Changes to the Cuis base image
+
+The way *ChangeSets* are created and managed in Cuis is different from Squeak. This was done to make ChangeSets a good way to manage changes to the base Cuis Core image, while keeping code in Packages out of the way, so they don't get mixed together.
+
+What is not in a Package belongs (at least temporarily) to the Cuis Core image. Such code is automatically captured in a *ChangeSet*. The ChangeSet for Core changes is created automatically and named like *"1243-CuisCore-JuanVuletich-2012Apr03-22h50m"*. The number at the beginning is the next number for the Cuis update stream, and is provided only as a suggestion. The "CuisCore" part is to reveal that the code belongs in the base image and not in some package. Then we have author name and date / time of creation. These *ChangeSets* are created automatically. There is no longer a way to manually create them, or make them "current" or "active". **It is best to rename them, replacing *'CuisCore'* with some meaningful name.** These *ChangeSets* will not capture any code that belongs in a Package.
+
+Opening a **Change Sorter** will show the CuisCore change set. This is useful, for example, to check that no code that was intended for a Package ends up here by mistake (because of the wrong class or method category). But it is also useful when doing changes to the base system. Now, we can do changes both to the base system and to a number of packages, all in the same session, without having to be careful about selecting the proper change set before saving a method: **The code is automatically added to the proper *Package* or *ChangeSet*, simply following the class or method category.** Gone are the days of messed up change sets and lost code!
+
+When the changes to the base system are complete, it is a good time to review the CuisCore change set and maybe remove from it changes that we don't want to keep (for example, experiments, halts, etc). Then, just do right click / File out and remove. This saves the *ChangeSet* on disk. It also removes it from the **ChangeSorter** (but it doesn't remove any code). This is good, because the next changes done will end in a new CuisCore change set, and there's no risk of having undesired changes in the old one. As changes to the base image progress, and several CuisCore *ChangeSets* are saved to disk, these numbered files are created in sequence. They will be ready to be loaded back in proper order in a fresh Cuis image, or to be sent to Cuis maintainers for integration in the update stream and in next releases of Cuis.
+
+### Installing ChangeSet files into Cuis
+
+<kbd>Install</kbd> loads all the code in the file into a separate, new *ChangeSet* object (viewable in the **ChangeSorter** tool). This is appropriate for loading Cuis updates, or other code that we are not authoring, as it doesn't add new items (class or method definitions) to the current ChangeSet used to record the changes we make to Cuis.
+
+<div class="note debugger" markdown="1">
+<svg class="icon"><use href="{{ "/assets/icons.svg#triangle-alert" | relative_url }}"></use></svg>
+
+Usually any ChangeSets should be installed before doing changes to the image. The reason is that an installed ChangeSet could overwrite changes done by you, or packages you have installed. If this is the case, the affected packages would appear as dirty, and your change set would include any installed changes (that don't belong in a package). Be careful when saving packages or change sets if this was the case!
+
+</div>
+
+## Cherry picking individual changes from ChangeSet or Package files
+
+Additionally, you can study a Package (.pck.st) or ChangeSet (.cs) file without installing it. To do this, use the **FileList**, navigate to the appropriate directory, select the file and click on <kbd>Contents</kbd>. You will get a **ChangeList** tool with the contents of the file. You can select each change, to see the code, and compare it with what is currently loaded in the system (if that is the case). You can also apply various filters on the list. See the right-click menu. Once you have one or more changes selected, you can do right-click / 'fileIn selections'. Changes that belong in a package that is already there will be captured by that package, which will now be dirty. Code that doesn't belong in a loaded package will be included in the current *ChangeSet*, together with code you save in a **Browser**. A new *Package* or *ChangeSet* will *not* be created. This is especially useful when reviewing code, or when we are combining code from more than one source into a single *ChangeSet* or *Package*.
+
+## Using Git and GitHub
+
+Cuis doesn't do version control by itself: it doesn't handle Package versions, ancestries, etc. If versioning of Packages is desired, the best is to use an external versioning file repository, such as Git or Mercurial. This is not unlike using Git or GitHub with a file-based development environment such as Eclipse or a text editor. Like Cuis, these tools don't do version handling themselves, they just load and save files, and let Git do its magic.
+
+The Cuis project is hosted on [GitHub](https://github.com), as most projects related to Cuis.
+
+<div class="note" markdown="1">
+<svg class="icon"><use href="{{ "/assets/icons.svg#lightbulb" | relative_url }}"></use></svg>
+
+The recommendation is to use a GitHub repository with a name beginning with 'Cuis-Smalltalk-', so it will be easy for anybody to find it.
+
+</div>
+
+The guiding principle is to *not duplicate concepts and behavior*. We use GitHub to host, version, diff and merge external packages (.pck files), i.e. code that is maintained independently and outside Cuis.
+
+Package files need to be simple text files. Cuis code files are uncompressed, encoded in UTF-8, and use the LF (ASCII 10) newline convention. This means they are Git friendly: Git/GitHub can diff versions, merge branches, and browse them with syntax highlighting.
+
+### Hosting external packages
+
+What follows is the suggested procedure for using Git/GitHub to host external packages, and store their version history. Usually do this every day.
+
+1. Start with a standard (i.e. fresh) Cuis image. **Never save the image.**
+2. Set up Git repositories for external packages (if not already done).
+3. Install packages from Git repositories.
+4. Develop. Modify and/or create packages.
+5. Save own packages (to Git repositories).
+6. Git add / commit / push as appropriate.
+7. Save changes that are not part of any package. These are automatically captured in numbered ChangeSets, separated from changes to packages.
+8. Exit the image. Usually without saving.

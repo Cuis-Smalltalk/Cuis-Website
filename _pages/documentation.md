@@ -178,11 +178,11 @@ How to work with Cuis, from everyday tasks to its internals.
         <p>The Cuis Rolling Release Repo includes a 64 bit Cuis image, a selection of optional packages, and a Virtual Machine to let it run on the main PC platforms.</p>
       </li>
       <li>
-        <a href="{{ source }}CodeManagementInCuis.md">Managing your code in Cuis</a>
+        <a href="{{ "/documentation/managing-your-code" | relative_url }}">Managing your code in Cuis</a>
         <p>Code that is not part of the Cuis Core image itself, like applications, frameworks and libraries, should be stored in Packages.</p>
       </li>
       <li>
-        <a href="{{ source }}CuisAndGitHub.md">Using Git and GitHub to host and manage Cuis code</a>
+        <a href="{{ "/documentation/managing-your-code#using-git-and-github" | relative_url }}">Using Git and GitHub to host and manage Cuis code</a>
         <p>Cuis doesn't do version control by itself. Instead, we suggest using external VCS tools.</p>
       </li>
       <li>

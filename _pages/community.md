@@ -23,7 +23,7 @@ Keeping them to yourself for too long may mean they never mature. Sharing them p
 
 ## Contributing to Cuis
 
-For the recommended way of handling your own projects based on Cuis, please read [Code Management in Cuis](https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/blob/master/Documentation/CodeManagementInCuis.md), about developing packages for Cuis, and [Using Git and GitHub to host and manage Cuis code](https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/blob/master/Documentation/CuisAndGitHub.md). While Cuis should work equally well with any file-based DVCS, we encourage the use of Git and GitHub.
+For the recommended way of handling your own projects based on Cuis, please read [Code Management in Cuis]({{ "/documentation/managing-your-code" | relative_url }}), about developing packages for Cuis, and [Using Git and GitHub to host and manage Cuis code]({{ "/documentation/managing-your-code#using-git-and-github" | relative_url }}). While Cuis should work equally well with any file-based DVCS, we encourage the use of Git and GitHub.
 
 To contribute code to the base image, use the tools included in Cuis, such as the ChangeSorter and the ChangeList to prepare ChangeSets and save them to file. Send the files as attachments to a message describing them to our mailing list, so we all can review and discuss. We prefer this over git pull requests for changes to the base image. For changes to existing packages, or contribution of new packages, pull requests are OK.
 
