@@ -445,33 +445,41 @@ h2, h3 {
   }
 }
 
-.shelves {
-  display: flex;
-  gap: 10px;
-  overflow-x: auto;
-  scrollbar-width: none;
+.toc {
+  margin: 0 0 $spacing-unit;
+  border-bottom: 1px solid $line;
+  padding-bottom: 12px;
+  font-size: $small-font-size;
 
-  &::-webkit-scrollbar {
-    display: none;
+  p,
+  ul,
+  li {
+    display: inline;
+    margin: 0;
+    padding: 0;
   }
 
-  a {
-    flex: none;
-    border: 1px solid var(--window);
-    border-radius: 999px;
-    padding: 4px 14px;
-    background-color: #fff;
-    color: $ink;
-    font-size: $small-font-size;
-    font-weight: 700;
-    text-decoration: none;
+  p {
+    margin-right: 4px;
+    color: $grey;
   }
 
-  @include media-query($on-laptop) {
-    margin: 0 (-$spacing-unit / 2);
-    padding: 0 40px 0 $spacing-unit / 2;
-    -webkit-mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent);
-    mask-image: linear-gradient(to right, #000 calc(100% - 40px), transparent);
+  li {
+    white-space: nowrap;
+
+    @include media-query($on-palm) {
+      white-space: normal;
+    }
+  }
+
+  li:not(:last-child)::after {
+    content: "·";
+    margin: 0 4px 0 8px;
+  }
+
+  code {
+    padding: 0;
+    background: none;
   }
 }
 

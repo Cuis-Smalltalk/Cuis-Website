@@ -10,6 +10,9 @@ plugins:
 
 date_format: "%Y-%m-%d"
 
+kramdown:
+  toc_levels: [2]
+
 collections:
   docs:
     output: true

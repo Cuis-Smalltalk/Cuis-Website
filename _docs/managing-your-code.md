@@ -3,6 +3,8 @@ title: Managing your code in Cuis
 description: "Packages, ChangeSets, and how to host and version your code with Git and GitHub."
 ---
 
+{% include toc.html %}
+
 Cuis includes tools and procedures for managing Smalltalk code. Central to this is the management of Packages and Package Files (.pck), and ChangeSets and ChangeSet files (.cs.st). Code that is not part of the Cuis Core image itself, like applications, frameworks and libraries, should be stored in *Packages*. New code that is meant as patches, fixes or additions, that could eventually become part of Cuis itself, is not part of any *Package*, and is therefore automatically stored in *ChangeSets*.
 
 ## Packages

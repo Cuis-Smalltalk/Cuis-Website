@@ -9,15 +9,7 @@ description: "Everything to learn and use Cuis."
 
 {% assign source = "https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/blob/master/Documentation/" %}
 
-<nav class="shelves">
-  <a href="#get-started">Get started</a>
-  <a href="#ideas">Ideas and history</a>
-  <a href="#learn">Learn</a>
-  <a href="#guides">Guides</a>
-  <a href="#talks">Talks</a>
-  <a href="#papers">Papers</a>
-  <a href="#see-also">See also</a>
-</nav>
+{% include toc.html %}
 
 ## Get started {#get-started}
 
