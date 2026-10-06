@@ -562,6 +562,66 @@ code {
   }
 }
 
+.timeline {
+  position: relative;
+  padding-left: 48px;
+  overflow-wrap: anywhere;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 10px;
+    bottom: 0;
+    left: 13px;
+    width: 3px;
+    border-radius: 2px;
+    background-color: var(--window);
+  }
+
+  > :first-child {
+    margin-top: 0;
+  }
+
+  h2 {
+    position: relative;
+    margin: 2em 0 0.5em;
+    font-size: 1.25em;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -44px;
+      box-sizing: border-box;
+      width: 20px;
+      height: 20px;
+      @include raised(50%);
+      background-color: var(--window);
+    }
+  }
+
+  .when {
+    display: block;
+    margin-bottom: 4px;
+    font: 700 #{$small-font-size}/20px "IBM Plex Sans", sans-serif;
+    letter-spacing: 0;
+    color: $grey;
+  }
+}
+
+table {
+  border-collapse: collapse;
+  font-size: $small-font-size;
+  font-variant-numeric: tabular-nums;
+}
+
+th,
+td {
+  border-bottom: 1px solid $line;
+  padding: 6px 24px 6px 0;
+  text-align: left;
+}
+
 kbd {
   @include raised(4px);
   padding: 1px 8px;

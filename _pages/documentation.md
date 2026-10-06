@@ -117,7 +117,7 @@ The ideas behind Smalltalk and Cuis, and why they are the way they are.
     <p>A great email message from Alan Kay on the Dynabook.</p>
   </li>
   <li>
-    <a href="{{ source }}CuisHistory.md">A short history of Cuis</a>
+    <a href="{{ "/documentation/history" | relative_url }}">A short history of Cuis</a>
     <p>In 2003, Juan Vuletich, by then an active collaborator in the Squeak project, decided that a zoomable and scalable GUI was needed for Smalltalk.</p>
   </li>
   <li>
