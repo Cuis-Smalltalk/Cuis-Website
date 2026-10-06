@@ -203,20 +203,8 @@ How to work with Cuis, from everyday tasks to its internals.
     <h3>Advanced</h3>
     <ul class="doc-list">
       <li>
-        <a href="{{ source }}Technical/VM/TheOpenSmalltalkVM.md">The Open Smalltalk VM</a>
+        <a href="{{ "/documentation/open-smalltalk-vm" | relative_url }}">The Open Smalltalk VM</a>
         <p>Cuis runs on the Open Smalltalk VM. The latest release of this VM is included in the CuisVM.app folder.</p>
-      </li>
-      <li>
-        <a href="{{ source }}Technical/VM/BuildYourOwnVM.md">Build your own VM</a>
-        <p>If you are comfortable using Linux tools (gcc, make, ld), you can build the OpenSmalltalk VM yourself.</p>
-      </li>
-      <li>
-        <a href="{{ source }}Technical/VM/HowToBuildMacUnifiedVM.md">How to create a Mac Unified VM</a>
-        <p>This procedure builds a Mac VM that includes both the Apple Silicon and Intel binaries and runs natively on both flavors of Mac hardware.</p>
-      </li>
-      <li>
-        <a href="{{ source }}Technical/VM/HowToBuildCuisVMBundle.md">How to build the CuisVM.app multiplatform VM bundle</a>
-        <p>This procedure bundles together the VMs for various platforms. The result is the VM we include with Cuis.</p>
       </li>
       <li>
         <a href="{{ source }}Technical/FFI/AQuickOrientationToFFIFromSmalltalk.md">A Quick Orientation To FFI From Smalltalk</a>
@@ -233,10 +221,6 @@ How to work with Cuis, from everyday tasks to its internals.
       <li>
         <a href="{{ source }}Technical/ASemanticsForEphemerons.md">A semantics for Ephemerons (& Weak Referrers)</a>
         <p>A Smalltalk system is composed of a live object graph, which is the transitive closure of the objects reachable from the roots.</p>
-      </li>
-      <li>
-        <a href="{{ source }}Technical/UsefulTips.md">Some useful tips to keep in mind</a>
-        <p>VM dump of Smalltalk processes: the VM will dump the stack traces of all processes to stdout.</p>
       </li>
     </ul>
   </div>
