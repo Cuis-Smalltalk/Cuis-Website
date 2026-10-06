@@ -1,7 +1,7 @@
 ---
 ---
 
-@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400&family=Unbounded:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400&family=Unbounded:wght@800&display=swap");
 
 $paper: #fbf8f1;
 $ink: #1d1d1f;
@@ -176,7 +176,10 @@ pre {
   padding: 16px 20px;
   background-color: color-mix(in srgb, $ink 7%, transparent);
   line-height: 1.5;
+  tab-size: 4;
 }
+
+@import "syntax";
 
 h2, h3 {
   > code {

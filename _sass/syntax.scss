@@ -1,0 +1,47 @@
+$shout-messages: #033dcb;
+$shout-literals: #0a580d;
+$shout-strings: #61003c;
+$shout-pseudo-variables: #720000;
+$shout-temps: #232323;
+
+.highlight {
+  .nf, .nb {
+    color: $shout-messages;
+  }
+
+  .ss {
+    color: $shout-messages;
+    font-weight: 700;
+  }
+
+  .s {
+    color: $shout-strings;
+  }
+
+  .m, .sc {
+    color: $shout-literals;
+  }
+
+  .c {
+    color: $shout-literals;
+    font-style: italic;
+  }
+
+  .k {
+    color: $shout-literals;
+    font-weight: 700;
+  }
+
+  .bp {
+    color: $shout-pseudo-variables;
+  }
+
+  .nv {
+    color: $shout-temps;
+    font-style: italic;
+  }
+
+  .nc, .o {
+    font-weight: 700;
+  }
+}
