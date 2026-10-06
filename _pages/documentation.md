@@ -36,8 +36,8 @@ description: "Everything to learn and use Cuis."
     </div>
     <ol>
       <li>
-        <span data-method="git">Clone the latest stable release: <code class="copy">git clone https://github.com/Cuis-Smalltalk/Cuis7-8.git</code></span>
-        <span data-method="zip"><a href="https://github.com/Cuis-Smalltalk/Cuis7-8/archive/refs/heads/main.zip">Download</a> the latest stable release and unzip it.</span>
+        <span data-method="git">Clone Cuis: <code class="copy">git clone --depth 1 https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev.git</code></span>
+        <span data-method="zip"><a href="https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/archive/refs/heads/master.zip">Download</a> Cuis and unzip it.</span>
       </li>
       <li>
         <span data-os="mac" data-method="git">Double click <code>RunCuisOnFinder.command</code>, or run <code class="copy">./RunCuisOnMac.sh</code> in a Terminal.</span>
@@ -75,9 +75,16 @@ description: "Everything to learn and use Cuis."
 
 <div class="row">
   <div class="col versions-browser">
-    <h3>Rolling Release</h3>
-    <p>Want the newest stuff, found a bug, or want to contribute? Go for the <a href="https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev">Cuis Rolling Release</a>. Same steps as above.</p>
+    <h3>Why the rolling release?</h3>
+    <p>It's where Cuis evolves, with new features, bug fixes and package updates. <a href="{{ "/documentation/release-process" | relative_url }}">Stable releases</a> only receive fixes for serious bugs, while packages keep moving forward with the rolling release, so using a stable release means knowing which version of each package matches it. That fits experienced users with specific needs, such as projects already built on one that don't need to follow ongoing development. Just starting? The rolling release is the way to go.</p>
   </div>
+</div>
+
+<div class="note" markdown="1">
+<svg class="icon"><use href="{{ "/assets/icons.svg#lightbulb" | relative_url }}"></use></svg>
+
+Cloned with Git? You only got the latest commit. Run <code class="copy">git fetch --unshallow</code> in the Cuis folder to get the full history.
+
 </div>
 
 <div class="note" markdown="1">
