@@ -190,7 +190,7 @@ How to work with Cuis, from everyday tasks to its internals.
         <p>To recover our code, the [recent changes] button in FileList will open a ChangeList on the selected file.</p>
       </li>
       <li>
-        <a href="{{ source }}AdditionalPackagesForCuis.md">Additional Packages for Cuis</a>
+        <a href="{{ "/documentation/additional-packages" | relative_url }}">Additional packages for Cuis</a>
         <p>Optional functionality, that can be loaded as needed, is stored in separate code Packages.</p>
       </li>
       <li>

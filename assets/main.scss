@@ -170,6 +170,14 @@ code {
   box-decoration-break: clone;
 }
 
+pre {
+  overflow-x: auto;
+  border-radius: 8px;
+  padding: 16px 20px;
+  background-color: color-mix(in srgb, $ink 7%, transparent);
+  line-height: 1.5;
+}
+
 h2, h3 {
   > code {
     padding: 0;
