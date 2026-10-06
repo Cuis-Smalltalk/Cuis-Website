@@ -174,8 +174,8 @@ How to work with Cuis, from everyday tasks to its internals.
     <h3>Basics</h3>
     <ul class="doc-list">
       <li>
-        <a href="{{ source }}CuisDirectoryStructure.md">Directory Structure of Cuis Smalltalk</a>
-        <p>The Cuis Rolling Release Repo includes a 64 bit Cuis image, a selection of optional packages, and a Virtual Machine to let it run on the main PC platforms.</p>
+        <a href="{{ "/documentation/directory-structure" | relative_url }}">Directory structure of Cuis Smalltalk</a>
+        <p>The Cuis Rolling Release Repo includes a 64-bit Cuis image, a selection of optional packages, and a Virtual Machine to let it run on the main PC platforms.</p>
       </li>
       <li>
         <a href="{{ "/documentation/managing-your-code" | relative_url }}">Managing your code in Cuis</a>
