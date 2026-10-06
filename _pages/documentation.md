@@ -211,7 +211,7 @@ How to work with Cuis, from everyday tasks to its internals.
         <p>There are two main ways to call external code in the Cuis / Squeak world.</p>
       </li>
       <li>
-        <a href="{{ source }}Technical/FFI/AQuickOrientationToFFIFromSmalltalk.md">A Quick Orientation To FFI From Smalltalk</a>
+        <a href="{{ "/documentation/quick-orientation-to-ffi" | relative_url }}">A quick orientation to FFI from Smalltalk</a>
         <p>So you want to interact with some library written in C from Smalltalk, and you want the convenience of interfacing from the image itself.</p>
       </li>
       <li>
