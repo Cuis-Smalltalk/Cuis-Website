@@ -207,16 +207,16 @@ How to work with Cuis, from everyday tasks to its internals.
         <p>Cuis runs on the Open Smalltalk VM. The latest release of this VM is included in the CuisVM.app folder.</p>
       </li>
       <li>
+        <a href="{{ "/documentation/ffi-or-vm-plugins" | relative_url }}">FFI or VM plugins, what to use?</a>
+        <p>There are two main ways to call external code in the Cuis / Squeak world.</p>
+      </li>
+      <li>
         <a href="{{ source }}Technical/FFI/AQuickOrientationToFFIFromSmalltalk.md">A Quick Orientation To FFI From Smalltalk</a>
         <p>So you want to interact with some library written in C from Smalltalk, and you want the convenience of interfacing from the image itself.</p>
       </li>
       <li>
         <a href="{{ source }}Technical/FFI/CuisFFIPrimer.md">Cuis FFI Primer</a>
         <p>Cuis has the ability to interoperate with foreign code that conforms to a given platform's Application Binary Interface (ABI) specification.</p>
-      </li>
-      <li>
-        <a href="{{ source }}Technical/FFI/FFIorVMPluginsWhatToUse.md">FFI or VM Plugins, what to use?</a>
-        <p>There are two main ways to call external code in the Cuis / Squeak world.</p>
       </li>
       <li>
         <a href="{{ source }}Technical/ASemanticsForEphemerons.md">A semantics for Ephemerons (& Weak Referrers)</a>
