@@ -1,0 +1,507 @@
+---
+title: Cuis FFI primer
+description: "How to call C libraries from Cuis: library classes, interface methods, callbacks, threads and data."
+---
+
+{% include toc.html %}
+
+By Eliot Miranda, Jon Raiford · Last edited 2024-11-25
+{: .post-meta}
+
+Cuis has the ability to interoperate with foreign code that conforms to a given platform's Application Binary Interface (ABI) specification, essentially a codification of the C calling convention and data representation [^1]. FFI is an abbreviation of Foreign Function Interface. The Cuis FFI allows the programmer to
+
+- load and unload dynamic libraries
+- call functions defined in libraries
+- pass a subset of Smalltalk objects as arguments to these functions, including objects that model or refer to external data
+- pass as arguments to these functions callbacks that invoke Smalltalk blocks
+- (in the threaded VM) allow called library functions to execute in parallel on threads separate from that running Smalltalk
+- receive callbacks from external code
+- refer to external data, including storing C structures in Smalltalk objects
+- model complex C type definitions to make it easier to access external data
+- insulate the programmer from as many details of the ABI as possible, and support the writing of portable cross-platform interfaces to foreign code
+
+This document aims to convey the necessary information to make effective use of the Cuis FFI. It is not guaranteed to be comprehensive, and describes a moving target. Please use this document alongside the Cuis development environment. The curious programmer will find useful examples and by definition a complete FFI within Cuis itself.
+
+As of 2026 the CuisVM has two architectures as regards the FFI. The traditional VM is single-threaded, implementing Smalltalk image level concurrency with Processes by multiplexing them over the single VM thread. The multi-threaded VM still allows only one thread to execute Smalltalk at any one time, but allows a new thread to run Smalltalk while the current thread is busy executing the external code it invoked. In this way the standard class library, which assumes non-concurrent Smalltalk execution, can be used while any number of threads are busy in external code.[^2] A section on the threaded FFI details use of this architecture.
+
+## Define library class
+
+In order to use a library, make a subclass of ExternalLibrary and implement the moduleName class method. Libraries should be accessed via singletons as they can only be opened once. The common pattern in Cuis is to use class instance variable named 'default' to reference this. If the interface is complex and has significant differences between 32 and 64 bit versions then consider creating an abstract class, MyLibrary, with two concrete subclasses, e.g. MyLibrary32 and MyLibrary64, with most code in the abstract superclass. Then have MyLibrary's new method test the word size and answer an instance of either MyLibrary32 or MyLibrary64 as appropriate.
+
+```smalltalk
+ExternalLibrary subclass: #MyLibrary
+	instanceVariableNames: ''
+	classVariableNames: ''
+	poolDictionaries: ''
+	category: 'MyPackage-MyCategory'
+
+MyLibrary class
+	instanceVariableNames: 'default'
+```
+
+*MyLibrary class methods for 'accessing'*
+
+```smalltalk
+moduleName
+	"Answer the name of the module for this library"
+	Smalltalk platformName = 'Win32' ifTrue:
+		[^'mylib.dll'].
+	Smalltalk platformName = 'unix' ifTrue:
+		[^'mylib.so'].
+	Smalltalk platformName = 'Mac OS' ifTrue:
+		[^'mylib.dylib'].
+	^self error: 'Platform not supported'
+```
+
+*MyLibrary class methods for 'instance creation'*
+
+```smalltalk
+default
+	"Answer the library singleton (single class approach)"
+	^default ifNil: [default := super new]!
+```
+
+***or***
+
+```smalltalk
+default
+	"Answer either a 32-bit or a 64-bit wrapper as appropriate (three class approach)."
+	^default ifNil:
+		[default := (Smalltalk wordSize = 8 ifTrue: [MyLibrary64] ifFalse: [MyLibrary32])
+			basicNew initialize]
+```
+
+```smalltalk
+new
+	"Prevent multiple instances"
+	^self error: 'use #default'
+```
+
+***or***
+
+```smalltalk
+new
+	"Prevent multiple instances"
+	^self default
+```
+
+*MyLibrary class methods for 'system startup'*
+
+```smalltalk
+install
+	"ExternalLibrary sends install to all ExternalLibrary subclasses on startup.
+	 Use it to discard stale state. At least nil the default instance. All ExternalAddress
+	 handles are invalidated on launching an image."
+	default := nil
+```
+
+## Opening and closing dynamic libraries
+
+Dynamic libraries are typically opened lazily when a function is first called. To force a library to load, send `#forceLoading` to the library singleton.
+
+```smalltalk
+MyLibrary default forceLoading.
+```
+
+<div class="note" markdown="1">
+<svg class="icon"><use href="{{ "/assets/icons.svg#info" | relative_url }}"></use></svg>
+
+Cuis does not currently have a method in the FFI package to close a library. One can use `Smalltalk unloadModule: <module name>`.[^3]
+
+</div>
+
+## Defining interface methods to library functions
+
+There are two ways to invoke functions in libraries. The best way is to add an interface method to the library class for each function one wants to call. Each interface method should contain:
+
+- Method Selector - There is no direct connection between the method selector and the function name, but it is a good idea to closely replicate the function name.[^4]
+- Method Arguments - The names of the arguments do not matter other than they must be unique and begin with a lowercase letter
+- (optional) Comment - It is a good idea to include the text of the function's C declaration in the method comment along with the description of the function
+- Function Declaration - The function declaration is a pragma (a partial statement within angle brackets) with a keyword describing the calling convention, either `cdecl:` for the C calling convention, or `apicall:` for the Pascal calling convention, followed by the function's return type, the name of the function as a string, and a literal array (without leading `#`) of the types of the arguments. The full syntax is given below.
+- Method Code - Code to run if the attempt to call the function fails. This is typically `^self externalCallFailed`
+
+### Interface method ExternalFunction pragma syntax
+
+An interface method pragma defining a foreign function is composed of the following sequence:
+
+- begins with `<`
+- calling convention keyword, either `cdecl:` for the caller-pops-arguments C calling convention, or `apicall:` for the callee-pops-arguments Pascal calling convention[^5]
+- The function's return [type](#argtype)
+- The function's name as a string
+- a left parenthesis `(`
+- zero or more argument [types](#argtype), one for each interface method argument/function argument pair, separated by whitespace. There is no checking beyond syntax. Chaos may ensue if you define too few arguments to a given function.[^6]
+- one may include an "optional arguments" punctuator (`...`) at the relevant point. On most platforms `...` is unnecessary but on Apple ARMv8 (Apple Silicon) it is required for correct operation because thereon all optional arguments are passed on the stack and none in registers.
+- ends with `>`.
+
+A return or argument type is a sequence of
+{: #argtype}
+
+- optional `const` keyword
+- a type name, either one of the standard type names in the table below, or the name of a class inheriting from ExternalStructure that defines a C structure.
+- optional whitespace
+- an optional pointer indication, either `*` or `**`
+
+### Example C function interface method
+
+*ODBC3Library class methods for 'ODBC3-primitives'*
+
+```smalltalk
+sqlBindParameter: statementHandle
+parameterNumber: parameterNumber
+inputOutputType: inputOutputType
+valueType: valueType
+parameterType: parameterType
+columnSize: columnSize
+decimalDigits: decimalDigits
+parameterValuePtr: parameterValuePtr
+bufferLength: bufferLength
+strLenOrIndPtr: strLenOrIndPtr
+	"SQLRETURN SQLBindParameter(
+		SQLHSTMT        StatementHandle,
+		SQLUSMALLINT    ParameterNumber,
+		SQLSMALLINT     InputOutputType,
+		SQLSMALLINT     ValueType,
+		SQLSMALLINT     ParameterType,
+		SQLULEN         ColumnSize,
+		SQLSMALLINT     DecimalDigits,
+		SQLPOINTER      ParameterValuePtr,
+		SQLLEN          BufferLength,
+		SQLLEN *        StrLen_or_IndPtr);"
+
+	<cdecl: int16 'SQLBindParameter' (SQLHSTMT uint16 int16 int16 int16 integer int16 void* int3264 SQLInteger*)>
+	^self externalCallFailed
+```
+
+This function "SQLBindParameter" takes ten parameters and answers a SQLRETURN. It is necessary to look at the header file(s) to determine the atomic datatypes being used. In this case, SQLRETURN turns out to be a 16-bit integer. The first and last arguments for this function are passed as structures. StatementHandle is using the structure SQLHSTMT, which is defined as a subclass of ExternalStructure. Similarly, StrLen_or_IndPtr is defined as a SQLInteger* structure. The asterisk indicates that a pointer to the structure should be sent.
+
+### Example variadic C function interface method
+
+*LibCLibrary methods for 'printing'*
+
+```smalltalk
+printf: format with: arg1 with: arg2
+	"int printf(const char *format, ...);"
+
+	<cdecl: int32 'printf' (char* ... uint3264 uint3264)>
+	^self externalCallFailed
+```
+
+### Using ExternalFunctions via `invokeWith:...`
+
+Sometimes it is more convenient to refer to an external function via a variable, analogous to using function pointers in C, rather than through an interface method. Defining an interface method's pragma actually creates a hidden instance of ExternalLibraryFunction which is stored as the method's first literal (e.g. use "inspect method" on a library interface method to see it). The ExternalLibraryFunction includes data that is used by the SqueakFFIPrims plugin to marshall the arguments and return value from Smalltalk objects to C arguments, and from C return type to Smalltalk return value. Such objects can be created programmatically and used directly. ExternalLibraryFunction inherits from ExternalFunction. ExternalFunction can be used to wrap pointers to functions returned by foreign code, and invoke them. ExternalLibraryFunction can be used to refer to named functions in libraries. The function call mechanism is the same for both. As of this writing there is no direct support for instantiating ExternalFunction. Here is a realistic example of an ExternalLibraryFunction to invoke the C library's qsort function, `void qsort(void *base, size_t nel, size_t width, int (*compar)(const void *, const void *))` on a 64-bit platform.
+
+```smalltalk
+qsort := ExternalLibraryFunction
+	name:'qsort'
+	module: Alien libcName "the name of the platform's dynamic library for the standard C library"
+	callType: 0 "0 is cdecl:, 1 is apicall:"
+	returnType: ExternalType void
+	argumentTypes: {ExternalType void asPointerType.
+		ExternalType uint64.
+		ExternalType uint64.
+		ExternalType void asPointerType}.
+```
+
+ExternalFunctions are evaluated using `invokeWith:[with:]*`, e.g.
+
+```smalltalk
+qsort invokeWith: myDataElements with: nElements with: elementSize with: myCallback
+```
+
+## Callbacks
+
+The Cuis FFI supports callbacks which may be passed as actual parameters to foreign functions expecting them. The scheme maps a C callback to a Smalltalk block, with each parameter of the callback being passed to a subsequent block parameter. For example here is a Callback suitable for being passed to C's qsort routine:
+
+```smalltalk
+callback := Callback
+	signature: #(int (*)(const void *, const void *))
+	block: [ :arg1 :arg2 |
+		((arg1 doubleAt: 1) - (arg2 doubleAt: 1)) sign].
+```
+
+The type signature is in a different syntax to that used in interface methods.[^8]
+
+To pass a Callback as an actual parameter in an interface method send one simply passes the Callback:[^7]
+
+```smalltalk
+libc qsort: myDoubles _: nDoubles _: ExternalType double byteSize _: callback
+```
+
+To pull this off the FFI maintains a hierarchy of Callback classes, one for each ABI, which contain the necessary marshalling methods. Currently there is no compiler from C function syntax to callback marshalling method. For the moment ask Eliot to write these methods by hand on an as-needed basis. See `FFIPluginTests>>#testLibcQsort` in the Tests-FFI package for a full example.
+
+A Callback runs in the process that made the callout to external code from which the callback was invoked. The callback invocation's sender will be the context making the callout. Callbacks return to external code using a special primitive that does a longjmp back to the callback's entry-point into the VM. Callbacks are aware of their nesting so that if a callback attempts to return out of LIFO sequence it will suspend until any nested callbacks have returned.
+
+## The threaded FFI
+
+This section is specific to the Threaded VM only, and discusses
+
+- how threads share the VM and the points at which threads take control of and/or release the VM
+- how threads and Smalltalk processes are related
+- how errors in FFI calls can be captured in a timely manner
+- considerations for passing data to threaded calls
+
+Internally the VM uses two operations, *disownVM* and *ownVM*, to manage switching between threads. In the non-threaded VM these are noops. In the threaded VM disownVM releases the VM to allow other threads to execute it, and ownVM blocks until the calling thread becomes the one thread that is now running Smalltalk. Within the SqueakFFIPrims plugin, after marshalling arguments and immediately before calling the specified function, disownVM is invoked. Immediately after the call of the external function and the receipt of its return value ownVM is invoked, which blocks if some other thread is executing Smalltalk, and continues to block until the Smalltalk process running on the blocked thread is chosen by the Smalltalk scheduler.
+
+There is a heartbeat thread in both VMs running at a default 500Hz (controllable via a vmParameter) that periodically interrupts Smalltalk execution to poll for events. In the threaded VM the heartbeat also checks if the VM is unowned, and if so wakes up a thread to run Smalltalk. For short-running FFI calls the disowning thread will own the VM immediately because the heartbeat thread will not have performed its check. Only if the FFI callout takes considerable time, on average half of the heartbeat period, or by default 1 millisecond, [^9] will the heartbeat detect the VM is unowned and awaken a thread to start executing Smalltalk. The two threads then race to take ownership. If the newly awakened thread wins the race then it will start executing the highest-priority runnable Smalltalk process, and so the system will continue to run, and will not be blocked while the long-running callout executes in parallel, running on the thread that made the callout.
+
+The operations ownVM and disownVM are very simple, lock-free operations, much cheaper than signalling and waiting on OS semaphores. So in this architecture
+
+- the existing Smalltalk process scheduler remains unchanged except that an FFI callout is now another process suspension point where, like `Semaphore>>wait` et al, a process is blocked until its external call completes (or calls back).
+- any and all callouts may potentially thread
+- short-running callouts are not penalised since ownVM and disownVM are cheap operations relative to marshalling, callout and return.
+
+### Threaded callbacks
+
+If a callback occurs then the callback invokes ownVM, blocking until it is the highest-priority executable thread. A callback either originates from a thread making a call-out, in which case its priority is that of the priority of the Process that made the callout, or originates from an unknown thread, in which case it is assigned the priority of the foreign callback process. The foreign callback process (FCP) is a process in the specialObjectsArray existing to receive callbacks from foreign threads. When the FCP is activated to accept a foreign callback it is removed from the specialObjectsArray, at which point no further foreign callbacks can be accepted and will block. The first thing the FCP does before it executes its callback is repopulate the FCP slot in the specialObjectsArray with a fresh FCP. The FCP's priority can be chosen, and hence prioritises foreign callbacks relative to the rest of the system, and since creating a new process and storing it in the specialObjectsArray is relatively cheap, the system can accept foreign callbacks at a high priority. When an FCP returns to its foreign thread the FCP will be garbage collected.
+
+### Thread affinity
+
+When a Smalltalk process makes an FFI callout it becomes "affined" (from affinity) to the currently executing thread, and will remain affined until the callout returns. Nested callbacks and callouts within an affined process will stay affined for the dynamic extent of the outermost callout and hence occur on the same thread. An FCP is affined to the foreign thread that invoked it through a callback.
+
+In addition the programmer can affine a Smalltalk process to a thread or preclude it from being affined to a specific thread. Threads known to the threaded VM that can run Smalltalk (including those introduced to the VM by foreign callbacks) are given a numeric identifier starting at 1. A Smalltalk process has a **threadAffinity** inst var that is normally nil, meaning it can run on any thread. In a callout if a Process's threadAffinity is nil it will be set to the thread id of the current thread, affining it for the dynamic extent of the callout, threadAffinity being reset to nil on return of the callout. The programmer can set threadAffinity through the simple threadAffinity: accessor. Setting threadAffinity to a negative integer causes that Process to run on any thread other than the thread whose ID is the positive value of that negative threadAffinity.
+
+### Collecting errors in threaded callouts
+
+There is a preemption point on a callout returning before it executes Smalltalk. Since a returning callout may block in ownVM another thread may make a callout before the blocking thread can continue. There is therefore the possibility that if the callout returns an error the collection of the error information may be preempted and when accessed will be stale. So there needs to be a way of accessing errors associated with callouts such that there is no possibility of preemption. To achieve this one can specify an error reaper in a pragma immediately following a callout pragma. Here are two examples, the first reading Unix's errno variable[^10], the second calling Windows' GetLastError function.
+
+*FFITestLibrary class methods for error reaping examples*
+
+```smalltalk
+unixSysCallOpen: path oflag: oflag
+	<cdecl: int32 'open' (char * int32) module: 'libc'>
+	<osErrVar: int32 errno module: 'libc'>
+	^self externalCallFailed
+
+ffiCreateFileA: path desiredAccess: dwDesiredAccess shareMode: dwShareMode securityAttributes: lpSecurityAttributesOpt creationDisposition: dwCreationDisposition flagsAndAttributes: dwFlagsAndAttributes templateFile: hTemplateFile
+	"HANDLE CreateFileA(
+		[in]           LPCSTR                lpFileName,
+		[in]           DWORD                 dwDesiredAccess,
+		[in]           DWORD                 dwShareMode,
+		[in, optional] LPSECURITY_ATTRIBUTES lpSecurityAttributes,
+		[in]           DWORD                 dwCreationDisposition,
+		[in]           DWORD                 dwFlagsAndAttributes,
+		[in, optional] HANDLE                hTemplateFile
+	);"
+	<cdecl: void * 'CreateFileA'(char * uint32 uint32 void * uint32 uint32 uint32 void *) module: 'Kernel32.dll'>
+	<osErrFunc: uint32 'GetLastError'() module: 'Kernel32.dll'>
+	^self externalCallFailed
+```
+
+External function declarations augmented with error reaper declarations cause the error reaper value to be collected either by calling the error reaper function or reading the error reaper variable immediately following the callout. The value is then assigned to the activeProcess's osError variable once the VM is owned by the callout thread during return of the callout's value from the FFI invocation. An error reaper function cannot take any arguments, having only a return type. The type of the error reaper function or variable must be one of the primitive integer types (see next section).
+
+### Passing data to threaded callouts
+
+See the section [**Garbage Collection, Object Lifetime, and Pinning**](#garbage-collection-object-lifetime-and-pinning) below, especially references to pinning.
+
+## Representing and managing data
+
+This section details
+
+- how values are passed back and forth through interface methods
+- how external data is referenced and how structure types are handled
+- constraints the garbage collector imposes on the programmer
+
+### Primitive types
+
+The SqueakFFIPrims plugin understands a limited number of types; see `FFIConstants class>>#initializeTypeConstants`.[^11]
+
+These are
+
+| Data Type   | Description (32-bit Image)    | Description (64-bit Image)    |
+|:------------|:------------------------------|:------------------------------|
+| `bool`      | 32-bit Boolean                | 64-bit Boolean                |
+| `char`      | 8-bit Character (Unsigned)    | 8-bit Character (Unsigned)    |
+| `schar`[^12] | 8-bit Character (Signed)     | 8-bit Character (Signed)      |
+| `float`     | 4-byte Single precision float | 4-byte Single precision float |
+| `double`    | 8-byte Double precision float | 8-byte Double precision float |
+| `uint8`     | 8-bit Integer (Unsigned)      | 8-bit Integer (Unsigned)      |
+| `int8`      | 8-bit Integer (Signed)        | 8-bit Integer (Signed)        |
+| `uint16`    | 16-bit Integer (Unsigned)     | 16-bit Integer (Unsigned)     |
+| `int16`     | 16-bit Integer (Signed)       | 16-bit Integer (Signed)       |
+| `uint32`    | 32-bit Integer (Unsigned)     | 32-bit Integer (Unsigned)     |
+| `int32`     | 32-bit Integer (Signed)       | 32-bit Integer (Signed)       |
+| `uint64`    | 64-bit Integer (Unsigned)     | 64-bit Integer (Unsigned)     |
+| `int64`     | 64-bit Integer (Signed)       | 64-bit Integer (Signed)       |
+| `uint3264`  | 32-bit Integer (Unsigned)     | 64-bit Integer (Unsigned)     |
+| `int3264`   | 32-bit Integer (Signed)       | 64-bit Integer (Signed)       |
+
+### Deprecated argument types
+
+The following argument types are considered deprecated. The newer, more explicit data types should be used instead.
+
+- `byte` - Same as `uint8`
+- `sbyte` - Same as `int8`
+- `schar` - Same as `char`
+- `ushort` - Same as `uint16`
+- `short` - Same as `int16`
+- `ulong` - Same as `uint32`
+- `long` - Same as `int32`
+- `ulonglong` - Same as `uint64`
+- `longlong` - Same as `int64`
+- `size_t` - Same as `uint3264`
+
+The FFI (should??) redefines interface methods (and structure types) on start-up so that parameters of type uint3264 or int3264 are mapped into either uint64/int64 on 64-bit platforms or uint32/int32 on 32-bit platforms.
+
+### Parameter passing
+
+Several Smalltalk objects can be passed as actual parameters to formal parameters of the above types. In passing values through narrow parameters (e.g. passing SmallInteger maxVal through an int16) the value is first truncated, and then either zero-extended, if the type is unsigned, or sign-extended (from the most significant bit of the formal parameter's width, *not* the sign of the Smalltalk object) as dictated by the size and signedness of the formal parameter type. Any of these scalar types can be passed as either integer or floating point values, coerced according to C's integer/float implicit conversion rules (as applied in C assignment, cast, or return statements). N.B. There is *no* range checking beyond the plugin refusing to accept integers outside of the -2 ^ 63 to (2 ^ 64) - 1 range!![^13]
+
+- Integers in the range -2 ^ 63 to (2 ^ 64) - 1 (i.e. the union of the signed 64-bit 2's complement and unsigned 64-bit ranges) are either zero-extended or sign-extended
+- Floats[^14] are passed by value as implied by the introductory paragraph.
+- `true` and `false` are mapped to 1 and 0, and zero-extended to fill the width of the parameter (if integral, or passed as 1.0 and 0.0 if floating point)
+- Character instances are mapped to their character code and zero-extended to fill the width of the parameter (ditto).
+
+If a formal parameter is a pointer then as far as the SqueakFFIPrims plugin is concerned there are three cases.
+
+- an instance of ExternalAddress is passed by value
+- an instance of a raw bits object (String, Float32Array, Float32PointArray, Float64Array, IntegerArray, LargeNegativeInteger (!!), LargePositiveInteger (!!) et al; `(Smalltalk allClasses select: #isBits) reject: #isImmediateClass`) is passed as a pointer to the first byte of its data
+- a general instance of ExternalStructure (an instance of a structure type) is passed as a pointer to the first byte of its data
+
+If a formal parameter is a structure type then the actual parameter *must* be a general instance of ExternalStructure, and as many bytes as the sizeof the type of the formal parameter is passed. N.B. if the actual parameter is too small then garbage bytes will be passed following the bytes of the actual parameter.[^15]
+
+### Returning results
+
+The same set of objects are answered as values from interface methods whose return types are the same as the above.
+
+- for bool the full word of the function's result is tested and if zero then false, otherwise true, is answered.
+- for char and schar the least significant 8 bits of the function's result is answered as a Character[^8]
+- for the integer types, the appropriate width of the result is collected, and then sign-extended if necessary, and answered as a suitable Integer instance.
+- for the floating point types either the least significant 32-bits (for `float`) or the full 64-bits (for `double`) are answered as a Float instance (either BoxedFloat64 or SmallFloat64, as appropriate).
+
+If the return type is pointer then
+
+- if the type is char *, an instance of String (assumed to be ByteString) is answered (and the function result must be null-terminated)
+- if the type is a pointer to a general instance of ExternalStructure, an instance of that class will be answered, whose data will be an ExternalAddress
+- otherwise an instance of ExternalAddress will be answered
+
+If the return type is a general instance of ExternalStructure, an instance of that class will be answered, whose data will be a ByteArray.
+
+### Garbage collection, object lifetime, and pinning
+
+The OpenSmalltalk VM's Spur garbage collection scheme is the classical pairing of a generation scavenger for young objects with a mark-sweep collector for old objects. Most young objects are created in "eden", one of three small spaces, eden, past survivor space, and future survivor space, used to collect efficiently newly created objects. Large objects (64k words or larger) are created in old space. Objects living in new space are moved to old space when new space fills up with objects that survive; objects survive a scavenge when they are referenced from old objects and running processes. Objects living in new space are moved often, i.e. once every scavenge. Much less frequently old space is collected using the conventional recursive marking algorithm, and then compacted using a three finger algorithm that moves ordinary objects around "pinned" objects, leaving "pinned" objects where they are.
+
+Given the Cuis VM's garbage collector moves objects, and the FFI supports callbacks, during which the garbage collector may run, and hence move objects, it is unsafe to pass reference parameters that live on the Cuis heap, unless the actual parameter has been pinned, or the function being called does not call-back. With the threaded FFI it is never safe to pass objects that live on the Cuis heap unless they have been pinned (see the next but one paragraph), because Smalltalk execution can overlap with FFI callouts, and therefore unpinned objects may be moved during a callout. It is always safe to pass data stored on the external C heap (general instances of ExternalData, things pointed to by general instances of ExternalAddress), provided this data is live.
+
+The garbage collector will reclaim any and all unreferenced instances, including instances of ExternalAddress, et al, which will be finalized and hence the data they refer to will be freed back to the C heap. Therefore, for objects that live beyond the dynamic extent of a callout, you ***must*** store objects somewhere (e.g. in instance variables of some object that is alive for as long as a library is used) whose data have been passed as actual parameters through interface methods. The garbage collector has no information on the lifetime of C data. It is your responsibility to keep objects used in the FFI safe from the garbage collector. You have been warned.
+
+Objects may be "pinned" by sending them the "pin" message (which answers whether the object was already pinned, not the object itself). If an object is in old space, this merely marks the object as pinned which has the effect of leaving the object where it is until it is collected (pinning an object does *not* prevent it from being garbage collected). Objects in new space which are pinned are first moved to old space. This is not a cheap operation, the cost being a function of object size and the size of the stack zone[^16]. Therefore it is a good idea to try and reuse pinned objects over the course of several FFI calls.
+
+### Defining structure types
+
+Structure types are C's objects and it is important to be able to access fields within them, not just deal with them as blobs of data. The Cuis FFI provides the ExternalStructure hierarchy to do so. To define a structure type you create a subclass of ExternalStructure and fill in a class side method to define the fields and the field types of the structure. Structure fields can be other structures, but care must be taken when redefining a structure type used in another structure. Currently the containing structure is not automatically resized when a structure it contains is redefined.
+
+Here is an example from the FFI_Tests package:
+
+*FFITestBiggerStruct class methods for 'field definition'*
+
+```smalltalk
+fields
+	"FFITestBiggerStruct defineFields"
+	^#(
+		(x 'int64_t')
+		(y 'int64_t')
+		(z 'int64_t')
+		(w 'int64_t')
+		(r 'int64_t')
+		(s 'int64_t')
+		(t 'int64_t')
+		(u 'int64_t'))
+```
+
+On evaluating `FFITestBiggerStruct defineFields` on a 64-bit platform the FFI compiler generates methods such as
+
+*FFITestBiggerStruct methods for \*autogenerated*
+
+```smalltalk
+x
+	<generated>
+	^ handle int64At: 1
+
+x: t1
+	<generated>
+	handle int64At: 1 put: t1
+```
+
+This exemplifies structures, and pointers to structures, within structures:
+
+*FFITestCompoundStruct class methods for 'field definition'*
+
+```smalltalk
+fields
+	"FFITestCompoundStruct defineFields"
+	^#(
+		(s1 #FFISmallStruct1)
+		(p1 'FFISmallStruct1 *')
+		(s2 #FFITestPoint2)
+		(p2 'FFITestPoint2 *')
+		(s4 #FFITestPoint4)
+		(p4 'FFITestPoint4 *')
+	)
+```
+
+On evaluating `FFITestCompoundStruct defineFields` on a 64-bit platform the FFI compiler generates methods such as
+
+*FFITestCompoundStruct methods for \*autogenerated*
+
+```smalltalk
+s1
+	<generated>
+	^ FFISmallStruct1 fromHandle: (handle structAt: 1 length: 2)
+
+s1: t1
+	<generated>
+	handle structAt: 1 put: t1 getHandle length: 2
+
+p1
+	<generated>
+	^ FFISmallStruct1 fromHandle: (handle pointerAt: 9 length: 8)
+
+p1: t1
+	<generated>
+	handle pointerAt: 9 put: t1 getHandle length: 8
+```
+
+The handle of a general instance of ExternalStructure may be either a ByteArray, in which case its data exists on the Cuis heap, (and it may be wise to pin the handle), or an ExternalAddress, in which case its data exists on the C heap. In either case pay careful attention to [Garbage Collection, Object Lifetime, and Pinning](#garbage-collection-object-lifetime-and-pinning).
+
+## Footnotes
+
+[^1]: The ABI is sufficient to describe fully the C calling convention. Foreign code therefore is typically C libraries. C++ includes C as a subset, and therefore the C parts of C++ library APIs may be used directly. But C++ itself cannot be used directly; instead, define a suitable C interface using `extern C { ... }`, and create a library from that.
+
+[^2]: This is the same concurrency model the Python system uses.
+
+[^3]: An unload method could be added to the FFI package at short notice.
+
+[^4]: Note that Cuis (and Squeak) support `_:` as a keyword, so it is possible to use selectors such as `strncmp:_:_:`, e.g. `libc strncmp: s1 _: s2 _: n.`
+
+[^5]: which for example is used in the WIN32 API where it is indicated by the `__stdcall` modifier.
+
+[^6]: Defining too many should be fine but is pointless and confusing.
+
+[^7]: older versions of the SqueakFFIPrims plugin required that one send thunk to the Callback
+
+[^8]: the Callback type syntax is simply a Smalltalk literal array. Igor Stasenko discovered that any C declaration can be expressed using literal array syntax, and this has the advantage that whitespace is ignored. Eliot Miranda likes the syntax and hopes to use it in interface method pragmas. If and when that is possible the FFI will either support two surface syntaxes or will provide tools to convert the old syntax to the new. An advantage of this syntax for interface methods is that now the interface method pragma is a normal pragma, pragmas being receiverless unary or keyword messages with literal arguments, which in practice is a very rich language for method annotations. *The potential implications for the metadata in LIMS methods should be noted.*
+
+[^9]: the heartbeat could be set to a higher frequency, for example 5 KHz, to obtain an average latency of 100 microseconds before a thread is available
+
+[^10]: note that here 'libc' is just a placeholder. The setModule: accessor must be used to assign the actual libc name on the current platform which is available via Alien libcName.
+
+[^11]: in addition, the SqueakFFIPrims plugin has 16-bit and 32-bit Character types. These are useful for functions that return Character values. Passing Characters as parameters requires no special types since Characters are treated as unsigned integers by the argument marshalling machinery. **It may be useful to us to extend the FFI to allow the use of char16 and char32 return types.**
+
+[^12]: schar is a misnomer. Functions declared as returning schars answer Character instances that are fundamentally unsigned. As far as the SqueakFFIPrims plugin is concerned char and schar are the same type.
+
+[^13]: e.g. if you pass 1234.5678 through a formal parameter of type uint8, it will be passed as `1234.5678 asInteger bitAnd: 16rFF`, which happens to be 210; if you pass -1234.5678 through a formal parameter of type int8, it will be passed as `(-1234.5678 asInteger bitOr: (-1 bitShift: 7))`, which happens to be -82.
+
+[^14]: Cuis has only 64-bit Float objects obeying the IEEE 754-1985 standard (C's `double` type). But there are 32-bit float containers that convert between the external 64-bit and internal 32-bit representation, thereby saving space and providing compatibility with C's `float` type.
+
+[^15]: The SqueakFFIPrims plugin can easily be extended to pass the memory pointed to by an ExternalAddress. Please inform Eliot if this is a pressing need.
+
+[^16]: The OpenSmalltalk-VM provides context objects as per Smalltalk-80 but for efficiency a stack organization is used to execute methods, contexts acting as proxies for active stack frames. The stack zone is organized as pages that can hold about 40 activations, and the zone is of the order of 70k to 100k bytes, again controllable by a vmParameter. Whenever a become operation or a pin operation occurs the stack zone is scanned to eliminate forwarding pointers from the receivers of method activations introduced by the become or pin, avoiding the need for a forwarding pointer check when accessing inst vars. But it does mean that every become or pin entails both a copy of the object and a scan of all method activations, which takes hundreds of microseconds, e.g. on a 2018 2.9 GHz 6-Core Intel Core i9 MacBook Pro
+
+    ```smalltalk
+    [Array new: 512] bench '3.19 M runs per second. 313.82 n seconds per run. 34.02  % GC time.'
+    [Array new: 1024] bench '1.68 M runs per second. 593.53 n seconds per run. 32.94  % GC time.'
+    [(Array new: 512) pin] bench '4.89 k runs per second. 204.65 µ seconds per run. 0.06  % GC tim.'
+    [(Array new: 1024) pin] bench '4.54 k runs per second. 220.15 µ seconds per run. 0.12  % GC tim.'
+    | a | a := Array new: 1024 * 1024. "too big to be in new space, and hence allocated in old space"
+    [a pin. a unpin] bench '35.33 M runs per second. 28.30 n seconds per run. 0.00  % GC time.'
+    ```

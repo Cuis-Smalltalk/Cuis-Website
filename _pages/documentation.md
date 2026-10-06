@@ -215,7 +215,7 @@ How to work with Cuis, from everyday tasks to its internals.
         <p>So you want to interact with some library written in C from Smalltalk, and you want the convenience of interfacing from the image itself.</p>
       </li>
       <li>
-        <a href="{{ source }}Technical/FFI/CuisFFIPrimer.md">Cuis FFI Primer</a>
+        <a href="{{ "/documentation/cuis-ffi-primer" | relative_url }}">Cuis FFI primer</a>
         <p>Cuis has the ability to interoperate with foreign code that conforms to a given platform's Application Binary Interface (ABI) specification.</p>
       </li>
       <li>

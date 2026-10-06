@@ -649,6 +649,11 @@ td {
   border-bottom: 1px solid $line;
   padding: 6px 24px 6px 0;
   text-align: left;
+
+  code {
+    white-space: nowrap;
+    overflow-wrap: normal;
+  }
 }
 
 kbd {
