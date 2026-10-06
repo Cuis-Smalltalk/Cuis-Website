@@ -194,8 +194,8 @@ How to work with Cuis, from everyday tasks to its internals.
         <p>Optional functionality, that can be loaded as needed, is stored in separate code Packages.</p>
       </li>
       <li>
-        <a href="{{ source }}CuisReleaseProcess.md">The Cuis Smalltalk Release Process</a>
-        <p>This document describes the Process to handle Stable Releases for Cuis.</p>
+        <a href="{{ "/documentation/release-process" | relative_url }}">The Cuis Smalltalk release process</a>
+        <p>The process to handle Stable Releases for Cuis.</p>
       </li>
       <li>
         <a href="{{ "/documentation/getting-help" | relative_url }}">Getting help with Cuis</a>
