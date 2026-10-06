@@ -31,6 +31,12 @@ $on-tablet: 1039px;
   box-shadow: $shadow $shadow 0 var(--window);
 }
 
+@mixin raised($radius: 0, $shadow: 2px) {
+  border: 1px solid $ink;
+  border-radius: $radius;
+  box-shadow: $shadow $shadow 0 $ink;
+}
+
 @mixin panel {
   @include card;
   padding: 24px 28px;
@@ -109,8 +115,7 @@ figure {
   margin-left: 0;
 
   img {
-    border: 1px solid $ink;
-    box-shadow: 16px 16px 0 $ink;
+    @include raised($shadow: 16px);
   }
 }
 
@@ -484,10 +489,8 @@ code {
 
 .choice {
   display: inline-flex;
-  border: 1px solid $ink;
-  border-radius: 6px;
+  @include raised(6px);
   overflow: hidden;
-  box-shadow: 2px 2px 0 $ink;
 
   button {
     border: 0;
@@ -561,11 +564,9 @@ code {
 }
 
 kbd {
-  border: 1px solid $ink;
-  border-radius: 4px;
+  @include raised(4px);
   padding: 1px 8px;
   background-color: $paper;
-  box-shadow: 2px 2px 0 $ink;
   font-family: inherit;
   font-size: 0.8em;
   font-weight: 700;
@@ -636,13 +637,11 @@ kbd {
       left: 0;
       width: 28px;
       height: 28px;
-      border: 1px solid $ink;
-      border-radius: 50%;
+      @include raised(50%);
       background-color: var(--window);
       color: $on-window;
       font: 800 13px/28px $display;
       text-align: center;
-      box-shadow: 2px 2px 0 $ink;
     }
   }
 }
