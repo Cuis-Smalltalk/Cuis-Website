@@ -219,7 +219,7 @@ How to work with Cuis, from everyday tasks to its internals.
         <p>Cuis has the ability to interoperate with foreign code that conforms to a given platform's Application Binary Interface (ABI) specification.</p>
       </li>
       <li>
-        <a href="{{ source }}Technical/ASemanticsForEphemerons.md">A semantics for Ephemerons (& Weak Referrers)</a>
+        <a href="{{ "/documentation/ephemerons" | relative_url }}">A semantics for ephemerons (& weak referrers)</a>
         <p>A Smalltalk system is composed of a live object graph, which is the transitive closure of the objects reachable from the roots.</p>
       </li>
     </ul>

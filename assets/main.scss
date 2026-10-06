@@ -150,6 +150,36 @@ a {
   scroll-margin-top: 80px;
 }
 
+.footnotes li:target {
+  border-radius: 4px;
+  background-color: color-mix(in srgb, var(--window) 35%, transparent);
+  box-shadow: 0 0 0 4px color-mix(in srgb, var(--window) 35%, transparent);
+}
+
+sup:target {
+  border-radius: 4px;
+  background-color: var(--window);
+  box-shadow: 0 0 0 3px var(--window);
+
+  a {
+    color: $on-window;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    animation: target-pulse 0.8s ease-out 2;
+  }
+}
+
+@keyframes target-pulse {
+  from {
+    box-shadow: 0 0 0 3px var(--window), 0 0 0 3px var(--window);
+  }
+
+  to {
+    box-shadow: 0 0 0 3px var(--window), 0 0 0 14px transparent;
+  }
+}
+
 @media (prefers-reduced-motion: no-preference) {
   html {
     scroll-behavior: smooth;
