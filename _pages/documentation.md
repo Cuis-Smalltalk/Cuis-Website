@@ -7,13 +7,9 @@ title: Documentation
 description: "Everything to learn and use Cuis."
 ---
 
-{% assign source = "https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/blob/master/Documentation/" %}
-
-{% include toc.html %}
-
 ## Get started {#get-started}
 
-<p class="skip">Already running Cuis? Skip to <a href="#learn">Learn</a>.</p>
+<p class="skip">Already running Cuis? Skip to <a href="/documentation/tutorials/">Tutorials</a>.</p>
 
 <div class="kickstart">
   <div class="setup">
@@ -76,188 +72,34 @@ description: "Everything to learn and use Cuis."
 <div class="row">
   <div class="col versions-browser">
     <h3>Why the rolling release?</h3>
-    <p>It's where Cuis evolves, with new features, bug fixes and package updates. <a href="{{ "/documentation/release-process" | relative_url }}">Stable releases</a> only receive fixes for serious bugs, while packages keep moving forward with the rolling release, so using a stable release means knowing which version of each package matches it. That fits experienced users with specific needs, such as projects already built on one that don't need to follow ongoing development. Just starting? The rolling release is the way to go.</p>
+    <p>It's where Cuis evolves, with new features, bug fixes and package updates. <a href="/documentation/reference/release-process">Stable releases</a> only receive fixes for serious bugs, while packages keep moving forward with the rolling release, so using a stable release means knowing which version of each package matches it. That fits experienced users with specific needs, such as projects already built on one that don't need to follow ongoing development. Just starting? The rolling release is the way to go.</p>
   </div>
 </div>
 
 <div class="note" markdown="1">
-<svg class="icon"><use href="{{ "/assets/icons.svg#lightbulb" | relative_url }}"></use></svg>
+<svg class="icon"><use href="/assets/icons.svg#lightbulb"></use></svg>
 
 Cloned with Git? You only got the latest commit. Run <code class="copy">git fetch --unshallow</code> in the Cuis folder to get the full history.
 
 </div>
 
 <div class="note" markdown="1">
-<svg class="icon"><use href="{{ "/assets/icons.svg#info" | relative_url }}"></use></svg>
+<svg class="icon"><use href="/assets/icons.svg#info"></use></svg>
 
 Cuis doesn't touch anything else on your system. Want to remove it? Just delete the Cuis folder. That's all.
 
 </div>
 
-## Ideas and history {#ideas}
-
-The ideas behind Smalltalk and Cuis, and why they are the way they are.
-
-<ul class="doc-list">
-  <li>
-    <a href="https://www.cs.virginia.edu/~evans/cs655/readings/smalltalk.html">Design Principles Behind Smalltalk</a>
-    <p>The purpose of the Smalltalk project is to provide computer support for the creative spirit in everyone.</p>
-  </li>
-  <li>
-    <a href="{{ "/overview" | relative_url }}">About Cuis Smalltalk</a>
-    <p>What Cuis is, the philosophy behind it, and the origin of its name.</p>
-  </li>
-  <li>
-    <a href="{{ "/documentation/why-smalltalk-80" | relative_url }}">Cuis is a Smalltalk-80 system. Why?</a>
-    <p>So, {{ site.time | date: "%Y" | minus: 1980 }} years after Smalltalk-80, what does it mean to say that Cuis is a Smalltalk-80 system?</p>
-  </li>
-  <li>
-    <a href="{{ "/documentation/making-dynabooks-real" | relative_url }}">Making Dynabooks Real</a>
-    <p>A great email message from Alan Kay on the Dynabook.</p>
-  </li>
-  <li>
-    <a href="{{ "/documentation/history" | relative_url }}">A short history of Cuis</a>
-    <p>In 2003, Juan Vuletich, by then an active collaborator in the Squeak project, decided that a zoomable and scalable GUI was needed for Smalltalk.</p>
-  </li>
-  <li>
-    <a href="{{ "/quotes" | relative_url }}">Nice comments about Cuis</a>
-    <p>This is what the creators of Smalltalk and Morphic, and other prominent Smalltalk users have said about Cuis.</p>
-  </li>
-</ul>
-
-## Learn {#learn}
-
-<p class="skip">Already know Smalltalk? Skip to <a href="#guides">Guides</a>.</p>
-
-<div class="row">
-  <div class="col">
-    <h3>The Cuis Book</h3>
-    <img src="{{ "/assets/imgs/documentation/book.png" | relative_url }}" class="doc">
-    <p><a href="https://DrCuis.github.io/TheCuisBook">The Cuis book.</a> It is all about programming Smalltalk with Cuis. Whether you want to learn programming or to discover what Smalltalk has to offer, the book guides you in a journey to learn both the language, the tools and to code a modest replica of the <em>Spacewar!</em> game. Written by Hilaire Fernandes with Ken Dickey and Juan Vuletich. You can also download the <a href="https://github.com/DrCuis/TheCuisBook/releases/latest/download/TheCuisBook.pdf">pdf version</a>.</p>
-  </div>
-
-  <div class="col">
-    <h3>The Cuis Documentation Project</h3>
-    <img src="{{ "/assets/imgs/documentation/wiki.png" | relative_url }}" class="doc">
-    <p>If you are learning Smalltalk, the Cuis Documentation Project can help you.  The documentation is presented in Tutorials, How-to guides, References and Explanations.<br><a href="http://doc.cuis.st">read more</a></p>
-  </div>
-
-  <div class="col">
-    <h3>More introductions</h3>
-    <p>For an overview of Cuis, read the <a href="https://github.com/DrCuis/Learning-Cuis">Learning Cuis</a> page. Mark's <a href="https://mvolkmann.github.io/blog/smalltalk/01-quick-introduction/">blog</a> offers a quick introduction to Smalltalk that is well worth reading; be sure to also check out his other pages about Cuis Smalltalk.</p>
-    <p>A great <a href="https://www.youtube.com/playlist?list=PLMkq_h36PcLCtLKrrdOKKFV2r267VFH_t">series of introductory videos</a> in Spanish by Hernán Wilkinson.</p>
-    <p>An <a href="https://www.youtube.com/watch?v=8GRwNM3hBDA">introductory video</a> from Reykjavik University.</p>
-  </div>
+<div class="row contents">
+  {%- assign sections = "tutorials how-to-guides reference explanation talks" | split: " " %}
+  {%- for name in sections %}
+  {%- assign url = "/documentation/" | append: name | append: "/" %}
+  {%- assign section = site.docs | where: "url", url | first %}
+  <a class="col" id="{{ name }}" href="{{ section.url }}">
+    <h2>{{ section.title }}</h2>
+    {%- if section.description %}
+    <p>{{ section.description }}</p>
+    {%- endif %}
+  </a>
+  {%- endfor %}
 </div>
-<div class="row">
-  <div class="col">
-    <h3>The Morph Books</h3>
-    <p><a href="https://DrCuis.github.io/DesignGUI">The Morph Book vol. I - Designing Graphic User Interfaces.</a> Learn how to design simple graphic user interface with Morph objects. The book tutors you to learn both fundamental facets of Morph and design patterns applied to GUI developments.</p>
-    <p><a href="https://DrCuis.github.io/TheArtOfMorph">The Morph Book vol. II - The Art of Morph.</a> Learn how to design from scratch your own morph with the Cuis' Morphic 3 framework.</p>
-  </div>
-
-  <div class="col">
-    <h3>Smalltalk-80 books</h3>
-    <p>Additionally, there are many tutorials and references for Smalltalk in the web. They apply quite well to Cuis, especially those written originally for Smalltalk-80 or Squeak. These books <a href="http://stephane.ducasse.free.fr/FreeBooks/BlueBook/Bluebook.pdf">“Smalltalk-80 the language and its implementation”</a> and <a href="http://stephane.ducasse.free.fr/FreeBooks/InsideST/InsideSmalltalk.pdf">“Inside Smalltalk volume I”</a> are great introductory texts, and they are also the reference for the language and basic class library. Both are freely available. Read other references from <a href="http://stephane.ducasse.free.fr/FreeBooks/">Stef’s Free Online Smalltalk Books</a> collection.</p>
-    <p><strong>Inside Smalltalk volume I</strong> is an excellent introduction to Smalltalk-80. The browser and other tools look outdated, but all the concepts are fully up to date. Don’t pay much attention to chapters 9 and 10, though. Cuis is several generations more modern than the classic MVC GUI.</p>
-    <p><strong>Smalltalk-80 the language and its implementation</strong>, the Blue Book, is the first book devoted to Smalltalk-80. It is a great introduction to OOP and Smalltalk. As above, MVC and Pen are outdated with respect to Cuis.</p>
-  </div>
-</div>
-
-## Guides {#guides}
-
-How to work with Cuis, from everyday tasks to its internals.
-
-<div class="split">
-  <div>
-    <h3>Basics</h3>
-    <ul class="doc-list">
-      <li>
-        <a href="{{ "/documentation/directory-structure" | relative_url }}">Directory structure of Cuis Smalltalk</a>
-        <p>The Cuis Rolling Release Repo includes a 64-bit Cuis image, a selection of optional packages, and a Virtual Machine to let it run on the main PC platforms.</p>
-      </li>
-      <li>
-        <a href="{{ "/documentation/managing-your-code" | relative_url }}">Managing your code in Cuis</a>
-        <p>Code that is not part of the Cuis Core image itself, like applications, frameworks and libraries, should be stored in Packages.</p>
-      </li>
-      <li>
-        <a href="{{ "/documentation/managing-your-code#using-git-and-github" | relative_url }}">Using Git and GitHub to host and manage Cuis code</a>
-        <p>Cuis doesn't do version control by itself. Instead, we suggest using external VCS tools.</p>
-      </li>
-      <li>
-        <a href="{{ "/documentation/code-recovery" | relative_url }}">Code recovery in Cuis</a>
-        <p>To recover our code, the [recent changes] button in FileList will open a ChangeList on the selected file.</p>
-      </li>
-      <li>
-        <a href="{{ "/documentation/additional-packages" | relative_url }}">Additional packages for Cuis</a>
-        <p>Optional functionality, that can be loaded as needed, is stored in separate code Packages.</p>
-      </li>
-      <li>
-        <a href="{{ "/documentation/release-process" | relative_url }}">The Cuis Smalltalk release process</a>
-        <p>The process to handle Stable Releases for Cuis.</p>
-      </li>
-      <li>
-        <a href="{{ "/documentation/getting-help" | relative_url }}">Getting help with Cuis</a>
-        <p>In the Cuis community, questions are most welcome. The main place for them is our mail list.</p>
-      </li>
-      <li>
-        <a href="https://github.com/nmingotti/The-Cuis-CookBook/wiki">The Cuis CookBook Wiki</a>
-        <p>The community is gathering various pieces of advice and information at The Cuis CookBook Wiki.</p>
-      </li>
-    </ul>
-  </div>
-  <div>
-    <h3>Advanced</h3>
-    <ul class="doc-list">
-      <li>
-        <a href="{{ "/documentation/open-smalltalk-vm" | relative_url }}">The Open Smalltalk VM</a>
-        <p>Cuis runs on the Open Smalltalk VM. The latest release of this VM is included in the CuisVM.app folder.</p>
-      </li>
-      <li>
-        <a href="{{ "/documentation/ffi-or-vm-plugins" | relative_url }}">FFI or VM plugins, what to use?</a>
-        <p>There are two main ways to call external code in the Cuis / Squeak world.</p>
-      </li>
-      <li>
-        <a href="{{ "/documentation/quick-orientation-to-ffi" | relative_url }}">A quick orientation to FFI from Smalltalk</a>
-        <p>So you want to interact with some library written in C from Smalltalk, and you want the convenience of interfacing from the image itself.</p>
-      </li>
-      <li>
-        <a href="{{ "/documentation/cuis-ffi-primer" | relative_url }}">Cuis FFI primer</a>
-        <p>Cuis has the ability to interoperate with foreign code that conforms to a given platform's Application Binary Interface (ABI) specification.</p>
-      </li>
-      <li>
-        <a href="{{ "/documentation/ephemerons" | relative_url }}">A semantics for ephemerons (& weak referrers)</a>
-        <p>A Smalltalk system is composed of a live object graph, which is the transitive closure of the objects reachable from the roots.</p>
-      </li>
-    </ul>
-  </div>
-</div>
-
-## Talks {#talks}
-
-Presentations and podcasts on Cuis Smalltalk.
-
-{% assign talks = site.data.talks | sort: 'date' | reverse %}
-{% include videos.html videos=talks %}
-
-## Papers {#papers}
-
-Papers on aspects of Cuis Smalltalk.
-
-<ul class="doc-list">
-  <li>
-    <a href="{{ source }}Papers/2013-09-PrefilteringAntiAliasingForGeneralVectorGraphics.pdf">Prefiltering Antialiasing for General Vector Graphics</a>
-    <p>This work presents a simple and practical technique for the rasterization of general vector graphics with correct prefiltering antialiasing.</p>
-    <p>Juan Vuletich · 2013-09</p>
-  </li>
-  <li>
-    <a href="{{ source }}Papers/2022-11-UnicodeSupportInCuisSmalltalk.pdf">Unicode support in Cuis Smalltalk</a>
-    <p>It describes the approach used to support Unicode in Smalltalk source code and generally in Text objects.</p>
-    <p>Juan Vuletich · 2022-11 · FAST Workshop 2022</p>
-  </li>
-</ul>
-
-## See also {#see-also}
-
-- A [playlist of videos about Cuis](https://www.youtube.com/playlist?list=PLbevs6Mp0MMMaR5gSYzJQXQ56OplFSCJk).
-- The [Monthly Community Meetings]({{ "/community#past-meetings" | relative_url }}), recorded in video.

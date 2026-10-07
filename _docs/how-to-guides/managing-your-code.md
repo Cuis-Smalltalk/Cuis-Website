@@ -1,6 +1,6 @@
 ---
 title: Managing your code in Cuis
-description: "Packages, ChangeSets, and how to host and version your code with Git and GitHub."
+description: "Packages and ChangeSets: how Cuis keeps your code, and how to install and save it."
 ---
 
 {% include toc.html %}
@@ -42,7 +42,7 @@ When the changes to the base system are complete, it is a good time to review th
 <kbd>Install</kbd> loads all the code in the file into a separate, new *ChangeSet* object (viewable in the **ChangeSorter** tool). This is appropriate for loading Cuis updates, or other code that we are not authoring, as it doesn't add new items (class or method definitions) to the current ChangeSet used to record the changes we make to Cuis.
 
 <div class="note debugger" markdown="1">
-<svg class="icon"><use href="{{ "/assets/icons.svg#triangle-alert" | relative_url }}"></use></svg>
+<svg class="icon"><use href="/assets/icons.svg#triangle-alert"></use></svg>
 
 Usually any ChangeSets should be installed before doing changes to the image. The reason is that an installed ChangeSet could overwrite changes done by you, or packages you have installed. If this is the case, the affected packages would appear as dirty, and your change set would include any installed changes (that don't belong in a package). Be careful when saving packages or change sets if this was the case!
 
@@ -51,33 +51,3 @@ Usually any ChangeSets should be installed before doing changes to the image. Th
 ## Cherry picking individual changes from ChangeSet or Package files
 
 Additionally, you can study a Package (.pck.st) or ChangeSet (.cs) file without installing it. To do this, use the **FileList**, navigate to the appropriate directory, select the file and click on <kbd>Contents</kbd>. You will get a **ChangeList** tool with the contents of the file. You can select each change, to see the code, and compare it with what is currently loaded in the system (if that is the case). You can also apply various filters on the list. See the right-click menu. Once you have one or more changes selected, you can do right-click / 'fileIn selections'. Changes that belong in a package that is already there will be captured by that package, which will now be dirty. Code that doesn't belong in a loaded package will be included in the current *ChangeSet*, together with code you save in a **Browser**. A new *Package* or *ChangeSet* will *not* be created. This is especially useful when reviewing code, or when we are combining code from more than one source into a single *ChangeSet* or *Package*.
-
-## Using Git and GitHub
-
-Cuis doesn't do version control by itself: it doesn't handle Package versions, ancestries, etc. If versioning of Packages is desired, the best is to use an external versioning file repository, such as Git or Mercurial. This is not unlike using Git or GitHub with a file-based development environment such as Eclipse or a text editor. Like Cuis, these tools don't do version handling themselves, they just load and save files, and let Git do its magic.
-
-The Cuis project is hosted on [GitHub](https://github.com), as most projects related to Cuis.
-
-<div class="note" markdown="1">
-<svg class="icon"><use href="{{ "/assets/icons.svg#lightbulb" | relative_url }}"></use></svg>
-
-The recommendation is to use a GitHub repository with a name beginning with 'Cuis-Smalltalk-', so it will be easy for anybody to find it.
-
-</div>
-
-The guiding principle is to *not duplicate concepts and behavior*. We use GitHub to host, version, diff and merge external packages (.pck files), i.e. code that is maintained independently and outside Cuis.
-
-Package files need to be simple text files. Cuis code files are uncompressed, encoded in UTF-8, and use the LF (ASCII 10) newline convention. This means they are Git friendly: Git/GitHub can diff versions, merge branches, and browse them with syntax highlighting.
-
-### Hosting external packages
-
-What follows is the suggested procedure for using Git/GitHub to host external packages, and store their version history. Usually do this every day.
-
-1. Start with a standard (i.e. fresh) Cuis image. **Never save the image.**
-2. Set up Git repositories for external packages (if not already done).
-3. Install packages from Git repositories.
-4. Develop. Modify and/or create packages.
-5. Save own packages (to Git repositories).
-6. Git add / commit / push as appropriate.
-7. Save changes that are not part of any package. These are automatically captured in numbered ChangeSets, separated from changes to packages.
-8. Exit the image. Usually without saving.

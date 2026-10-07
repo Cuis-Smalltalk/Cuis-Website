@@ -394,6 +394,13 @@ h2, h3 {
   height: 1em;
   margin-right: 0.35em;
   vertical-align: -0.15em;
+
+  &.trailing {
+    width: 0.75em;
+    height: 0.75em;
+    margin: 0 0 0 0.25em;
+    vertical-align: -0.05em;
+  }
 }
 
 .news-links {
@@ -838,6 +845,7 @@ kbd {
   padding: 0 20px;
 }
 
+.col > h2,
 .col > h3,
 .quotes footer,
 .list h4,
@@ -934,7 +942,7 @@ kbd {
   }
 }
 
-.doc-list {
+.documentation-entries {
   columns: 2 360px;
   column-gap: $spacing-unit * 2;
   padding-left: 0;
@@ -954,6 +962,30 @@ kbd {
     margin: 4px 0 0;
     font-size: $small-font-size;
     color: $grey;
+  }
+}
+
+.contents {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: $spacing-unit * 2;
+
+  > a {
+    flex: 1 1 320px;
+    color: inherit;
+    text-decoration: none;
+  }
+
+  h2::after {
+    content: " ›";
+  }
+
+  p {
+    margin-top: 0;
+  }
+
+  > a:hover h2 {
+    text-decoration: underline;
   }
 }
 

@@ -1,7 +1,4 @@
----
----
-
-const icon = name => `<svg class="icon"><use href="{{ "/assets/icons.svg" | relative_url }}#${name}"></use></svg>`;
+const icon = (name, modifier = '') => `<svg class="icon ${modifier}"><use href="/assets/icons.svg#${name}"></use></svg>`;
 
 document.querySelectorAll('code.copy').forEach(code => {
   const button = document.createElement('button');
@@ -16,4 +13,11 @@ document.querySelectorAll('code.copy').forEach(code => {
   wrapper.className = 'copyable';
   code.replaceWith(wrapper);
   wrapper.append(code, button);
+});
+
+document.querySelectorAll('.workspace .page-content a[href^="http"]').forEach(link => {
+  if (link.hostname === 'cuis.st') return;
+  link.target = '_blank';
+  link.rel = 'noopener';
+  if (!link.classList.contains('video')) link.insertAdjacentHTML('beforeend', icon('external-link', 'trailing'));
 });

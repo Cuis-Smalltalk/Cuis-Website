@@ -1,0 +1,21 @@
+{%- assign entries = include.entries | default: page.entries -%}
+
+<ul class="documentation-entries">
+  {%- for entry in entries -%}
+    {%- assign item = entry -%}
+    {%- if entry.doc -%}
+      {%- assign url = page.url | append: entry.doc -%}
+      {%- assign item = site.docs | where: "url", url | first -%}
+    {%- endif -%}
+
+    {%- if item %}
+  <li>
+    <a href="{{ item.url }}">{{ item.title | escape }}</a>
+    {{ item.description | markdownify }}
+    {%- if item.author %}
+    <p>{{ item.author }} · {{ item.date }}{% if item.event %} · {{ item.event }}{% endif %}</p>
+    {%- endif %}
+  </li>
+    {%- endif -%}
+  {%- endfor %}
+</ul>
