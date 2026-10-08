@@ -246,6 +246,19 @@ Add an entry at the end of `_data/quotes.yml`, which goes from the oldest commen
 * `author_url` is optional, and links the name of the author.
 * `featured: 4` also shows the comment on the home page, after the ones with `featured` 1, 2 and 3. For the home page, you can write a shorter version of the comment in `excerpt`.
 
+### Want to add a screenshot to the home page?
+
+Put the image in `assets/imgs/home/`, and add an entry to `screenshots` in the front matter of `_pages/frontpage.md`. The slideshow shows them in that order.
+
+```yaml
+screenshots:
+  - image: ide.png
+    alt: "The Cuis Smalltalk development environment"
+    caption: "A typical work-in-progress scene in Cuis Smalltalk application development: …"
+```
+
+`caption` is plain text: Markdown in it is not converted.
+
 ## References
 
 - [GitHub Pages](https://docs.github.com/en/pages)

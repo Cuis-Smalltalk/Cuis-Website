@@ -1,0 +1,12 @@
+<div class="slideshow">
+  <div class="slides" tabindex="0" role="region" aria-roledescription="carousel" aria-label="Screenshots">
+    {%- for screenshot in include.screenshots %}
+    <figure aria-roledescription="slide" aria-label="{{ forloop.index }} of {{ forloop.length }}">
+      <img src="/assets/imgs/home/{{ screenshot.image }}" alt="{{ screenshot.alt }}"{% unless forloop.first %} loading="lazy"{% endunless %}>
+      {%- if screenshot.caption %}
+      <figcaption>{{ screenshot.caption }}</figcaption>
+      {%- endif %}
+    </figure>
+    {%- endfor %}
+  </div>
+</div>

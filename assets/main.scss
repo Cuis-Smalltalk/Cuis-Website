@@ -17,6 +17,9 @@ $content-width: 1260px;
 $on-palm: 600px;
 $on-laptop: 800px;
 $on-tablet: 1039px;
+$figure-shadow: 16px;
+$slide-step: 40px;
+$slide-controls-gap: 20px;
 
 @mixin media-query($device) {
   @media screen and (max-width: $device) {
@@ -114,7 +117,7 @@ figure {
   margin-left: 0;
 
   img {
-    @include raised($shadow: 16px);
+    @include raised($shadow: $figure-shadow);
   }
 }
 
@@ -777,7 +780,8 @@ kbd {
 }
 
 .hero {
-  padding-bottom: clamp(0px, 20vw, 220px);
+  $overlap: calc(clamp(0px, 20vw, 220px) + #{$slide-step + $slide-controls-gap});
+  padding-bottom: $overlap;
 
   h1 {
     font-size: clamp(2em, 10vw, 5.5em);
@@ -796,8 +800,92 @@ kbd {
     }
   }
 
-  + figure {
-    margin-top: calc(-1 * clamp(0px, 20vw, 220px));
+  + .slideshow {
+    margin-top: calc(-1 * #{$overlap});
+  }
+}
+
+.slideshow {
+  margin: $spacing-unit 0;
+
+  .slides {
+    display: flex;
+    align-items: flex-start;
+    margin-right: -$figure-shadow;
+    padding-bottom: $figure-shadow;
+    overflow-x: auto;
+    overscroll-behavior-x: contain;
+    scroll-snap-type: x mandatory;
+
+    @media (prefers-reduced-motion: no-preference) {
+      scroll-behavior: smooth;
+    }
+  }
+
+  &.enhanced .slides {
+    scrollbar-width: none;
+  }
+
+  figure {
+    flex: 0 0 100%;
+    box-sizing: border-box;
+    margin: 0;
+    padding-right: $figure-shadow;
+    scroll-snap-align: start;
+  }
+}
+
+.slide-controls {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: $slide-controls-gap;
+
+  button {
+    display: grid;
+    place-items: center;
+    border: 0;
+    padding: 0;
+    background: none;
+    color: inherit;
+    cursor: pointer;
+  }
+
+  .step {
+    width: $slide-step;
+    height: $slide-step;
+    @include raised(50%);
+    background-color: #fff;
+    color: $blue;
+    font-size: 22px;
+
+    &:disabled {
+      box-shadow: none;
+      opacity: 0.4;
+      cursor: default;
+    }
+
+    .icon {
+      margin: 0;
+    }
+  }
+
+  .dot {
+    width: 24px;
+    height: 24px;
+
+    &::before {
+      content: "";
+      width: 10px;
+      height: 10px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+    }
+
+    &[aria-current="true"]::before {
+      background-color: #fff;
+    }
   }
 }
 
