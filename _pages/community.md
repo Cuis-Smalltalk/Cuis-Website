@@ -2,7 +2,7 @@
 permalink: /community
 layout: page
 icon: users
-window: transcript
+window: package-installer
 title: Community
 description: "Mailing list, monthly meetings and how to contribute."
 ---

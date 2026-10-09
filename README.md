@@ -4,13 +4,13 @@ The website of Cuis Smalltalk is published at [cuis.st](https://cuis.st) with Gi
 
 ## Run the site
 
-The `Pages` workflow (`.github/workflows/pages.yml`) builds the site with Jekyll on every push to `master`, with Ruby 4.0.7 and the gems of `Gemfile.lock`, and GitHub Pages publishes it. To run it on your machine with the same versions, use Docker:
+The `Pages` workflow (`.github/workflows/pages.yml`) builds the site with Jekyll on every push to `master` and once a day, with Ruby 4.0.7 and the gems of `Gemfile.lock`, and GitHub Pages publishes it. To run it on your machine with the same versions, use Docker:
 
 ```
 docker compose up
 ```
 
-The first time, it takes a few minutes to install everything. When it shows `Server running`, open http://localhost:4000. Leave it running while you follow any of the guides below: each change you save shows up there.
+The first time, it takes a few minutes to install everything. When it shows `Server running`, open http://localhost:4000. Leave it running while you follow any of the guides below: each change you save shows up there. The Packages page shows the sample packages of `_data/packages.yml`, which the workflow replaces with the real list before each build. To see the real list, run `ruby _data/fetch-packages.rb`, and `git checkout _data/packages.yml` to get the samples back before you commit.
 
 Without Docker, with Ruby 4.0.7 installed:
 
@@ -157,6 +157,15 @@ Say `reference` has several pages about the VM, and you want them together in a 
 3. **Update the list of the section.** In `_docs/reference/index.md`, remove the lines of the pages you moved, and add one line for the subsection where you want it, with a slash at the end: `- doc: vm/`.
 
 A subsection can have its own subsections, built the same way.
+
+### Want to list a package?
+
+Add the topic `cuis-smalltalk-package` to its repository on GitHub, with the gear next to **About**. The Packages page lists every repository with that topic, forks included, and is refreshed once a day.
+
+* The name of the package is the name of the repository without `Cuis-Smalltalk-` or `Cuis-` at the start: `Cuis-Smalltalk-Regex` is listed as Regex.
+* Repositories with the same name, ignoring case, are shown in one card, one entry per repository: the official ones first, then the featured ones, then the rest. That is how a fork is shown next to its original. A fork doesn't inherit the topic: it needs its own.
+* The packages are sorted by their last push, the most recent first. The repositories of the Cuis-Smalltalk organization are marked as official. The Featured and Official buttons show only the featured or official packages, or both.
+* `_data/packages-config.yml` curates the list. To feature a repository, highlighted on the page, add it to `featured`. To hide a repository, or all the repositories of a user, add `owner/name` or `owner` to `excluded`.
 
 ### Want to add a talk?
 

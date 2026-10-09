@@ -3,6 +3,8 @@ name: Pages
 on:
   push:
     branches: [master]
+  schedule:
+    - cron: "0 6 * * *"
   workflow_dispatch:
 
 permissions:
@@ -23,6 +25,9 @@ jobs:
         with:
           ruby-version: "4.0.7"
           bundler-cache: true
+      - run: ruby _data/fetch-packages.rb
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - id: pages
         uses: actions/configure-pages@v6
       - run: |

@@ -1,119 +1,188 @@
-- name: Erudite
-  description: Documentation system for Cuis Smalltalk (with literate programming capabilities).
-  url: https://github.com/Cuis-Smalltalk/Erudite
-  tags: [documentation, literate programming]
+# Sample packages for running the site locally. The Pages workflow replaces this file with the
+# real list, written by fetch-packages.rb, before building the site.
 
-- name: Measures
-  description: Different Measure models implemented in Cuis.
-  url: https://github.com/Cuis-Smalltalk/Measures
-  tags: [utilities]
-
-- name: Calendar
-  description: Different implementation of how to represent dates and calendars in Cuis.
-  url: https://github.com/Cuis-Smalltalk/Calendars
-  tags: [utilities]
+- name: code-coverage
+  featured: false
+  official: false
+  pushed_at: "2026-10-05T14:19:32Z"
+  sources:
+    - owner: npapagna
+      url: https://github.com/npapagna/cuis-code-coverage
+      official: false
+      pushed_at: "2026-10-05T14:19:32Z"
 
 - name: OSProcess
-  description: Provides access to operating system functions, including pipes, child process creation, and control of the Squeak VM process.
-  url: https://github.com/Cuis-Smalltalk/OSProcess
-  tags: [utilities, operating system]
+  featured: true
+  official: true
+  pushed_at: "2026-09-29T02:44:37Z"
+  sources:
+    - owner: Cuis-Smalltalk
+      url: https://github.com/Cuis-Smalltalk/OSProcess
+      official: true
+      pushed_at: "2026-09-29T02:44:37Z"
+    - owner: dtlewis290
+      url: https://github.com/dtlewis290/Cuis-Smalltalk-OSProcess
+      official: false
+      pushed_at: "2019-05-29T23:50:16Z"
+      description: OSProcess provides access to operating system functions, including pipes, child process creation, and control of the Squeak VM process.
 
 - name: StyledTextEditor
-  description: Rich text editor.
-  url: https://github.com/Cuis-Smalltalk/StyledTextEditor
-  tags: [text editing]
+  featured: false
+  official: true
+  pushed_at: "2026-09-25T13:44:20Z"
+  sources:
+    - owner: Cuis-Smalltalk
+      url: https://github.com/Cuis-Smalltalk/StyledTextEditor
+      official: true
+      pushed_at: "2026-09-25T13:44:20Z"
+      description: A high quality Styled Text Model and Editor for Cuis Smalltalk
+    - owner: bpieber
+      url: https://github.com/bpieber/Cuis-Smalltalk-StyledTextEditor
+      official: false
+      pushed_at: "2023-09-18T15:49:14Z"
+      description: A high quality Styled Text Model and Editor for Cuis Smalltalk
+    - owner: nmingotti
+      url: https://github.com/nmingotti/Cuis-Smalltalk-StyledTextEditor
+      official: false
+      pushed_at: "2016-02-17T15:48:30Z"
+      description: A high quality Styled Text Model and Editor for Cuis Smalltalk
 
-- name: Aida
-  description: AidaWeb Smalltalk Web Application Server for Cuis 4.2.
-  url: https://github.com/pbella/Cuis-Smalltalk-Aida
-  tags: [web]
+- name: UI
+  featured: true
+  official: true
+  pushed_at: "2026-09-15T13:57:12Z"
+  sources:
+    - owner: Cuis-Smalltalk
+      url: https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-UI
+      official: true
+      pushed_at: "2026-09-15T13:57:12Z"
+      description: Morphic Widgets and Components for general use
 
-- name: Regex
-  description: Regular expressions support to Cuis.
-  url: https://github.com/nmingotti/Cuis-Smalltalk-Regex
-  tags: [regular expressions, parsing]
+- name: Signals
+  featured: false
+  official: false
+  pushed_at: "2026-09-07T06:54:07Z"
+  sources:
+    - owner: len
+      url: https://github.com/len/Signals
+      official: false
+      pushed_at: "2026-09-07T06:54:07Z"
+      description: Tracker and lively dataflow programming environment for real-time musical synthesis in Smalltalk
 
-- name: OpenGL
-  description: OpenGL in Cuis.
-  url: https://github.com/pbella/Cuis-OpenGL
-  tags: [graphics, opengl, 3D]
+- name: VMMaker
+  featured: false
+  official: true
+  pushed_at: "2026-08-31T12:12:12Z"
+  sources:
+    - owner: Cuis-Smalltalk
+      url: https://github.com/Cuis-Smalltalk/VMMaker
+      official: true
+      pushed_at: "2026-08-31T12:12:12Z"
+      description: Port of Squeak VMMaker to Cuis. For building VM Plugins.
 
-- name: Games
-  description: Games.
-  url: https://github.com/Cuis-Smalltalk/Games
-  tags: [games]
+- name: DenotativeObject
+  featured: true
+  official: false
+  pushed_at: "2026-08-10T11:22:34Z"
+  sources:
+    - owner: hernanwilkinson
+      url: https://github.com/hernanwilkinson/Cuis-Smalltalk-DenotativeObject
+      official: false
+      pushed_at: "2026-08-10T11:22:34Z"
+    - owner: ericbrandwein
+      url: https://github.com/ericbrandwein/Cuis-Smalltalk-DenotativeObject
+      official: false
+      pushed_at: "2019-05-10T03:34:47Z"
+
+- name: Numerics
+  featured: true
+  official: true
+  pushed_at: "2026-07-22T19:10:00Z"
+  sources:
+    - owner: Cuis-Smalltalk
+      url: https://github.com/Cuis-Smalltalk/Numerics
+      official: true
+      pushed_at: "2026-07-22T19:10:00Z"
+
+- name: Erudite
+  featured: false
+  official: true
+  pushed_at: "2026-03-26T20:26:15Z"
+  sources:
+    - owner: Cuis-Smalltalk
+      url: https://github.com/Cuis-Smalltalk/Erudite
+      official: true
+      pushed_at: "2026-03-26T20:26:15Z"
+      description: Documentation system for Cuis Smalltalk (with literate programming capabilities).
+
+- name: DatabaseSupport
+  featured: false
+  official: true
+  pushed_at: "2026-03-19T18:23:57Z"
+  sources:
+    - owner: Cuis-Smalltalk
+      url: https://github.com/Cuis-Smalltalk/DatabaseSupport
+      official: true
+      pushed_at: "2026-03-19T18:23:57Z"
+      description: Database support packages for Cuis Smalltalk
+
+- name: Morphic
+  featured: false
+  official: true
+  pushed_at: "2026-02-05T20:25:45Z"
+  sources:
+    - owner: Cuis-Smalltalk
+      url: https://github.com/Cuis-Smalltalk/Morphic
+      official: true
+      pushed_at: "2026-02-05T20:25:45Z"
 
 - name: SVG
-  description: Support for SVG (Scalable Vector Graphics) files.
-  url: https://github.com/Cuis-Smalltalk/SVG
-  tags: [graphics]
+  featured: false
+  official: true
+  pushed_at: "2026-01-27T13:45:58Z"
+  sources:
+    - owner: Cuis-Smalltalk
+      url: https://github.com/Cuis-Smalltalk/SVG
+      official: true
+      pushed_at: "2026-01-27T13:45:58Z"
 
-- name: PostgresAdapter
-  description:  a directly in Smalltalk implemented interface to PostgreSQL.
-  license: MIT
-  url: https://github.com/Phantasus/Cuis-Smalltalk-Postgres
-  tags: [database]
+- name: Games
+  featured: false
+  official: true
+  pushed_at: "2026-01-18T22:38:11Z"
+  sources:
+    - owner: Cuis-Smalltalk
+      url: https://github.com/Cuis-Smalltalk/Games
+      official: true
+      pushed_at: "2026-01-18T22:38:11Z"
 
-- name: SQLiteAdapter
-  description: a Smalltalk FFI interface to sqlite.
-  license: MIT
-  url: https://github.com/Phantasus/Cuis-Smalltalk-Sqlite
-  tags: [database]
+- name: Measures
+  featured: true
+  official: true
+  pushed_at: "2025-09-20T21:50:43Z"
+  sources:
+    - owner: Cuis-Smalltalk
+      url: https://github.com/Cuis-Smalltalk/Measures
+      official: true
+      pushed_at: "2025-09-20T21:50:43Z"
 
-- name: Mail
-  description: a collection of packages for dealing with mail.
-  license: MIT
-  url: https://github.com/Phantasus/Cuis-Smalltalk-Mail
-  tags: [networking, mail]
-
-- name: URI-Kernel
-  description: a collection of packages for dealing with URIs.
-  license: MIT
-  url: https://github.com/Phantasus/Cuis-Smalltalk-URI-Kernel
-  tags: [networking, web]
-
-- name: Gemini-Kernel
-  description: This package implements the gemini protocol and provides basic browsing capabilities.
-  license: MIT
-  url: https://github.com/Phantasus/Cuis-Smalltalk-Gemini-Kernel
-  tags: [networking, protocols, gemini]
-
-- name: CBOR
-  description: This package reads and writes the CBOR (RFC 7049) file format
-  license: MIT
-  url: https://github.com/Phantasus/Cuis-Smalltalk-CBOR
-  tags: [formats, persistence]
-
-- name: PetitParser
-  description: PetitParser combines ideas from scannerless parsing, parser combinators, parsing expression grammars (PEG) and packrat parsers to model grammars and parsers as objects that can be reconfigured dynamically.
-  url: https://github.com/Cuis-Smalltalk/Parsers/tree/master/PetitParser
-  tags: [parsing]
-
-- name: OMeta
-  description: an object-oriented language for pattern matching.
-  url: https://github.com/pbella/OMeta-Cuis
-  tags: [parsing]
-
-- name: AXAnnouncements
-  description: Announcements events framework.
-  url: https://bitbucket.org/mmontone/mold/src/master/AXAnnouncements.pck.st
-  tags: [events handling]
-
-- name: ValueModels
-  description: Value models implementation.
-  url: https://bitbucket.org/mmontone/mold/src/master/ValueModels.pck.st
-
-- name: Morphic-Widgets-Extras2
-  description: Widgets extras for Cuis.
-  url: https://bitbucket.org/mmontone/mold/src/master/Morphic-Widgets-Extras2.pck.st
-  tags: [user interface]
-
-- name: Props
-  description: General framework and tools for properties editing.
-  url: https://bitbucket.org/mmontone/mold/src/master/Props.pck.st
-  tags: [user interface]
-
-- name: PropsPreferences
-  description: Tool for editing Cuis preferences.
-  url: https://bitbucket.org/mmontone/mold/src/master/PropsPreferences.pck.st
-  tags: [user interface, tools]
+- name: Regex
+  featured: false
+  official: true
+  pushed_at: "2024-06-12T18:48:57Z"
+  sources:
+    - owner: Cuis-Smalltalk
+      url: https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Regex
+      official: true
+      pushed_at: "2024-06-12T18:48:57Z"
+      description: Regular expressions support
+    - owner: nmingotti
+      url: https://github.com/nmingotti/Cuis-Smalltalk-Regex
+      official: false
+      pushed_at: "2022-01-10T14:58:50Z"
+      description: Regular Expressions for Cuis
+    - owner: garduino
+      url: https://github.com/garduino/Cuis-Smalltalk-RegEx
+      official: false
+      pushed_at: "2020-11-25T16:14:53Z"
+      description: Regular Expressions for Cuis

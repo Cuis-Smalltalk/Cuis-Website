@@ -79,6 +79,7 @@ body {
 .workspace { --window: #b8b831; }
 .transcript { --window: #cc994c; }
 .package-installer { --window: #88e6d8; }
+.installed-packages { --window: #c49940; }
 .versions-browser { --window: #b5a0cc; }
 .senders { --window: #7399d9; }
 .package-downloader { --window: #d0e973; }
@@ -93,6 +94,7 @@ body {
 .workspace,
 .transcript,
 .package-installer,
+.installed-packages,
 .versions-browser,
 .senders,
 .package-downloader {
@@ -431,8 +433,7 @@ h2, h3 {
 
 .post-list,
 .videos,
-.list,
-.pagination {
+.list {
   padding-left: 0;
   list-style: none;
 }
@@ -1086,13 +1087,145 @@ kbd {
   }
 }
 
-.list > li {
-  display: flex;
-  flex-direction: column;
+.list {
+  grid-template-columns: repeat(3, 1fr);
+
+  > li {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .name {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+
+    > .icon {
+      margin: 0;
+    }
+  }
+
+  li > p {
+    margin: 0 0 0.75em;
+  }
+
+  li > .pushed {
+    margin: 0 0 1em;
+  }
+
+  @include media-query($on-laptop) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include media-query($on-palm) {
+    grid-template-columns: 1fr;
+  }
 }
 
-.list .description {
-  flex-grow: 1;
+.source {
+  margin: 0 0 1em;
+
+  p {
+    margin: 0.25em 0 0;
+  }
+}
+
+.repository {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0 0.5em;
+  white-space: nowrap;
+
+  > a {
+    margin-left: auto;
+  }
+}
+
+.owner {
+  color: inherit;
+}
+
+.no-description {
+  color: $grey;
+  font-style: italic;
+}
+
+.official {
+  margin: 0 0 0 0.25em;
+}
+
+.pushed {
+  font-size: 13px;
+  color: $grey;
+}
+
+.package-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.25em 1em;
+  margin: auto 0 0.25em;
+  font-size: $small-font-size;
+  color: $grey;
+}
+
+.more-sources {
+  margin: 0 0 0 auto;
+  border: 0;
+  padding: 0;
+  background: none;
+  font: inherit;
+  color: inherit;
+  text-decoration: underline;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.sources {
+  box-sizing: border-box;
+  width: min(560px, calc(100% - 32px));
+  overflow-wrap: anywhere;
+  @include titled-card;
+  padding: 0 20px;
+
+  &::backdrop {
+    background-color: color-mix(in srgb, $ink 40%, transparent);
+  }
+
+  h4 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1em;
+
+    // It takes the focus on opening only so that the close button doesn't.
+    &:focus {
+      outline: none;
+    }
+  }
+
+  button {
+    display: grid;
+    border: 0;
+    padding: 0;
+    background: none;
+    color: inherit;
+    cursor: pointer;
+
+    .icon {
+      width: 1.25em;
+      height: 1.25em;
+      margin: 0;
+    }
+  }
+
+  .source + .source {
+    border-top: 1px solid $line;
+    padding-top: 1em;
+  }
 }
 
 .videos {
@@ -1228,25 +1361,48 @@ kbd {
   font: inherit;
 }
 
-.tag {
-  display: inline-block;
-  margin-right: 6px;
-  border-radius: 999px;
-  padding: 2px 10px;
-  background-color: $line;
-  font-size: 13px;
-  color: $grey;
+.package-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  .search {
+    flex: 1 1 260px;
+    width: auto;
+  }
 }
 
-.pagination {
-  li {
-    display: inline;
-    margin-right: 12px;
+.filter {
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid $line;
+  border-radius: 8px;
+  padding: 0 16px;
+  background-color: #fff;
+  color: $grey;
+  cursor: pointer;
+  -webkit-user-select: none;
+  user-select: none;
+
+  input {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
   }
 
-  .active a {
-    color: inherit;
-    font-weight: 700;
-    text-decoration: none;
+  &:has(:checked) {
+    border-color: $blue;
+    background-color: $blue;
+    color: #fff;
   }
+
+  &:has(:focus-visible) {
+    outline: 2px solid;
+    outline-offset: 2px;
+  }
+}
+
+#package-list:has(.featured-filter:checked) .list > li:not([data-featured]),
+#package-list:has(.official-filter:checked) .list > li:not([data-official]) {
+  display: none;
 }

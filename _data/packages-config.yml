@@ -1,0 +1,11 @@
+# Curation of the packages that fetch-packages.rb lists from GitHub.
+
+# Featured repositories (owner/name, exactly as on GitHub): highlighted, and shown by the Featured filter.
+featured:
+  - Cuis-Smalltalk/OSProcess
+  - Cuis-Smalltalk/Cuis-Smalltalk-UI
+  - Cuis-Smalltalk/Numerics
+  - Cuis-Smalltalk/Measures
+
+# Repositories (owner/name) or whole owners (owner) never listed.
+excluded: []
