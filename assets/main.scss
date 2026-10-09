@@ -17,9 +17,11 @@ $content-width: 1260px;
 $on-palm: 600px;
 $on-laptop: 800px;
 $on-tablet: 1039px;
-$figure-shadow: 16px;
+$slide-gap: 16px;
 $slide-step: 40px;
 $slide-controls-gap: 20px;
+$card-border: 3.5px;
+$card-radius: 10px;
 
 @mixin media-query($device) {
   @media screen and (max-width: $device) {
@@ -27,17 +29,19 @@ $slide-controls-gap: 20px;
   }
 }
 
-@mixin card($shadow: 6px) {
-  border: 1px solid var(--window);
-  border-radius: 8px;
-  background-color: #fff;
-  box-shadow: $shadow $shadow 0 var(--window);
+@mixin frame($color: var(--window), $border: $card-border) {
+  border: $border solid $color;
+  border-radius: $card-radius $card-radius 0 0;
 }
 
-@mixin raised($radius: 0, $shadow: 2px) {
+@mixin card($border: $card-border) {
+  @include frame($border: $border);
+  background-color: #fff;
+}
+
+@mixin outlined($radius) {
   border: 1px solid $ink;
   border-radius: $radius;
-  box-shadow: $shadow $shadow 0 $ink;
 }
 
 @mixin panel {
@@ -117,7 +121,8 @@ figure {
   margin-left: 0;
 
   img {
-    @include raised($shadow: $figure-shadow);
+    box-sizing: border-box;
+    @include frame($ink);
   }
 }
 
@@ -557,7 +562,7 @@ h2, h3 {
 
 .choice {
   display: inline-flex;
-  @include raised(6px);
+  @include outlined(6px);
   overflow: hidden;
 
   button {
@@ -586,7 +591,7 @@ h2, h3 {
   align-items: flex-start;
   gap: 14px;
   margin: $spacing-unit 0;
-  @include card(3px);
+  @include card(2px);
   padding: 14px 18px;
   background-color: color-mix(in srgb, var(--window) 20%, #fff);
   font-size: $small-font-size;
@@ -664,7 +669,7 @@ h2, h3 {
       box-sizing: border-box;
       width: 20px;
       height: 20px;
-      @include raised(50%);
+      @include outlined(50%);
       background-color: var(--window);
     }
   }
@@ -697,7 +702,7 @@ td {
 }
 
 kbd {
-  @include raised(4px);
+  @include outlined(4px);
   padding: 1px 8px;
   background-color: $paper;
   font-family: inherit;
@@ -770,7 +775,7 @@ kbd {
       left: 0;
       width: 28px;
       height: 28px;
-      @include raised(50%);
+      @include outlined(50%);
       background-color: var(--window);
       color: $on-window;
       font: 800 13px/28px $display;
@@ -811,8 +816,7 @@ kbd {
   .slides {
     display: flex;
     align-items: flex-start;
-    margin-right: -$figure-shadow;
-    padding-bottom: $figure-shadow;
+    margin-right: -$slide-gap;
     overflow-x: auto;
     overscroll-behavior-x: contain;
     scroll-snap-type: x mandatory;
@@ -830,7 +834,7 @@ kbd {
     flex: 0 0 100%;
     box-sizing: border-box;
     margin: 0;
-    padding-right: $figure-shadow;
+    padding-right: $slide-gap;
     scroll-snap-align: start;
   }
 }
@@ -855,13 +859,12 @@ kbd {
   .step {
     width: $slide-step;
     height: $slide-step;
-    @include raised(50%);
+    border-radius: 50%;
     background-color: #fff;
     color: $blue;
     font-size: 22px;
 
     &:disabled {
-      box-shadow: none;
       opacity: 0.4;
       cursor: default;
     }
@@ -902,7 +905,6 @@ kbd {
   color: $blue;
   font-weight: 700;
   text-decoration: none;
-  box-shadow: 4px 4px 0 $ink;
 }
 
 .row,
@@ -981,7 +983,7 @@ kbd {
   footer {
     order: -1;
     padding: 20px calc(#{$face} + 34px) 20px 20px;
-    border-radius: 7px 7px 0 0;
+    border-radius: $card-radius - $card-border $card-radius - $card-border 0 0;
   }
 
   .post-meta {
@@ -997,7 +999,6 @@ kbd {
     height: auto;
     border: 3px solid #fff;
     border-radius: 50%;
-    box-shadow: 4px 4px 0 $ink;
   }
 
   .avatar {
@@ -1196,9 +1197,9 @@ kbd {
   align-items: center;
 
   img {
+    box-sizing: border-box;
     width: 100%;
-    border: 1px solid $ink;
-    box-shadow: 12px 12px 0 var(--window);
+    @include frame;
   }
 
   &:nth-child(even) img {
