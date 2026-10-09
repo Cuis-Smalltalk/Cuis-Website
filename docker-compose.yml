@@ -1,6 +1,6 @@
 services:
   jekyll:
-    image: ruby:3.3.4
+    image: ruby:4.0.7
     working_dir: /site
     volumes:
       - .:/site

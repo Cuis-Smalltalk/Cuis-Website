@@ -104,7 +104,7 @@ MyLibrary default forceLoading.
 ```
 
 <div class="note" markdown="1">
-<svg class="icon"><use href="/assets/icons.svg#info"></use></svg>
+<svg class="icon"><use href="{{ "/assets/icons.svg#info" | relative_url }}"></use></svg>
 
 Cuis does not currently have a method in the FFI package to close a library. One can use `Smalltalk unloadModule: <module name>`.[^3]
 

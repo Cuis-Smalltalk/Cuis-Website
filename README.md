@@ -4,7 +4,7 @@ The website of Cuis Smalltalk is published at [cuis.st](https://cuis.st) with Gi
 
 ## Run the site
 
-GitHub Pages builds the site with Jekyll, using the versions listed at [pages.github.com/versions](https://pages.github.com/versions/) (Ruby 3.3.4, `github-pages` 232). To run it on your machine with the same versions, use Docker:
+The `Pages` workflow (`.github/workflows/pages.yml`) builds the site with Jekyll on every push to `master`, with Ruby 4.0.7 and the gems of `Gemfile.lock`, and GitHub Pages publishes it. To run it on your machine with the same versions, use Docker:
 
 ```
 docker compose up
@@ -12,7 +12,7 @@ docker compose up
 
 The first time, it takes a few minutes to install everything. When it shows `Server running`, open http://localhost:4000. Leave it running while you follow any of the guides below: each change you save shows up there.
 
-Without Docker, with Ruby 3.3.4 installed:
+Without Docker, with Ruby 4.0.7 installed:
 
 ```
 bundle install
@@ -71,17 +71,17 @@ Say you wrote a guide on loading fonts in Cuis.
      It is at <kbd>World</kbd> / <kbd>Open</kbd> / <kbd>Installed Packages</kbd>.
      ```
 
-   * A link to another page uses its address:
+   * A link to another page uses its address through `relative_url`, so that it also works when the site is published under a path, as in a fork:
 
      ```markdown
-     Please take a look at [Getting help with Cuis](/documentation/how-to-guides/getting-help).
+     Please take a look at [Getting help with Cuis]({{ "/documentation/how-to-guides/getting-help" | relative_url }}).
      ```
 
    * A tip goes in this block. For a fact, change `lightbulb` to `info`. For a warning, change it to `triangle-alert`, and `class="note"` to `class="note debugger"`:
 
      ```html
      <div class="note" markdown="1">
-     <svg class="icon"><use href="/assets/icons.svg#lightbulb"></use></svg>
+     <svg class="icon"><use href="{{ "/assets/icons.svg#lightbulb" | relative_url }}"></use></svg>
 
      The text of the tip, in Markdown.
 

@@ -9,7 +9,7 @@ description: "Everything to learn and use Cuis."
 
 ## Get started {#get-started}
 
-<p class="skip">Already running Cuis? Skip to <a href="/documentation/tutorials/">Tutorials</a>.</p>
+<p class="skip">Already running Cuis? Skip to <a href="{{ "/documentation/tutorials/" | relative_url }}">Tutorials</a>.</p>
 
 <div class="kickstart">
   <div class="setup">
@@ -72,19 +72,19 @@ description: "Everything to learn and use Cuis."
 <div class="row">
   <div class="col versions-browser">
     <h3>Why the rolling release?</h3>
-    <p>It's where Cuis evolves, with new features, bug fixes and package updates. <a href="/documentation/reference/release-process">Stable releases</a> only receive fixes for serious bugs, while packages keep moving forward with the rolling release, so using a stable release means knowing which version of each package matches it. That fits experienced users with specific needs, such as projects already built on one that don't need to follow ongoing development. Just starting? The rolling release is the way to go.</p>
+    <p>It's where Cuis evolves, with new features, bug fixes and package updates. <a href="{{ "/documentation/reference/release-process" | relative_url }}">Stable releases</a> only receive fixes for serious bugs, while packages keep moving forward with the rolling release, so using a stable release means knowing which version of each package matches it. That fits experienced users with specific needs, such as projects already built on one that don't need to follow ongoing development. Just starting? The rolling release is the way to go.</p>
   </div>
 </div>
 
 <div class="note" markdown="1">
-<svg class="icon"><use href="/assets/icons.svg#lightbulb"></use></svg>
+<svg class="icon"><use href="{{ "/assets/icons.svg#lightbulb" | relative_url }}"></use></svg>
 
 Cloned with Git? You only got the latest commit. Run <code class="copy">git fetch --unshallow</code> in the Cuis folder to get the full history.
 
 </div>
 
 <div class="note" markdown="1">
-<svg class="icon"><use href="/assets/icons.svg#info"></use></svg>
+<svg class="icon"><use href="{{ "/assets/icons.svg#info" | relative_url }}"></use></svg>
 
 Cuis doesn't touch anything else on your system. Want to remove it? Just delete the Cuis folder. That's all.
 
@@ -95,7 +95,7 @@ Cuis doesn't touch anything else on your system. Want to remove it? Just delete 
   {%- for name in sections %}
   {%- assign url = "/documentation/" | append: name | append: "/" %}
   {%- assign section = site.docs | where: "url", url | first %}
-  <a class="col" id="{{ name }}" href="{{ section.url }}">
+  <a class="col" id="{{ name }}" href="{{ section.url | relative_url }}">
     <h2>{{ section.title }}</h2>
     {%- if section.description %}
     <p>{{ section.description }}</p>

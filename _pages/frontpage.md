@@ -19,7 +19,7 @@ screenshots:
 Cuis is a **free Smalltalk-80 environment** with a specific set of goals: being **simple and powerful**.<br>It is also **portable to any platform**, fast and efficient.
 {: .lead}
 
-[Get started](/documentation/#get-started){: .button}
+[Get started]({{ "/documentation/#get-started" | relative_url }}){: .button}
 
 </div>
 

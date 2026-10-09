@@ -4,6 +4,9 @@ author: "Copyright © 2009-2026 Juan Vuletich"
 
 theme: null
 
+sass:
+  sourcemap: development
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag

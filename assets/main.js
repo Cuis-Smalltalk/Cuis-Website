@@ -1,4 +1,7 @@
-const icon = (name, modifier = '') => `<svg class="icon ${modifier}"><use href="/assets/icons.svg#${name}"></use></svg>`;
+---
+---
+
+const icon = (name, modifier = '') => `<svg class="icon ${modifier}"><use href="{{ "/assets/icons.svg" | relative_url }}#${name}"></use></svg>`;
 
 document.querySelectorAll('code.copy').forEach(code => {
   const button = document.createElement('button');

@@ -4,15 +4,15 @@
     <h4>{{ video.title }}</h4>
     {%- if video.video contains "youtu.be/" %}
     {%- assign id = video.video | split: "youtu.be/" | last | split: "?" | first %}
-    <a class="video" href="{{ video.video }}"><img src="https://i.ytimg.com/vi/{{ id }}/sddefault.jpg" alt="{{ video.title | escape }}"><svg width="68" height="48"><use href="/assets/icons.svg#youtube"></use></svg></a>
+    <a class="video" href="{{ video.video }}"><img src="https://i.ytimg.com/vi/{{ id }}/sddefault.jpg" alt="{{ video.title | escape }}"><svg width="68" height="48"><use href="{{ "/assets/icons.svg#youtube" | relative_url }}"></use></svg></a>
     {%- else %}
     {%- assign host = video.video | split: "//" | last | split: "/" | first %}
-    <a class="video external" href="{{ video.video }}"><span><svg class="icon"><use href="/assets/icons.svg#external-link"></use></svg>{{ host }}</span></a>
+    <a class="video external" href="{{ video.video }}"><span><svg class="icon"><use href="{{ "/assets/icons.svg#external-link" | relative_url }}"></use></svg>{{ host }}</span></a>
     {%- endif %}
     <p><em>{{ video.description }}</em></p>
     <p class="post-meta">
-      <svg class="icon"><use href="/assets/icons.svg#user"></use></svg>{{ video.chair | default: video.speaker }}<br>
-      <svg class="icon"><use href="/assets/icons.svg#calendar"></use></svg>{{ video.date }}{% if video.event %} · {{ video.event }}{% endif %}
+      <svg class="icon"><use href="{{ "/assets/icons.svg#user" | relative_url }}"></use></svg>{{ video.chair | default: video.speaker }}<br>
+      <svg class="icon"><use href="{{ "/assets/icons.svg#calendar" | relative_url }}"></use></svg>{{ video.date }}{% if video.event %} · {{ video.event }}{% endif %}
       {%- if video.slides %}<br><a href="{{ video.slides }}">Slides</a>{% endif %}
       {%- if video.code %}<br><a href="{{ video.code }}">Code</a>{% endif %}
     </p>

@@ -7,14 +7,14 @@ description: "How to get answers, and how to report bugs so they get fixed."
 
 In the Cuis community, questions are most welcome. The main place for them is our [mail list](https://lists.cuis.st/mailman/listinfo/cuis-dev). In this space we value free speech, and at the same time we want an open and warm place where everybody can feel comfortable.
 
-Still, besides the [documentation](/documentation/) on this site and at [DrCuis](https://github.com/DrCuis), there are very good books, web pages, blogs and online videos that include descriptions of the ideas and intentions behind the code in the Cuis system. These are generally better than answers in the mail list, because they were written with great care. Questions on the mail list are often better for filling in details, for example, Cuis-specific details when you're reading a non-Cuis-specific book.
+Still, besides the [documentation]({{ "/documentation/" | relative_url }}) on this site and at [DrCuis](https://github.com/DrCuis), there are very good books, web pages, blogs and online videos that include descriptions of the ideas and intentions behind the code in the Cuis system. These are generally better than answers in the mail list, because they were written with great care. Questions on the mail list are often better for filling in details, for example, Cuis-specific details when you're reading a non-Cuis-specific book.
 
 For any Open Source project, questions are especially valuable if they point to some aspect not covered in enough clarity and detail in the documentation. Good questions help us refine documentation, or fix annoyances in the system. You know, we old-timers don't read the documentation we wrote very often, and we tend to get used to small annoyances in the system to the point where we don't see them any more. Good questions, complaints and bug reports are extremely helpful!
 
 Still, questions that can be addressed by reading the documentation or a quick query to the system can sometimes feel annoying to maintainers. Authors can carefully write some explanation, investing several hours, and making that part of the documentation. Or we can instead write 10 times about the same issue, only when someone asks, each time improvising a low-quality ten-minute email. The first option results in higher quality material that can benefit many people over the course of years. The second option gives a low-quality answer to just one person, which may never be read again.
 
 <div class="note" markdown="1">
-<svg class="icon"><use href="/assets/icons.svg#lightbulb"></use></svg>
+<svg class="icon"><use href="{{ "/assets/icons.svg#lightbulb" | relative_url }}"></use></svg>
 
 So, if you read the documentation first, and then point to flaws or missing parts, you are really helping us make a better system. This can't be stressed enough. We really, really, really, very much, prefer this!
 

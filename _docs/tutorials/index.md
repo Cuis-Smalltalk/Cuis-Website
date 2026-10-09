@@ -47,7 +47,7 @@ other_resources:
     description: "There are many tutorials and references for Smalltalk in the web. They apply quite well to Cuis, especially those written originally for Smalltalk-80 or Squeak."
 ---
 
-Already know Smalltalk? Skip to [How-to guides](/documentation/how-to-guides/).
+Already know Smalltalk? Skip to [How-to guides]({{ "/documentation/how-to-guides/" | relative_url }}).
 {: .skip}
 
 {% include documentation-entries.html %}

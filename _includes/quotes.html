@@ -7,9 +7,9 @@
       {{ text | prepend: '"' | append: '"' | markdownify }}
       <footer>
         {%- if quote.photo %}
-        <img src="/assets/imgs/faces/{{ quote.photo }}" alt="" width="120" height="120">
+        <img src="{{ "/assets/imgs/faces/" | append: quote.photo | relative_url }}" alt="" width="120" height="120">
         {%- else %}
-        <span class="avatar"><svg><use href="/assets/icons.svg#user"></use></svg></span>
+        <span class="avatar"><svg><use href="{{ "/assets/icons.svg#user" | relative_url }}"></use></svg></span>
         {%- endif %}
         <strong>{% if quote.author_url %}<a href="{{ quote.author_url }}">{{ quote.author }}</a>{% else %}{{ quote.author }}{% endif %}</strong>
       </footer>
@@ -18,6 +18,6 @@
     {%- endfor %}
   </div>
   {%- if include.more %}
-  <p class="more"><a class="button" href="/quotes">More nice comments about Cuis</a></p>
+  <p class="more"><a class="button" href="{{ "/quotes" | relative_url }}">More nice comments about Cuis</a></p>
   {%- endif %}
 </div>

@@ -7,7 +7,7 @@ title: Community
 description: "Mailing list, monthly meetings and how to contribute."
 ---
 
-Cuis has an active community of developers and users. Our main meeting point is the [mailing list](https://lists.cuis.st/mailman/listinfo/cuis-dev). You are welcome in our community! If you use Cuis or are curious about our work, subscribe to the mailing list to ask questions and tell us about your own projects and ideas. Please take a look at [Getting help with Cuis](/documentation/how-to-guides/getting-help).
+Cuis has an active community of developers and users. Our main meeting point is the [mailing list](https://lists.cuis.st/mailman/listinfo/cuis-dev). You are welcome in our community! If you use Cuis or are curious about our work, subscribe to the mailing list to ask questions and tell us about your own projects and ideas. Please take a look at [Getting help with Cuis]({{ "/documentation/how-to-guides/getting-help" | relative_url }}).
 
 You can browse the [archives](https://lists.cuis.st/mailman/archives/cuis-dev/) for a glimpse of previous discussions. Before April 2019, we used cuis-dev@cuis-smalltalk.org: [zip with messages](https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/blob/master/Documentation/MailList/cuis-dev_cuis-smalltalk.org.txt.zip). Before April 2016, we used cuis@jvuletich.org: [archives](http://jvuletich.org/mailman/listinfo/cuis_jvuletich.org).
 
@@ -23,7 +23,7 @@ Keeping them to yourself for too long may mean they never mature. Sharing them p
 
 ## Contributing to Cuis
 
-For the recommended way of handling your own projects based on Cuis, please read [Code Management in Cuis](/documentation/how-to-guides/managing-your-code), about developing packages for Cuis, and [Using Git and GitHub to host and manage Cuis code](/documentation/how-to-guides/using-git-and-github). While Cuis should work equally well with any file-based DVCS, we encourage the use of Git and GitHub.
+For the recommended way of handling your own projects based on Cuis, please read [Code Management in Cuis]({{ "/documentation/how-to-guides/managing-your-code" | relative_url }}), about developing packages for Cuis, and [Using Git and GitHub to host and manage Cuis code]({{ "/documentation/how-to-guides/using-git-and-github" | relative_url }}). While Cuis should work equally well with any file-based DVCS, we encourage the use of Git and GitHub.
 
 To contribute code to the base image, use the tools included in Cuis, such as the ChangeSorter and the ChangeList to prepare ChangeSets and save them to file. Send the files as attachments to a message describing them to our mailing list, so we all can review and discuss. We prefer this over git pull requests for changes to the base image. For changes to existing packages, or contribution of new packages, pull requests are OK.
 

@@ -4,7 +4,7 @@ layout: default
 
 <article>
   <header class="post-header">
-    <h1>{% if page.icon %}<svg class="icon"><use href="/assets/icons.svg#{{ page.icon }}"></use></svg>{% endif %}{{ page.title | escape }}</h1>
+    <h1>{% if page.icon %}<svg class="icon"><use href="{{ "/assets/icons.svg#" | append: page.icon | relative_url }}"></use></svg>{% endif %}{{ page.title | escape }}</h1>
     {%- if page.description %}
     <p class="lead">{{ page.description }}</p>
     {%- endif %}

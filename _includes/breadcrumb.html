@@ -9,7 +9,7 @@
     {%- assign url = path | append: "/" -%}
     {%- assign parent = candidates | where: "url", url | first -%}
     {%- if parent %}
-    <li><a href="{{ parent.url }}">{{ parent.title | escape }}</a></li>
+    <li><a href="{{ parent.url | relative_url }}">{{ parent.title | escape }}</a></li>
     {%- endif -%}
     {%- endunless -%}
     {%- endfor %}

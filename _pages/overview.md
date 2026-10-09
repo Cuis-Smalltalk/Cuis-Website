@@ -41,7 +41,7 @@ Cuis assumes very little on the underlying platform, and this lets it run **out-
   <div class="col">
     <h3>Package</h3>
     <img src="./assets/imgs/features/package.png" class="doc">
-    <p>Code management in Cuis is done with its package system and your preferred VCS. Cuis development is done on GitHub.<br><a href="/documentation/how-to-guides/managing-your-code">read more</a></p>
+    <p>Code management in Cuis is done with its package system and your preferred VCS. Cuis development is done on GitHub.<br><a href="{{ "/documentation/how-to-guides/managing-your-code" | relative_url }}">read more</a></p>
   </div>
 
   <div class="col">

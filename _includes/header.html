@@ -1,12 +1,12 @@
 <header class="site-header">
   <div class="wrapper">
-    <a class="site-title" href="/"><img src="/assets/imgs/brand/cuis-logo.png" width="37" height="34" alt="">{{ site.title | escape }}</a>
+    <a class="site-title" href="{{ "/" | relative_url }}"><img src="{{ "/assets/imgs/brand/cuis-logo.png" | relative_url }}" width="37" height="34" alt="">{{ site.title | escape }}</a>
 
     <nav class="site-nav">
       <input type="checkbox" id="nav-trigger" class="nav-trigger" />
       <label for="nav-trigger">
         <span class="menu-icon">
-          <svg width="22" height="22"><use href="/assets/icons.svg#menu"></use></svg>
+          <svg width="22" height="22"><use href="{{ "/assets/icons.svg#menu" | relative_url }}"></use></svg>
         </span>
       </label>
 
@@ -15,7 +15,7 @@
           {%- assign my_page = site.pages | where: "path", path | first -%}
           {%- if my_page.title -%}
           {%- assign section = page.url | slice: 0, my_page.url.size -%}
-          <a class="page-link" href="{{ my_page.url }}"{% if my_page.url == page.url %} aria-current="page"{% elsif my_page.url != "/" and section == my_page.url %} aria-current="true"{% endif %}><svg class="icon"><use href="/assets/icons.svg#{{ my_page.icon }}"></use></svg>{{ my_page.title | escape }}</a>
+          <a class="page-link" href="{{ my_page.url | relative_url }}"{% if my_page.url == page.url %} aria-current="page"{% elsif my_page.url != "/" and section == my_page.url %} aria-current="true"{% endif %}><svg class="icon"><use href="{{ "/assets/icons.svg#" | append: my_page.icon | relative_url }}"></use></svg>{{ my_page.title | escape }}</a>
           {%- endif -%}
         {%- endfor -%}
       </div>

@@ -19,4 +19,4 @@ The Cuis Smalltalk GitHub organization, at <https://github.com/Cuis-Smalltalk>, 
 
 Some Cuis developers may prefer to host their packages in personal repos. This is usually best for code that is not yet ready for wide adoption. You're welcome to explore them and contact authors if you have questions.
 
-Don't forget to check the [Packages](/packages) section when searching for useful packages for Cuis!
+Don't forget to check the [Packages]({{ "/packages" | relative_url }}) section when searching for useful packages for Cuis!

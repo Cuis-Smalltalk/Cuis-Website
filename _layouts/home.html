@@ -9,9 +9,9 @@ layout: default
 {% include post-list.html posts=latest %}
 
 <p class="news-links">
-  <a href="/news">Older news</a>
-  <a href="/feed.xml" title="Subscribe via RSS">
-    <svg class="icon"><use href="/assets/icons.svg#rss"></use></svg>Subscribe
+  <a href="{{ "/news" | relative_url }}">Older news</a>
+  <a href="{{ "/feed.xml" | relative_url }}" title="Subscribe via RSS">
+    <svg class="icon"><use href="{{ "/assets/icons.svg#rss" | relative_url }}"></use></svg>Subscribe
   </a>
 </p>
 
@@ -19,4 +19,4 @@ layout: default
 {%- assign meetings = site.data.past-meetings | sort: 'date' | reverse | slice: 0, 1 %}
 {% include videos.html videos=meetings %}
 
-<p><a href="/community#past-meetings">Past meetings</a></p>
+<p><a href="{{ "/community#past-meetings" | relative_url }}">Past meetings</a></p>

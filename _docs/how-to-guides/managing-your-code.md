@@ -42,7 +42,7 @@ When the changes to the base system are complete, it is a good time to review th
 <kbd>Install</kbd> loads all the code in the file into a separate, new *ChangeSet* object (viewable in the **ChangeSorter** tool). This is appropriate for loading Cuis updates, or other code that we are not authoring, as it doesn't add new items (class or method definitions) to the current ChangeSet used to record the changes we make to Cuis.
 
 <div class="note debugger" markdown="1">
-<svg class="icon"><use href="/assets/icons.svg#triangle-alert"></use></svg>
+<svg class="icon"><use href="{{ "/assets/icons.svg#triangle-alert" | relative_url }}"></use></svg>
 
 Usually any ChangeSets should be installed before doing changes to the image. The reason is that an installed ChangeSet could overwrite changes done by you, or packages you have installed. If this is the case, the affected packages would appear as dirty, and your change set would include any installed changes (that don't belong in a package). Be careful when saving packages or change sets if this was the case!
 

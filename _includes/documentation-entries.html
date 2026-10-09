@@ -10,7 +10,7 @@
 
     {%- if item %}
   <li>
-    <a href="{{ item.url }}">{{ item.title | escape }}</a>
+    <a href="{{ item.url | relative_url }}">{{ item.title | escape }}</a>
     {{ item.description | markdownify }}
     {%- if item.author %}
     <p>{{ item.author }} · {{ item.date }}{% if item.event %} · {{ item.event }}{% endif %}</p>
