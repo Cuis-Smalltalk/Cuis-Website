@@ -39,6 +39,12 @@ $card-radius: 10px;
   background-color: #fff;
 }
 
+// The window color behind the rounded corners keeps the antialiased seam between border and title bar from showing white
+@mixin titled-card {
+  @include frame;
+  background: linear-gradient(var(--window) $card-radius, #fff 0) border-box;
+}
+
 @mixin outlined($radius) {
   border: 1px solid $ink;
   border-radius: $radius;
@@ -931,7 +937,7 @@ kbd {
 .list > li,
 .videos > li {
   overflow-wrap: anywhere;
-  @include card;
+  @include titled-card;
   padding: 0 20px;
 }
 
