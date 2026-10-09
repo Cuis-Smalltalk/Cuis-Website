@@ -153,8 +153,23 @@
   chair: Luciano Notarfrancesco & Ken Dickey
   date: 2026-01
   video: https://youtu.be/Lr5N7A-8mgg
+- title: I Ching
+  description: Ken Dickey animates the 64 hexagrams of the I Ching with <a href="https://github.com/KenDickey/Cuis-Smalltalk-IChing">Cuis-Smalltalk-IChing</a> and shows the visual pattern that emerges when you rearrange them. Then the conversation moves on to Cosmopolitan Libc, a Lisp that fits in 436 bytes, and GNU Mes.
+  chair: Ken Dickey
+  date: 2026-04
+  video: https://youtu.be/ZA809IQa3Hg
 - title: Blueprint
   description: <a href="https://youtu.be/5TV1Li12ry0">Blueprint</a> is a rework of the Cuis Smalltalk system desktop done purely by a code agent (artificial intelligence) directed in natural language, no Smalltalk code was written by hand.
   chair: Milan Lajtos
   date: 2026-07
   video: https://youtu.be/HPcCg66tdrM
+- title: Refactorings, AI and RISC-V
+  description: Hernán Wilkinson shows what's new in Extract Method, which can now extract code that assigns temporaries or has non-local returns, and parameterize code that is similar but not identical. Then he shows how he works on Cuis with Claude Code through his <a href="https://github.com/hernanwilkinson/Cuis-MCPServer">MCP server</a>, and <a href="https://github.com/hernanwilkinson/SmalltalkMentor">SmalltalkMentor</a>, a tool that uses AI to review students' code. Ken Dickey tells how the RISC-V JIT for the OpenSmalltalk VM is going, and Juan Vuletich explains the latest VectorGraphics speedups.
+  chair: Hernán Wilkinson & Ken Dickey
+  date: 2026-09
+  video: https://youtu.be/CCtVO-3197w
+- title: Website, Dybo and Stream Deck
+  description: Cristián Pérez presents the redesigned website and <a href="https://github.com/wenoa/cuis-streamdeck">Cuis for Stream Deck</a>, his new plugin for controlling Cuis from a Stream Deck. Hilaire Fernandes shows the improvements to the <a href="https://github.com/Dynamic-Book/DyboApp">Dybo</a> tools.
+  chair: Cristián Pérez & Hilaire Fernandes
+  date: 2026-10
+  video: https://youtu.be/blqkV2ZnIpQ
