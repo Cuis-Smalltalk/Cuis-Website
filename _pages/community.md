@@ -35,7 +35,7 @@ Any contribution must be under the [MIT License](https://github.com/Cuis-Smallta
 
 ## Monthly meetings
 
-On the first Wednesday of each month, at 16:00 GMT ([convert here to your local time](https://timee.io/20240403T1600?tl=Cuis-Meeting&rf=m)), a member of the Cuis community chairs a 30 min virtual meeting on a selected topic. Join the meeting at [meeting.cuis.st](https://meeting.cuis.st).
+Once a month we get together to show progress on Cuis, discuss ideas, share experiences and learn from each other. Everyone is welcome! Just drop by [meeting.cuis.st](https://meeting.cuis.st) on the **first Wednesday of the month at <time class="meeting" datetime="16:00">16:00 GMT</time>**. And if you missed one, no problem: you can watch them all below.
 
 ## Past meetings
 

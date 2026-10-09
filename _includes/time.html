@@ -1,0 +1,2 @@
+{%- assign gmt = include.at | append: " UTC" -%}
+<time class="local" datetime="{{ gmt | date: "%Y-%m-%dT%H:%MZ" }}">{{ gmt | date: "%A %-d %B %Y, %H:%M GMT" }}</time>

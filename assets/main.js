@@ -22,6 +22,28 @@ document.querySelectorAll('.page-content a[href^="http"]').forEach(link => {
   if (!link.classList.contains('video')) link.insertAdjacentHTML('beforeend', icon('external-link', 'trailing'));
 });
 
+const localTime = (date, options) => date.toLocaleString(document.documentElement.lang, { ...options, hour: '2-digit', minute: '2-digit', hourCycle: 'h23', timeZoneName: 'short' });
+
+document.querySelectorAll('time.local').forEach(time => {
+  time.textContent = localTime(new Date(time.dateTime), { weekday: 'long', day: 'numeric', month: 'long', year: 'numeric' });
+});
+
+document.querySelectorAll('time.meeting').forEach(time => {
+  const [hours, minutes] = time.dateTime.split(':');
+  const now = new Date();
+  const firstWednesday = month => {
+    const date = new Date(Date.UTC(now.getUTCFullYear(), month, 1, hours, minutes));
+    date.setUTCDate(1 + (3 - date.getUTCDay() + 7) % 7);
+    return date;
+  };
+  let next = firstWednesday(now.getUTCMonth());
+  if (next < now) next = firstWednesday(now.getUTCMonth() + 1);
+
+  time.dateTime = next.toISOString();
+  time.textContent = localTime(next);
+  if (next.getDay() !== next.getUTCDay()) time.textContent += ` (${next.toLocaleDateString(document.documentElement.lang, { weekday: 'long' })})`;
+});
+
 document.querySelectorAll('.slideshow').forEach(slideshow => {
   const track = slideshow.querySelector('.slides');
   const slides = [...track.children];

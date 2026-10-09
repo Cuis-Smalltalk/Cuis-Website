@@ -191,6 +191,8 @@ layout: post
 
 The date is the day you publish it, not the day of what it announces: a post with a future date is not published. Use the same date in the name and in `date`. This post is published at `/2026/10/06/october-meeting.html`. `layout: post` gives it the design of a news post. Its first paragraph is the summary shown in the news list and on the home page.
 
+To give a date and time, such as the one of a meeting, write `{% include time.html at="2026-11-04 16:00" %}` with the time in GMT: each visitor sees it in their own time zone.
+
 ### Want to add a meeting recording?
 
 Add an entry anywhere in `_data/past-meetings.yml`: the Community page sorts them by date.
