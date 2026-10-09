@@ -15,7 +15,7 @@ document.querySelectorAll('code.copy').forEach(code => {
   wrapper.append(code, button);
 });
 
-document.querySelectorAll('.workspace .page-content a[href^="http"]').forEach(link => {
+document.querySelectorAll('.page-content a[href^="http"]').forEach(link => {
   if (link.hostname === 'cuis.st') return;
   link.target = '_blank';
   link.rel = 'noopener';
