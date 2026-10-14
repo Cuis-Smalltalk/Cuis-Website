@@ -7,6 +7,12 @@ title: Packages
 description: "Libraries and tools for Cuis, built by the community."
 ---
 
+<div class="note" markdown="1">
+<svg class="icon"><use href="{{ "/assets/icons.svg#info" | relative_url }}"></use></svg>
+
+To learn more about how to register your package here, see [Registering a package]({{ "/documentation/how-to-guides/additional-packages#registering-a-package" | relative_url }}).
+</div>
+
 <div id="package-list">
   <div class="package-filters">
     <input class="search" placeholder="Search package">

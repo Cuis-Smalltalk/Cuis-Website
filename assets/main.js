@@ -47,6 +47,13 @@ document.querySelectorAll('time.meeting').forEach(time => {
   if (next.getDay() !== next.getUTCDay()) time.textContent += ` (${next.toLocaleDateString(document.documentElement.lang, { weekday: 'long' })})`;
 });
 
+document.querySelectorAll('time.daily').forEach(time => {
+  const [hours, minutes] = time.dateTime.split(':');
+  const today = new Date();
+  today.setUTCHours(hours, minutes, 0, 0);
+  time.textContent = localTime(today);
+});
+
 document.querySelectorAll('.slideshow').forEach(slideshow => {
   const track = slideshow.querySelector('.slides');
   const slides = [...track.children];

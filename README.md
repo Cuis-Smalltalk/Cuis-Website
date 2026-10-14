@@ -160,12 +160,7 @@ A subsection can have its own subsections, built the same way.
 
 ### Want to list a package?
 
-Add the topic `cuis-smalltalk-package` to its repository on GitHub, with the gear next to **About**. The Packages page lists every repository with that topic, forks included, and is refreshed once a day.
-
-* The name of the package is the name of the repository without `Cuis-Smalltalk-` or `Cuis-` at the start: `Cuis-Smalltalk-Regex` is listed as Regex.
-* Repositories with the same name, ignoring case, are shown in one card, one entry per repository: the official ones first, then the featured ones, then the rest. That is how a fork is shown next to its original. A fork doesn't inherit the topic: it needs its own.
-* The packages are sorted by their last push, the most recent first. The repositories of the Cuis-Smalltalk organization are marked as official. The Featured and Official buttons show only the featured or official packages, or both.
-* `_data/packages-config.yml` curates the list. To feature a repository, highlighted on the page, add it to `featured`. To hide a repository, or all the repositories of a user, add `owner/name` or `owner` to `excluded`.
+Follow [Registering a package](https://cuis.st/documentation/how-to-guides/additional-packages#registering-a-package).
 
 ### Want to add a talk?
 
