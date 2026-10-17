@@ -30,3 +30,15 @@ What follows is the suggested procedure for using Git/GitHub to host external pa
 6. Git add / commit / push as appropriate.
 7. Save changes that are not part of any package. These are automatically captured in numbered ChangeSets, separated from changes to packages.
 8. Exit the image. Usually without saving.
+
+## Letting GitHub recognize your code as Smalltalk
+
+GitHub uses the `.st` extension for both Smalltalk and StringTemplate, and guesses the language of each file from its contents. Sometimes it guesses wrong, and your repository shows up as StringTemplate.
+
+This matters because only code recognized as Smalltalk gets proper syntax highlighting.
+
+To set the language yourself, add a `.gitattributes` file at the root of your repository with this line:
+
+```text
+*.st linguist-language=Smalltalk
+```
