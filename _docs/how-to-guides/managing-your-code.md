@@ -17,15 +17,38 @@ Cuis includes a tool to manage installed *Packages*. It is at <kbd>World</kbd> /
 
 The operations available on installed or newly created packages are:
 
-- <kbd>Save</kbd> Saves a package on the file system. Overwrites any existing version. It is good to save the package from time to time, to reduce the risk of losing code.
+- <kbd>Save</kbd> Asks for the [version](#package-versions) to save the package as, proposing the current one, and saves the package on the file system. Overwrites any existing file. It is good to save the package from time to time, to reduce the risk of losing code.
 - <kbd>Delete</kbd> Removes the Package instance from the image. **Does not remove any code.** This means, effectively, to merge back the code into Cuis.
 - <kbd>Browse unsaved Changes</kbd> This opens a ChangeSorter on the ChangeSet that captures all the changes done to the Package since it was last saved. Therefore it shows the work done on the package that would be lost if the package is not saved.
 - <kbd>Browse package code</kbd> This opens a Class Browser that only shows the code that belongs in the package. This is useful for working on a package, or studying it.
-- <kbd>Add requirement</kbd> This opens a select list of loaded packages. Each package provides a *Feature*. You can CANCEL, require the current Cuis base version (at a minimum) or require any of the packages on the list. Required packages will be loaded before the selected package (`Feature require: #'your-package'.`). When a package is selected, the lower browser pane shows its requirements, which may be deleted. **Don't forget to *Save* your package after adding or deleting requirements!**
+- <kbd>Add requirement</kbd> This opens a select list of loaded packages. Each package provides a *Feature*. You can CANCEL, require the current Cuis base version or require any of the packages on the list. The requirement accepts a [range of versions](#package-versions). Required packages will be loaded before the selected package (`Feature require: #'your-package'.`). When a package is selected, the lower browser pane shows its requirements, which may be deleted. **Don't forget to *Save* your package after adding or deleting requirements!**
 
-The tool shows, for each Package, the name, whether it is dirty (has unsaved changes) and the file it was installed from / saved to.
+The tool shows, for each Package, the name and version, whether it is dirty (has unsaved changes) and the file it was installed from / saved to.
 
 Handling Packages like this, Cuis behaves as a sort of document editor (like, for example, a regular text editor) whose documents are *Package* files *(.pck.st)*.
+
+### Package versions
+
+Each package has a version, like `1.4.2`, that you choose each time you save it.
+
+Cuis encourages, but doesn't enforce, [Semantic Versioning](https://semver.org): increase the patch for bug fixes, the minor for new functionality, and the major for changes that can break the code that uses your package.
+
+The package file states its version, and the range of versions it accepts for each requirement:
+
+```text
+!provides: 'WebClient' '1.39.0'!
+!requires: 'Network-Kernel' '1.2.0' '1.*.*'!
+```
+
+WebClient is at 1.39.0, and accepts any Network-Kernel from 1.2.0 to the last 1.x.x. A `*` means any number.
+
+<kbd>Add requirement</kbd> always creates a range like that one: from the version currently loaded to the last one with the same major. Any other range has to be set by hand.
+
+Cuis base has a version too: Cuis 7.9 updated to #8276 is 7.9.8276. Requiring it from that image asks for update #8276 or a later one, within Cuis 7.
+
+Cuis itself doesn't strictly follow Semantic Versioning, as its [releases]({{ "/documentation/reference/release-process" | relative_url }}) are based on dates, not features. Even so, a package that requires Cuis 7 doesn't load in Cuis 8 until its requirement is updated.
+
+Package files in the previous format, with versions like `1 39`, still load, and get the new format when you save them.
 
 ## Changes to the Cuis base image
 

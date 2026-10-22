@@ -3,7 +3,7 @@ title: Using Git and GitHub to host and manage Cuis code
 description: "How to host and version your Cuis packages with Git and GitHub."
 ---
 
-Cuis doesn't do version control by itself: it doesn't handle Package versions, ancestries, etc. If versioning of Packages is desired, the best is to use an external versioning file repository, such as Git or Mercurial. This is not unlike using Git or GitHub with a file-based development environment such as Eclipse or a text editor. Like Cuis, these tools don't do version handling themselves, they just load and save files, and let Git do its magic.
+Cuis doesn't do version control by itself: it doesn't keep previous versions of Packages, ancestries, etc. If versioning of Packages is desired, the best is to use an external versioning file repository, such as Git or Mercurial. This is not unlike using Git or GitHub with a file-based development environment such as Eclipse or a text editor. Like Cuis, these tools don't do version handling themselves, they just load and save files, and let Git do its magic.
 
 The Cuis project is hosted on [GitHub](https://github.com), as most projects related to Cuis.
 

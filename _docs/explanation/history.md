@@ -288,6 +288,7 @@ First release of Cuis following a new Release Process: Cuis 6.2 Stable Release. 
 - Ephemeron fixes
 - Method timestamps saved in UTC time, displayed in local time
 - Fast StaticImageMorph
+- Semantic Versioning for packages
 - Bug Fixes, Cleanup, Refactors
 
 </div>
