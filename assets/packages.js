@@ -6,15 +6,17 @@ const sortByName = document.querySelector('#package-list .name-sort');
 const cards = [...list.children];
 list.querySelectorAll('time').forEach(time => time.textContent = new Date(time.dateTime).toLocaleString(undefined, { dateStyle: 'medium', timeStyle: 'short', hourCycle: 'h23' }));
 const name = card => card.querySelector('.name a').textContent;
+const texts = (card, selector) => [...card.querySelectorAll(selector)].map(element => element.textContent).join(' ');
 const search = new MiniSearch({
-  fields: ['name', 'descriptions'],
+  fields: ['name', 'owners', 'descriptions'],
   processTerm: term => Array.from(term, (_, i) => term.toLowerCase().slice(i)),
   searchOptions: { processTerm: term => term.toLowerCase(), prefix: true, fuzzy: 0.2, combineWith: 'AND', boost: { name: 2 } }
 });
 search.addAll(cards.map((card, id) => ({
   id,
   name: name(card),
-  descriptions: [...card.querySelectorAll('.description')].map(description => description.textContent).join(' ')
+  owners: texts(card, '.owner'),
+  descriptions: texts(card, '.description')
 })));
 
 const show = () => {
