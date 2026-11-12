@@ -6,6 +6,7 @@ featured:
   - Cuis-Smalltalk/Cuis-Smalltalk-UI
   - Cuis-Smalltalk/Numerics
   - Cuis-Smalltalk/Measures
+  - hernanwilkinson/Cuis-MCPServer
 
 # Repositories (owner/name) or whole owners (owner) never listed.
 excluded: []
