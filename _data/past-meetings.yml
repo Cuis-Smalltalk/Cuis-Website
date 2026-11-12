@@ -173,3 +173,8 @@
   chair: Cristián Pérez & Hilaire Fernandes
   date: 2026-10
   video: https://youtu.be/blqkV2ZnIpQ
+- title: Claude Code and MCP Server
+  description: Hernán Wilkinson shows how Claude Code works on a live Cuis image through his <a href="https://github.com/hernanwilkinson/Cuis-MCPServer">MCP server</a>. Claude builds a calculator with a Morphic UI and its tests, makes a second window for it with GUI Designer by driving the designer's model, reproduces from a screenshot the form layout example Ken Dickey shows at the start, and fixes the extra parentheses left by the Extract Temporary refactoring.
+  chair: Hernán Wilkinson
+  date: 2026-11
+  video: https://youtu.be/Tnx8j_IlO9Q
