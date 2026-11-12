@@ -19,4 +19,4 @@ layout: default
 {%- assign meetings = site.data.past-meetings | sort: 'date' | reverse | slice: 0, 1 %}
 {% include videos.html videos=meetings %}
 
-<p><a href="{{ "/community#past-meetings" | relative_url }}">Past meetings</a></p>
+<p><a href="{{ "/community/#past-meetings" | relative_url }}">Past meetings</a></p>

@@ -1,0 +1,82 @@
+# Sample contributors for running the site locally. The Pages workflow replaces this file with the
+# real counts, written by fetch-contributors.rb, before building the site.
+
+---
+- months: 3
+  contributors:
+  - name: Juan Vuletich
+    methods: 524
+  - name: Hernan Wilkinson
+    methods: 367
+  - name: Cristián Abel Pérez
+    methods: 102
+  - name: Facundo Javier Gelatti
+    methods: 17
+  - name: Joel Esteban Cámera
+    methods: 5
+  - name: Hilaire Fernandes
+    methods: 3
+- months: 6
+  contributors:
+  - name: Juan Vuletich
+    methods: 1027
+  - name: Hernan Wilkinson
+    methods: 378
+  - name: Cristián Abel Pérez
+    methods: 102
+  - name: Joel Esteban Cámera
+    methods: 36
+  - name: Luciano Esteban Notarfrancesco
+    methods: 28
+  - name: Facundo Javier Gelatti
+    methods: 17
+  - name: Milan Lajtos
+    methods: 10
+  - name: Hilaire Fernandes
+    methods: 7
+  - name: Eliot Emilio Miranda
+    methods: 4
+  - name: Francisco Garau
+    methods: 3
+  - name: Zardoz
+    methods: 2
+  - name: Ezequiel Birman
+    methods: 1
+- months: 12
+  contributors:
+  - name: Juan Vuletich
+    methods: 1679
+  - name: Joel Esteban Cámera
+    methods: 553
+  - name: Hernan Wilkinson
+    methods: 422
+  - name: Cristián Abel Pérez
+    methods: 102
+  - name: Luciano Esteban Notarfrancesco
+    methods: 99
+  - name: Facundo Javier Gelatti
+    methods: 95
+  - name: Eliot Emilio Miranda
+    methods: 28
+  - name: Hilaire Fernandes
+    methods: 17
+  - name: Milan Lajtos
+    methods: 10
+  - name: Ramiro Saravia
+    methods: 4
+  - name: David Faitelson
+    methods: 3
+  - name: Francisco Garau
+    methods: 3
+  - name: Ezequiel Ramis
+    methods: 2
+  - name: Ken Dickey
+    methods: 2
+  - name: Michael Rueger
+    methods: 2
+  - name: Zardoz
+    methods: 2
+  - name: Ezequiel Birman
+    methods: 1
+  - name: Nicolás Papagna Maldonado
+    methods: 1

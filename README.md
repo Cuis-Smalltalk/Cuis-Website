@@ -10,7 +10,7 @@ The `Pages` workflow (`.github/workflows/pages.yml`) builds the site with Jekyll
 docker compose up
 ```
 
-The first time, it takes a few minutes to install everything. When it shows `Server running`, open http://localhost:4000. Leave it running while you follow any of the guides below: each change you save shows up there. The Packages page shows the sample packages of `_data/packages.yml`, which the workflow replaces with the real list before each build. To see the real list, run `ruby _data/fetch-packages.rb`, and `git checkout _data/packages.yml` to get the samples back before you commit.
+The first time, it takes a few minutes to install everything. When it shows `Server running`, open http://localhost:4000. Leave it running while you follow any of the guides below: each change you save shows up there. The Packages page shows the sample packages of `_data/packages.yml`, which the workflow replaces with the real list before each build. To see the real list, run `ruby _data/fetch-packages.rb`, and `git checkout _data/packages.yml` to get the samples back before you commit. The same goes for the Contributors page and `_data/contributors.yml`, which the workflow counts from the change sets of Cuis-Smalltalk-Dev: to see the real counts, run `ruby _data/fetch-contributors.rb` with the path of your clone of Cuis-Smalltalk-Dev, and `git checkout _data/contributors.yml` before you commit.
 
 Without Docker, with Ruby 4.0.7 installed:
 

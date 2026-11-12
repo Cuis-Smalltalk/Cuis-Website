@@ -28,6 +28,14 @@ jobs:
       - run: ruby _data/fetch-packages.rb
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - uses: actions/checkout@v7
+        with:
+          repository: Cuis-Smalltalk/Cuis-Smalltalk-Dev
+          path: _cuis
+          sparse-checkout: |
+            CoreUpdates
+            PreviousUpdates
+      - run: ruby _data/fetch-contributors.rb _cuis
       - id: pages
         uses: actions/configure-pages@v6
       - run: |

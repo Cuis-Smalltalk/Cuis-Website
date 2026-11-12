@@ -1406,3 +1406,71 @@ kbd {
 #package-list:has(.official-filter:checked) .list > li:not([data-official]) {
   display: none;
 }
+
+.period-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: $spacing-unit * 0.75;
+
+  .filter {
+    padding: 8px 16px;
+  }
+
+  @include media-query($on-palm) {
+    flex-wrap: nowrap;
+    gap: 6px;
+
+    .filter {
+      flex: 1;
+      min-width: 0;
+      justify-content: center;
+      padding: 8px 4px;
+      font-size: $small-font-size;
+      text-align: center;
+    }
+  }
+}
+
+.contributors {
+  width: 100%;
+
+  .rank {
+    width: 2.5em;
+    color: $grey;
+  }
+
+  .name {
+    padding-right: 16px;
+  }
+
+  .share {
+    width: 55%;
+
+    span {
+      display: block;
+      width: var(--share);
+      min-width: 2px;
+      height: 10px;
+      border-radius: 3px;
+      background-color: var(--window);
+    }
+  }
+
+  .methods {
+    padding-right: 0;
+    text-align: right;
+  }
+
+  @include media-query($on-palm) {
+    .share {
+      width: 30%;
+    }
+  }
+}
+
+#contributors:has([value="3"]:checked) .contributors:not([data-months="3"]),
+#contributors:has([value="6"]:checked) .contributors:not([data-months="6"]),
+#contributors:has([value="12"]:checked) .contributors:not([data-months="12"]) {
+  display: none;
+}

@@ -1,11 +1,13 @@
 ---
-permalink: /community
+permalink: /community/
 layout: page
 icon: users
 window: package-installer
 title: Community
 description: "Mailing list, monthly meetings and how to contribute."
 ---
+
+{% include toc.html %}
 
 Cuis has an active community of developers and users. Our main meeting point is the [mailing list](https://lists.cuis.st/mailman/listinfo/cuis-dev). You are welcome in our community! If you use Cuis or are curious about our work, subscribe to the mailing list to ask questions and tell us about your own projects and ideas. Please take a look at [Getting help with Cuis]({{ "/documentation/how-to-guides/getting-help" | relative_url }}).
 
@@ -32,6 +34,12 @@ Please use an image with all relevant packages already loaded, using updated ver
 For some ideas on how you can help Cuis, see [Helping Cuis](https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/wiki/Helping-Cuis). You can contribute your own too.
 
 Any contribution must be under the [MIT License](https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/blob/master/LICENSE). By contributing, you agree to the [Developer Certificate of Origin](https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/blob/master/DCO), a simple statement that you have the legal right to make the contribution.
+
+<div class="note" markdown="1">
+<svg class="icon"><use href="{{ "/assets/icons.svg#users" | relative_url }}"></use></svg>
+
+See who has been contributing to Cuis in the last months on the [Contributors]({{ "/community/contributors" | relative_url }}) page.
+</div>
 
 ## Monthly meetings
 
