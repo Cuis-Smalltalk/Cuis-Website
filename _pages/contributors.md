@@ -34,4 +34,4 @@ description: "Thank you to everyone who keeps Cuis growing."
   {% endfor %}
 </div>
 
-<p class="fine-print">Every method someone modifies in the Cuis base image counts as one contribution. The list is updated every day.</p>
+<p class="fine-print">Every method someone modifies in the Cuis base image or in the packages that come with Cuis counts as one contribution. The list is updated every day.</p>

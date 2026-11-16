@@ -32,9 +32,12 @@ jobs:
         with:
           repository: Cuis-Smalltalk/Cuis-Smalltalk-Dev
           path: _cuis
+          fetch-depth: 0
           sparse-checkout: |
             CoreUpdates
             PreviousUpdates
+            Packages
+            CompatibilityPackages
       - run: ruby _data/fetch-contributors.rb _cuis
       - id: pages
         uses: actions/configure-pages@v6
