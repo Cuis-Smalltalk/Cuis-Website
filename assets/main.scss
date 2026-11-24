@@ -1110,6 +1110,10 @@ kbd {
     margin: 0 0 0.75em;
   }
 
+  li > .activity {
+    margin: 0.5em 0;
+  }
+
   li > .pushed {
     margin: 0 0 1em;
   }
@@ -1128,6 +1132,10 @@ kbd {
 
   p {
     margin: 0.25em 0 0;
+  }
+
+  .activity {
+    margin: 0.5em 0 0;
   }
 }
 
@@ -1175,6 +1183,46 @@ kbd {
   display: inline-flex;
   align-items: center;
   white-space: nowrap;
+}
+
+.bars {
+  display: flex;
+  align-items: flex-end;
+  gap: 2px;
+  height: 18px;
+
+  > span {
+    flex: 1;
+    border-radius: 1px;
+    background-color: $blue;
+  }
+
+  .level-0 {
+    height: 2px;
+    background-color: $line;
+  }
+
+  .level-1 {
+    height: 25%;
+  }
+
+  .level-2 {
+    height: 50%;
+  }
+
+  .level-3 {
+    height: 75%;
+  }
+
+  .level-4 {
+    height: 100%;
+  }
+}
+
+.commits {
+  margin: 0.25em 0 0;
+  font-size: 13px;
+  color: $grey;
 }
 
 .more-sources {

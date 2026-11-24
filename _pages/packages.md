@@ -23,6 +23,7 @@ To learn more about how to register your package here, see [Registering a packag
     <div class="filter-group sort" role="group" aria-label="Sort">
       <label class="filter"><input type="checkbox" class="name-sort"><svg class="icon"><use href="{{ "/assets/icons.svg#arrow-down-a-z" | relative_url | cache_bust }}"></use></svg>Name</label>
       <label class="filter"><input type="checkbox" class="stars-sort"><svg class="icon"><use href="{{ "/assets/icons.svg#star" | relative_url | cache_bust }}"></use></svg>Stars</label>
+      <label class="filter"><input type="checkbox" class="activity-sort"><svg class="icon"><use href="{{ "/assets/icons.svg#activity" | relative_url }}"></use></svg>Activity</label>
     </div>
   </div>
   <ul class="list">
@@ -38,6 +39,7 @@ To learn more about how to register your package here, see [Registering a packag
         <span class="stars" data-stars="{{ package.stars }}"><svg class="icon" role="img" aria-label="Stars"><title>Stars</title><use href="{{ "/assets/icons.svg#star" | relative_url | cache_bust }}"></use></svg>{{ package.stars }}</span>
         {% if more > 0 %}<button class="more-sources" commandfor="{{ dialog }}" command="show-modal">{{ more }} more</button>{% endif %}
       </div>
+      {% include activity.html commits=package.commits months=package.activity %}
       <p class="pushed"><svg class="icon"><use href="{{ "/assets/icons.svg#calendar" | relative_url | cache_bust }}"></use></svg>Last updated <time datetime="{{ package.pushed_at }}">{{ package.pushed_at | date: site.date_format }}</time></p>
       {% if more > 0 %}
       <dialog id="{{ dialog }}" class="sources" closedby="any" aria-labelledby="{{ dialog }}-title">
@@ -46,6 +48,7 @@ To learn more about how to register your package here, see [Registering a packag
         <div class="source">
           <div class="repository"><b><a class="owner" href="https://github.com/{{ source.owner }}">@{{ source.owner }}</a>{% if source.official %}<svg class="icon official" role="img" aria-label="Official"><title>Official</title><use href="{{ "/assets/icons.svg#badge-check" | relative_url | cache_bust }}"></use></svg>{% endif %}</b><span class="stars"><svg class="icon" role="img" aria-label="Stars"><title>Stars</title><use href="{{ "/assets/icons.svg#star" | relative_url | cache_bust }}"></use></svg>{{ source.stars }}</span><a href="{{ source.url }}">repo</a></div>
           {% if source.description %}<p class="description">{{ source.description }}</p>{% else %}<p class="no-description">No description provided</p>{% endif %}
+          {% include activity.html commits=source.commits months=source.activity %}
           <p class="pushed"><svg class="icon"><use href="{{ "/assets/icons.svg#calendar" | relative_url | cache_bust }}"></use></svg>Last updated <time datetime="{{ source.pushed_at }}">{{ source.pushed_at | date: site.date_format }}</time></p>
         </div>
         {% endfor %}

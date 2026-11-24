@@ -4,6 +4,7 @@
 
 require "json"
 require "net/http"
+require "time"
 require "yaml"
 
 QUERY = "topic:cuis-smalltalk-package fork:true"
@@ -12,6 +13,16 @@ PAGE_SIZE = 100
 # GitHub search returns an error past its first 1000 results.
 MAX_RESULTS = 1000
 CONFIG = YAML.load_file("_data/packages-config.yml")
+# Activity is the commits of the default branch in the last 12 months, counted per month.
+MONTHS = 12
+MONTH = 365.0 / MONTHS * 24 * 60 * 60
+NOW = Time.now.utc
+HEADERS = ENV["GITHUB_TOKEN"] ? { "Authorization" => "Bearer #{ENV["GITHUB_TOKEN"]}" } : {}
+
+def get(url)
+  response = Net::HTTP.get_response(URI(url), HEADERS)
+  [response, JSON.parse(response.body)]
+end
 
 class Repository
   def initialize(data)
@@ -22,6 +33,23 @@ class Repository
   def owner = @data["owner"]["login"]
   def pushed_at = @data["pushed_at"]
   def stars = @data["stargazers_count"]
+
+  # Commits per month, the oldest month first.
+  def activity
+    @activity ||= commit_dates.each_with_object(Array.new(MONTHS, 0)) do |date, months|
+      months[MONTHS - 1 - ((NOW - date) / MONTH).floor.clamp(0, MONTHS - 1)] += 1
+    end
+  end
+
+  def commit_dates(url = "#{@data["url"]}/commits?" + URI.encode_www_form(since: (NOW - MONTHS * MONTH).iso8601, per_page: 100))
+    response, commits = get(url)
+    # GitHub answers 409 for a repository without commits.
+    return [] if response.code == "409"
+    raise "#{full_name}: #{commits["message"]}" unless response.is_a?(Net::HTTPSuccess)
+    dates = commits.map { |commit| Time.parse(commit["commit"]["committer"]["date"]) }
+    next_page = response["link"].to_s[/<([^>]+)>; rel="next"/, 1]
+    next_page ? dates + commit_dates(next_page) : dates
+  end
 
   def package_name
     @data["name"].sub(/\ACuis-(Smalltalk-)?/i, "")
@@ -51,6 +79,8 @@ class Repository
       "official" => official?,
       "pushed_at" => pushed_at,
       "stars" => stars,
+      "commits" => activity.sum,
+      "activity" => activity,
       "description" => description,
     }
   end
@@ -75,6 +105,8 @@ class Package
       "official" => @repositories.any?(&:official?),
       "pushed_at" => @repositories.first.pushed_at,
       "stars" => sources.first.stars,
+      "commits" => sources.first.activity.sum,
+      "activity" => sources.first.activity.dup,
       "sources" => sources.map(&:to_h),
     }
   end
@@ -82,8 +114,7 @@ end
 
 def search(page = 1)
   url = URI("https://api.github.com/search/repositories?" + URI.encode_www_form(q: QUERY, sort: "updated", per_page: PAGE_SIZE, page: page))
-  headers = ENV["GITHUB_TOKEN"] ? { "Authorization" => "Bearer #{ENV["GITHUB_TOKEN"]}" } : {}
-  results = JSON.parse(Net::HTTP.get(url, headers))
+  _, results = get(url)
   raise "Incomplete search results" if results["incomplete_results"]
   repositories = results["items"].map { |data| Repository.new(data) }
   last_page = repositories.size < PAGE_SIZE || page * PAGE_SIZE == MAX_RESULTS

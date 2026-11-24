@@ -2,12 +2,15 @@ import MiniSearch from 'https://cdnjs.cloudflare.com/ajax/libs/minisearch/7.2.0/
 
 const list = document.querySelector('#package-list .list');
 const query = document.querySelector('#package-list .search');
-const sortByName = document.querySelector('#package-list .name-sort');
-const sortByStars = document.querySelector('#package-list .stars-sort');
 const cards = [...list.children];
 list.querySelectorAll('time').forEach(time => time.textContent = new Date(time.dateTime).toLocaleString(undefined, { dateStyle: 'medium', timeStyle: 'short', hourCycle: 'h23' }));
 const name = card => card.querySelector('.name a').textContent;
-const stars = card => Number(card.querySelector('.stars').dataset.stars);
+const number = (card, selector, key) => Number(card.querySelector(selector).dataset[key]);
+const orders = new Map([
+  [document.querySelector('#package-list .name-sort'), (a, b) => name(a).localeCompare(name(b))],
+  [document.querySelector('#package-list .stars-sort'), (a, b) => number(b, '.stars', 'stars') - number(a, '.stars', 'stars')],
+  [document.querySelector('#package-list .activity-sort'), (a, b) => number(b, '.activity', 'commits') - number(a, '.activity', 'commits')]
+]);
 const texts = (card, selector) => [...card.querySelectorAll(selector)].map(element => element.textContent).join(' ');
 const search = new MiniSearch({
   fields: ['name', 'owners', 'descriptions'],
@@ -23,16 +26,12 @@ search.addAll(cards.map((card, id) => ({
 
 const show = () => {
   const found = query.value ? search.search(query.value).map(result => cards[result.id]) : cards;
-  const sorted = sortByName.checked ? found.toSorted((a, b) => name(a).localeCompare(name(b)))
-    : sortByStars.checked ? found.toSorted((a, b) => stars(b) - stars(a))
-    : found;
-  list.replaceChildren(...sorted);
+  const order = [...orders].find(([sort]) => sort.checked)?.[1];
+  list.replaceChildren(...(order ? found.toSorted(order) : found));
 };
-const sortBy = (sort, other) => sort.addEventListener('change', () => {
-  if (sort.checked) other.checked = false;
+orders.forEach((_, sort) => sort.addEventListener('change', () => {
+  if (sort.checked) orders.forEach((_, other) => other.checked = other === sort);
   show();
-});
+}));
 query.addEventListener('input', show);
-sortBy(sortByName, sortByStars);
-sortBy(sortByStars, sortByName);
 show();
