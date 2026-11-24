@@ -36,7 +36,7 @@ For some ideas on how you can help Cuis, see [Helping Cuis](https://github.com/C
 Any contribution must be under the [MIT License](https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/blob/master/LICENSE). By contributing, you agree to the [Developer Certificate of Origin](https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Dev/blob/master/DCO), a simple statement that you have the legal right to make the contribution.
 
 <div class="note" markdown="1">
-<svg class="icon"><use href="{{ "/assets/icons.svg#users" | relative_url }}"></use></svg>
+<svg class="icon"><use href="{{ "/assets/icons.svg#users" | relative_url | cache_bust }}"></use></svg>
 
 See who has been contributing to Cuis in the last months on the [Contributors]({{ "/community/contributors" | relative_url }}) page.
 </div>

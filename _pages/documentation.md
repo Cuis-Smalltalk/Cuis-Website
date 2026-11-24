@@ -77,14 +77,14 @@ description: "Everything to learn and use Cuis."
 </div>
 
 <div class="note" markdown="1">
-<svg class="icon"><use href="{{ "/assets/icons.svg#lightbulb" | relative_url }}"></use></svg>
+<svg class="icon"><use href="{{ "/assets/icons.svg#lightbulb" | relative_url | cache_bust }}"></use></svg>
 
 Cloned with Git? You only got the latest commit. Run <code class="copy">git fetch --unshallow</code> in the Cuis folder to get the full history.
 
 </div>
 
 <div class="note" markdown="1">
-<svg class="icon"><use href="{{ "/assets/icons.svg#info" | relative_url }}"></use></svg>
+<svg class="icon"><use href="{{ "/assets/icons.svg#info" | relative_url | cache_bust }}"></use></svg>
 
 Cuis doesn't touch anything else on your system. Want to remove it? Just delete the Cuis folder. That's all.
 

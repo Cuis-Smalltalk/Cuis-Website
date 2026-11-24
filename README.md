@@ -81,7 +81,7 @@ Say you wrote a guide on loading fonts in Cuis.
 
      ```html
      <div class="note" markdown="1">
-     <svg class="icon"><use href="{{ "/assets/icons.svg#lightbulb" | relative_url }}"></use></svg>
+     <svg class="icon"><use href="{{ "/assets/icons.svg#lightbulb" | relative_url | cache_bust }}"></use></svg>
 
      The text of the tip, in Markdown.
 

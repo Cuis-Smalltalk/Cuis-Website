@@ -8,7 +8,7 @@ description: "Libraries and tools for Cuis, built by the community."
 ---
 
 <div class="note" markdown="1">
-<svg class="icon"><use href="{{ "/assets/icons.svg#info" | relative_url }}"></use></svg>
+<svg class="icon"><use href="{{ "/assets/icons.svg#info" | relative_url | cache_bust }}"></use></svg>
 
 To learn more about how to register your package here, see [Registering a package]({{ "/documentation/how-to-guides/additional-packages#registering-a-package" | relative_url }}).
 </div>
@@ -17,36 +17,36 @@ To learn more about how to register your package here, see [Registering a packag
   <div class="package-filters">
     <input class="search" placeholder="Search package">
     <div class="filter-group" role="group" aria-label="Filter">
-      <label class="filter"><input type="checkbox" class="featured-filter"><svg class="icon"><use href="{{ "/assets/icons.svg#sparkles" | relative_url }}"></use></svg>Featured</label>
-      <label class="filter"><input type="checkbox" class="official-filter"><svg class="icon"><use href="{{ "/assets/icons.svg#badge-check" | relative_url }}"></use></svg>Official</label>
+      <label class="filter"><input type="checkbox" class="featured-filter"><svg class="icon"><use href="{{ "/assets/icons.svg#sparkles" | relative_url | cache_bust }}"></use></svg>Featured</label>
+      <label class="filter"><input type="checkbox" class="official-filter"><svg class="icon"><use href="{{ "/assets/icons.svg#badge-check" | relative_url | cache_bust }}"></use></svg>Official</label>
     </div>
     <div class="filter-group sort" role="group" aria-label="Sort">
-      <label class="filter"><input type="checkbox" class="name-sort"><svg class="icon"><use href="{{ "/assets/icons.svg#arrow-down-a-z" | relative_url }}"></use></svg>Name</label>
-      <label class="filter"><input type="checkbox" class="stars-sort"><svg class="icon"><use href="{{ "/assets/icons.svg#star" | relative_url }}"></use></svg>Stars</label>
+      <label class="filter"><input type="checkbox" class="name-sort"><svg class="icon"><use href="{{ "/assets/icons.svg#arrow-down-a-z" | relative_url | cache_bust }}"></use></svg>Name</label>
+      <label class="filter"><input type="checkbox" class="stars-sort"><svg class="icon"><use href="{{ "/assets/icons.svg#star" | relative_url | cache_bust }}"></use></svg>Stars</label>
     </div>
   </div>
   <ul class="list">
     {% for package in site.data.packages %}
     <li{% if package.featured %} class="world" data-featured{% endif %}{% if package.official %} data-official{% endif %}>
       {% assign source = package.sources.first %}
-      <h4 class="name"><a href="{{ source.url }}">{{ package.name }}</a>{% if package.official %}<svg class="icon" role="img" aria-label="Official"><title>Official</title><use href="{{ "/assets/icons.svg#badge-check" | relative_url }}"></use></svg>{% endif %}</h4>
+      <h4 class="name"><a href="{{ source.url }}">{{ package.name }}</a>{% if package.official %}<svg class="icon" role="img" aria-label="Official"><title>Official</title><use href="{{ "/assets/icons.svg#badge-check" | relative_url | cache_bust }}"></use></svg>{% endif %}</h4>
       {% if source.description %}<p class="description">{{ source.description }}</p>{% else %}<p class="no-description">No description provided</p>{% endif %}
       {% assign more = package.sources.size | minus: 1 %}
       {% assign dialog = "sources-" | append: forloop.index %}
       <div class="package-footer">
         <b><a class="owner" href="https://github.com/{{ source.owner }}">@{{ source.owner }}</a></b>
-        <span class="stars" data-stars="{{ package.stars }}"><svg class="icon" role="img" aria-label="Stars"><title>Stars</title><use href="{{ "/assets/icons.svg#star" | relative_url }}"></use></svg>{{ package.stars }}</span>
+        <span class="stars" data-stars="{{ package.stars }}"><svg class="icon" role="img" aria-label="Stars"><title>Stars</title><use href="{{ "/assets/icons.svg#star" | relative_url | cache_bust }}"></use></svg>{{ package.stars }}</span>
         {% if more > 0 %}<button class="more-sources" commandfor="{{ dialog }}" command="show-modal">{{ more }} more</button>{% endif %}
       </div>
-      <p class="pushed"><svg class="icon"><use href="{{ "/assets/icons.svg#calendar" | relative_url }}"></use></svg>Last updated <time datetime="{{ package.pushed_at }}">{{ package.pushed_at | date: site.date_format }}</time></p>
+      <p class="pushed"><svg class="icon"><use href="{{ "/assets/icons.svg#calendar" | relative_url | cache_bust }}"></use></svg>Last updated <time datetime="{{ package.pushed_at }}">{{ package.pushed_at | date: site.date_format }}</time></p>
       {% if more > 0 %}
       <dialog id="{{ dialog }}" class="sources" closedby="any" aria-labelledby="{{ dialog }}-title">
-        <h4 id="{{ dialog }}-title" tabindex="-1" autofocus>{{ package.name }}<button commandfor="{{ dialog }}" command="close" aria-label="Close"><svg class="icon"><use href="{{ "/assets/icons.svg#x" | relative_url }}"></use></svg></button></h4>
+        <h4 id="{{ dialog }}-title" tabindex="-1" autofocus>{{ package.name }}<button commandfor="{{ dialog }}" command="close" aria-label="Close"><svg class="icon"><use href="{{ "/assets/icons.svg#x" | relative_url | cache_bust }}"></use></svg></button></h4>
         {% for source in package.sources %}
         <div class="source">
-          <div class="repository"><b><a class="owner" href="https://github.com/{{ source.owner }}">@{{ source.owner }}</a>{% if source.official %}<svg class="icon official" role="img" aria-label="Official"><title>Official</title><use href="{{ "/assets/icons.svg#badge-check" | relative_url }}"></use></svg>{% endif %}</b><span class="stars"><svg class="icon" role="img" aria-label="Stars"><title>Stars</title><use href="{{ "/assets/icons.svg#star" | relative_url }}"></use></svg>{{ source.stars }}</span><a href="{{ source.url }}">repo</a></div>
+          <div class="repository"><b><a class="owner" href="https://github.com/{{ source.owner }}">@{{ source.owner }}</a>{% if source.official %}<svg class="icon official" role="img" aria-label="Official"><title>Official</title><use href="{{ "/assets/icons.svg#badge-check" | relative_url | cache_bust }}"></use></svg>{% endif %}</b><span class="stars"><svg class="icon" role="img" aria-label="Stars"><title>Stars</title><use href="{{ "/assets/icons.svg#star" | relative_url | cache_bust }}"></use></svg>{{ source.stars }}</span><a href="{{ source.url }}">repo</a></div>
           {% if source.description %}<p class="description">{{ source.description }}</p>{% else %}<p class="no-description">No description provided</p>{% endif %}
-          <p class="pushed"><svg class="icon"><use href="{{ "/assets/icons.svg#calendar" | relative_url }}"></use></svg>Last updated <time datetime="{{ source.pushed_at }}">{{ source.pushed_at | date: site.date_format }}</time></p>
+          <p class="pushed"><svg class="icon"><use href="{{ "/assets/icons.svg#calendar" | relative_url | cache_bust }}"></use></svg>Last updated <time datetime="{{ source.pushed_at }}">{{ source.pushed_at | date: site.date_format }}</time></p>
         </div>
         {% endfor %}
       </dialog>
@@ -56,4 +56,4 @@ To learn more about how to register your package here, see [Registering a packag
   </ul>
 </div>
 
-<script type="module" src="{{ "/assets/packages.js" | relative_url }}"></script>
+<script type="module" src="{{ "/assets/packages.js" | relative_url | cache_bust }}"></script>

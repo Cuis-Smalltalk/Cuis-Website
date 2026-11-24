@@ -8,7 +8,7 @@ Cuis doesn't do version control by itself: it doesn't keep previous versions of 
 The Cuis project is hosted on [GitHub](https://github.com), as most projects related to Cuis.
 
 <div class="note" markdown="1">
-<svg class="icon"><use href="{{ "/assets/icons.svg#lightbulb" | relative_url }}"></use></svg>
+<svg class="icon"><use href="{{ "/assets/icons.svg#lightbulb" | relative_url | cache_bust }}"></use></svg>
 
 The recommendation is to use a GitHub repository with a name beginning with 'Cuis-Smalltalk-', so it will be easy for anybody to find it.
 

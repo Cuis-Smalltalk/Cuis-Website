@@ -8,7 +8,7 @@ description: "Where optional functionality for Cuis lives, how to load it, and h
 The Cuis base image includes only kernel functionality, very basic libraries, and development tools. Everything else comes in Packages that you load when you need them.
 
 <div class="note" markdown="1">
-<svg class="icon"><use href="{{ "/assets/icons.svg#lightbulb" | relative_url }}"></use></svg>
+<svg class="icon"><use href="{{ "/assets/icons.svg#lightbulb" | relative_url | cache_bust }}"></use></svg>
 
 Don't forget to check the [Packages]({{ "/packages" | relative_url }}) section when searching for useful packages for Cuis!
 
@@ -60,7 +60,7 @@ Feature require: 'Regex-Core'.
 `Feature require:` looks for packages in the `Packages` folder of Cuis, and in every folder inside the one that contains Cuis, at any depth. It also loads the packages that a package requires, looking for them in the same places. If they live in other repos, clone those too. The [directory structure of Cuis]({{ "/documentation/reference/directory-structure" | relative_url }}) describes these folders.
 
 <div class="note" markdown="1">
-<svg class="icon"><use href="{{ "/assets/icons.svg#lightbulb" | relative_url }}"></use></svg>
+<svg class="icon"><use href="{{ "/assets/icons.svg#lightbulb" | relative_url | cache_bust }}"></use></svg>
 
 Want the official packages at hand? Run `clonePackageRepos.sh` from your Cuis folder: it clones the package repos of the Cuis Smalltalk organization next to it.
 
@@ -91,7 +91,7 @@ Repositories with the same package name, ignoring case, are one package, with a 
 Want to take your package off the list? Just remove the topic.
 
 <div class="note" markdown="1">
-<svg class="icon"><use href="{{ "/assets/icons.svg#info" | relative_url }}"></use></svg>
+<svg class="icon"><use href="{{ "/assets/icons.svg#info" | relative_url | cache_bust }}"></use></svg>
 
 The list is updated every day at around <time class="daily" datetime="06:00">06:00 GMT</time>, and each time the site is updated.
 

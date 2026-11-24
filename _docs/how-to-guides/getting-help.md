@@ -14,7 +14,7 @@ For any Open Source project, questions are especially valuable if they point to 
 Still, questions that can be addressed by reading the documentation or a quick query to the system can sometimes feel annoying to maintainers. Authors can carefully write some explanation, investing several hours, and making that part of the documentation. Or we can instead write 10 times about the same issue, only when someone asks, each time improvising a low-quality ten-minute email. The first option results in higher quality material that can benefit many people over the course of years. The second option gives a low-quality answer to just one person, which may never be read again.
 
 <div class="note" markdown="1">
-<svg class="icon"><use href="{{ "/assets/icons.svg#lightbulb" | relative_url }}"></use></svg>
+<svg class="icon"><use href="{{ "/assets/icons.svg#lightbulb" | relative_url | cache_bust }}"></use></svg>
 
 So, if you read the documentation first, and then point to flaws or missing parts, you are really helping us make a better system. This can't be stressed enough. We really, really, really, very much, prefer this!
 
