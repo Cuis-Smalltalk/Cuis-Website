@@ -1171,6 +1171,12 @@ kbd {
   color: $grey;
 }
 
+.stars {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+}
+
 .more-sources {
   margin: 0 0 0 auto;
   border: 0;
@@ -1369,6 +1375,30 @@ kbd {
   .search {
     flex: 1 1 260px;
     width: auto;
+  }
+}
+
+.filter-group {
+  display: flex;
+  gap: 10px;
+
+  &.sort {
+    gap: 0;
+
+    .filter:not(:first-child) {
+      margin-left: -1px;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+
+    .filter:not(:last-child) {
+      border-top-right-radius: 0;
+      border-bottom-right-radius: 0;
+    }
+
+    .filter:has(:checked) {
+      position: relative;
+    }
   }
 }
 

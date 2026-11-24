@@ -5,184 +5,220 @@
   featured: false
   official: false
   pushed_at: "2026-10-05T14:19:32Z"
+  stars: 7
   sources:
     - owner: npapagna
       url: https://github.com/npapagna/cuis-code-coverage
       official: false
       pushed_at: "2026-10-05T14:19:32Z"
+      stars: 7
 
 - name: OSProcess
   featured: true
   official: true
   pushed_at: "2026-09-29T02:44:37Z"
+  stars: 5
   sources:
     - owner: Cuis-Smalltalk
       url: https://github.com/Cuis-Smalltalk/OSProcess
       official: true
       pushed_at: "2026-09-29T02:44:37Z"
+      stars: 5
     - owner: dtlewis290
       url: https://github.com/dtlewis290/Cuis-Smalltalk-OSProcess
       official: false
       pushed_at: "2019-05-29T23:50:16Z"
+      stars: 3
       description: OSProcess provides access to operating system functions, including pipes, child process creation, and control of the Squeak VM process.
 
 - name: StyledTextEditor
   featured: false
   official: true
   pushed_at: "2026-09-25T13:44:20Z"
+  stars: 6
   sources:
     - owner: Cuis-Smalltalk
       url: https://github.com/Cuis-Smalltalk/StyledTextEditor
       official: true
       pushed_at: "2026-09-25T13:44:20Z"
+      stars: 6
       description: A high quality Styled Text Model and Editor for Cuis Smalltalk
     - owner: bpieber
       url: https://github.com/bpieber/Cuis-Smalltalk-StyledTextEditor
       official: false
       pushed_at: "2023-09-18T15:49:14Z"
+      stars: 18
       description: A high quality Styled Text Model and Editor for Cuis Smalltalk
     - owner: nmingotti
       url: https://github.com/nmingotti/Cuis-Smalltalk-StyledTextEditor
       official: false
       pushed_at: "2016-02-17T15:48:30Z"
+      stars: 0
       description: A high quality Styled Text Model and Editor for Cuis Smalltalk
 
 - name: UI
   featured: true
   official: true
   pushed_at: "2026-09-15T13:57:12Z"
+  stars: 24
   sources:
     - owner: Cuis-Smalltalk
       url: https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-UI
       official: true
       pushed_at: "2026-09-15T13:57:12Z"
+      stars: 24
       description: Morphic Widgets and Components for general use
 
 - name: Signals
   featured: false
   official: false
   pushed_at: "2026-09-07T06:54:07Z"
+  stars: 14
   sources:
     - owner: len
       url: https://github.com/len/Signals
       official: false
       pushed_at: "2026-09-07T06:54:07Z"
+      stars: 14
       description: Tracker and lively dataflow programming environment for real-time musical synthesis in Smalltalk
 
 - name: VMMaker
   featured: false
   official: true
   pushed_at: "2026-08-31T12:12:12Z"
+  stars: 2
   sources:
     - owner: Cuis-Smalltalk
       url: https://github.com/Cuis-Smalltalk/VMMaker
       official: true
       pushed_at: "2026-08-31T12:12:12Z"
+      stars: 2
       description: Port of Squeak VMMaker to Cuis. For building VM Plugins.
 
 - name: DenotativeObject
   featured: true
   official: false
   pushed_at: "2026-08-10T11:22:34Z"
+  stars: 7
   sources:
     - owner: hernanwilkinson
       url: https://github.com/hernanwilkinson/Cuis-Smalltalk-DenotativeObject
       official: false
       pushed_at: "2026-08-10T11:22:34Z"
+      stars: 7
     - owner: ericbrandwein
       url: https://github.com/ericbrandwein/Cuis-Smalltalk-DenotativeObject
       official: false
       pushed_at: "2019-05-10T03:34:47Z"
+      stars: 0
 
 - name: Numerics
   featured: true
   official: true
   pushed_at: "2026-07-22T19:10:00Z"
+  stars: 5
   sources:
     - owner: Cuis-Smalltalk
       url: https://github.com/Cuis-Smalltalk/Numerics
       official: true
       pushed_at: "2026-07-22T19:10:00Z"
+      stars: 5
 
 - name: Erudite
   featured: false
   official: true
   pushed_at: "2026-03-26T20:26:15Z"
+  stars: 15
   sources:
     - owner: Cuis-Smalltalk
       url: https://github.com/Cuis-Smalltalk/Erudite
       official: true
       pushed_at: "2026-03-26T20:26:15Z"
+      stars: 15
       description: Documentation system for Cuis Smalltalk (with literate programming capabilities).
 
 - name: DatabaseSupport
   featured: false
   official: true
   pushed_at: "2026-03-19T18:23:57Z"
+  stars: 4
   sources:
     - owner: Cuis-Smalltalk
       url: https://github.com/Cuis-Smalltalk/DatabaseSupport
       official: true
       pushed_at: "2026-03-19T18:23:57Z"
+      stars: 4
       description: Database support packages for Cuis Smalltalk
 
 - name: Morphic
   featured: false
   official: true
   pushed_at: "2026-02-05T20:25:45Z"
+  stars: 8
   sources:
     - owner: Cuis-Smalltalk
       url: https://github.com/Cuis-Smalltalk/Morphic
       official: true
       pushed_at: "2026-02-05T20:25:45Z"
+      stars: 8
 
 - name: SVG
   featured: false
   official: true
   pushed_at: "2026-01-27T13:45:58Z"
+  stars: 2
   sources:
     - owner: Cuis-Smalltalk
       url: https://github.com/Cuis-Smalltalk/SVG
       official: true
       pushed_at: "2026-01-27T13:45:58Z"
+      stars: 2
 
 - name: Games
   featured: false
   official: true
   pushed_at: "2026-01-18T22:38:11Z"
+  stars: 0
   sources:
     - owner: Cuis-Smalltalk
       url: https://github.com/Cuis-Smalltalk/Games
       official: true
       pushed_at: "2026-01-18T22:38:11Z"
+      stars: 0
 
 - name: Measures
   featured: true
   official: true
   pushed_at: "2025-09-20T21:50:43Z"
+  stars: 5
   sources:
     - owner: Cuis-Smalltalk
       url: https://github.com/Cuis-Smalltalk/Measures
       official: true
       pushed_at: "2025-09-20T21:50:43Z"
+      stars: 5
 
 - name: Regex
   featured: false
   official: true
   pushed_at: "2024-06-12T18:48:57Z"
+  stars: 4
   sources:
     - owner: Cuis-Smalltalk
       url: https://github.com/Cuis-Smalltalk/Cuis-Smalltalk-Regex
       official: true
       pushed_at: "2024-06-12T18:48:57Z"
+      stars: 4
       description: Regular expressions support
     - owner: nmingotti
       url: https://github.com/nmingotti/Cuis-Smalltalk-Regex
       official: false
       pushed_at: "2022-01-10T14:58:50Z"
+      stars: 1
       description: Regular Expressions for Cuis
     - owner: garduino
       url: https://github.com/garduino/Cuis-Smalltalk-RegEx
       official: false
       pushed_at: "2020-11-25T16:14:53Z"
+      stars: 1
       description: Regular Expressions for Cuis

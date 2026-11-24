@@ -21,6 +21,7 @@ class Repository
   def full_name = @data["full_name"]
   def owner = @data["owner"]["login"]
   def pushed_at = @data["pushed_at"]
+  def stars = @data["stargazers_count"]
 
   def package_name
     @data["name"].sub(/\ACuis-(Smalltalk-)?/i, "")
@@ -49,6 +50,7 @@ class Repository
       "url" => @data["html_url"],
       "official" => official?,
       "pushed_at" => pushed_at,
+      "stars" => stars,
       "description" => description,
     }
   end
@@ -72,6 +74,7 @@ class Package
       "featured" => @repositories.any?(&:featured?),
       "official" => @repositories.any?(&:official?),
       "pushed_at" => @repositories.first.pushed_at,
+      "stars" => sources.first.stars,
       "sources" => sources.map(&:to_h),
     }
   end
